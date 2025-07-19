@@ -138,6 +138,28 @@ const ContactPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <div class="banner-container">
+        {/* <!-- Desktop Banner (hidden on mobile) */}
+
+        <motion.img
+          src="/images/banners/contact-us.jpg"
+          alt="Desktop Banner"
+          class="hidden md:block w-full"
+          initial={{ scale: 1.1 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1 }}
+        />
+
+        {/* <!-- Mobile Banner (hidden on desktop) --> */}
+        <motion.img
+          src="/images/mobile-view-banner/contact-us.jpg"
+          alt="Mobile Banner"
+          class="block md:hidden w-full"
+          initial={{ scale: 1.1 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1 }}
+        />
+      </div>
       {/* Animated background elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         {[...Array(8)].map((_, i) => (
@@ -412,7 +434,7 @@ const ContactPage = () => {
                 </div>
               </form>
             </div>
-             {/* Global Support Card */}
+            {/* Global Support Card */}
             <motion.div
               variants={itemVariants}
               whileHover="hover"
@@ -455,7 +477,6 @@ const ContactPage = () => {
               </div>
             </motion.div>
           </motion.div>
-          
 
           {/* Right Column */}
           <div className="space-y-6">
@@ -517,7 +538,7 @@ const ContactPage = () => {
                       </a>
                     </div>
                   </motion.div>
-                 
+
                   <motion.div
                     className="flex items-start space-x-4"
                     whileHover={{ x: 5 }}
@@ -601,8 +622,6 @@ const ContactPage = () => {
                 </div>
               </div>
             </motion.div>
-
-           
           </div>
         </div>
       </motion.div>

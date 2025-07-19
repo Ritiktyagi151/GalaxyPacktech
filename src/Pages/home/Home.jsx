@@ -16,24 +16,33 @@ import WhyChooseUs from "./WhyChooseUs";
 import ValuedClients from "./ValuedClients";
 import TeamSection from "./TeamSection";
 import MachineGallery from "./GallerySection";
+import ImageSlider from "../../components/ImagesHomepageSlider";
 function Home() {
   return (
     <div>
-      <div className="relative w-full h-[85vh] aspect-video overflow-hidden">
+      {/* <div className="relative w-full h-[85vh] overflow-hidden">
+        <img
+          className="object-fill transition-transform duration-500 ease-in-out"
+          src="images/banners/GS-24-PLUS-200.jpg"
+          alt=""
+        />
+      </div> */}
+      <div className="relative w-full h-[70vh] aspect-video overflow-hidden">
         <video
           className="absolute top-0 left-0 w-full h-full object-cover"
           muted
           autoPlay
           loop
           playsInline
-          src="/video/galaxypack.mp4"
+          src="/video/HomePageVideo.mp4"
         />
       </div>
+      {/* <ImageSlider /> */}
       <AboutSection />
-      <Product />
       <GalaxyTechProcess />
+      {/* <Product /> */}
       <GalaxyPackTechMachines />
-      <MachineGallery />
+      {/* <MachineGallery /> */}
       <GalaxyVideoSection />
       <WhyChooseUs />
       <PremiumBlogSlider />

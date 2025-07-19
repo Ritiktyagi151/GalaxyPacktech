@@ -18,8 +18,7 @@ const GalaxyTechProcess = () => {
       ],
       linkText: "Explore Materials >>",
       linkUrl: "#",
-      image:
-        "https://images.unsplash.com/photo-1629904853893-c2c8981a1dc5?q=80&w=2340&auto=format&fit=crop",
+      image: "/images/phases-images/phase1.png",
       popup: {
         title: "Galaxy Pack Tech Material Innovation",
         content: [
@@ -45,7 +44,7 @@ const GalaxyTechProcess = () => {
       linkText: "View Cutting Process >>",
       linkUrl: "#",
       image:
-        "https://images.unsplash.com/photo-1532618500676-2e0cbf7ba8b8?q=80&w=2340&auto=format&fit=crop",
+        "/images/phases-images/phase2.png",
       popup: {
         title: "Galaxy Pack Tech Cutting Technology",
         content: [
@@ -71,7 +70,7 @@ const GalaxyTechProcess = () => {
       linkText: "Tour Assembly Line >>",
       linkUrl: "#",
       image:
-        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2340&auto=format&fit=crop",
+        "/images/phases-images/phase3.png",
       popup: {
         title: "Galaxy Pack Tech Assembly Systems",
         content: [
@@ -97,7 +96,7 @@ const GalaxyTechProcess = () => {
       linkText: "See Tech Specs >>",
       linkUrl: "#",
       image:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2340&auto=format&fit=crop",
+        "/images/phases-images/phase4.png",
       popup: {
         title: "Galaxy Pack Tech Smart Features",
         content: [
@@ -123,7 +122,7 @@ const GalaxyTechProcess = () => {
       linkText: "Our Quality Promise >>",
       linkUrl: "#",
       image:
-        "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2340&auto=format&fit=crop",
+        "/images/phases-images/phase5.png",
       popup: {
         title: "Galaxy Pack Tech Quality Standards",
         content: [
@@ -226,6 +225,65 @@ const GalaxyTechProcess = () => {
         }`}
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+           <div className="bg-white shadow-xl rounded-xl border border-gray-200 overflow-hidden">
+            <div className="pp-advanced-tabs-wrapper flex flex-wrap border-b border-gray-200">
+              {tabs.map((tab) => (
+                <button
+                  key={tab.id}
+                  className={`px-6 py-4 font-medium flex items-center transition-all ${
+                    activeTab === tab.id
+                      ? "text-orange-600 border-b-2 border-orange-600"
+                      : "text-gray-500 hover:text-orange-500"
+                  }`}
+                  onClick={() => setActiveTab(tab.id)}
+                >
+                  <i className={`${tab.icon} mr-2`} />
+                  <span>{tab.title}</span>
+                </button>
+              ))}
+            </div>
+
+            <div className="pp-advanced-tabs-content-wrapper">
+              {tabs.map((tab) => (
+                <div
+                  key={tab.id}
+                  className={`p-0 ${activeTab === tab.id ? "block" : "hidden"}`}
+                >
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+                    <div className="relative h-full min-h-[300px]">
+                      <img
+                        src={tab.image}
+                        alt={tab.heading}
+                        className="w-full h-full object-fill absolute inset-0"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent opacity-70" />
+                    </div>
+
+                    <div className="bg-white p-8">
+                      <h3 className="text-2xl font-bold mb-4 text-orange-600">
+                        {tab.heading}
+                      </h3>
+                      {tab.content.map((paragraph, i) => (
+                        <p key={i} className="text-gray-700 mb-4">
+                          {paragraph}
+                        </p>
+                      ))}
+                      <button
+                        onClick={() => openPopup(tab)}
+                        className="inline-block mt-4 text-orange-600 hover:text-orange-500 transition-all group"
+                      >
+                        <span className="relative">
+                          {tab.linkText}
+                          <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-orange-500 transition-all group-hover:w-full"></span>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-700">
               Galaxy Pack Tech Manufacturing Excellence
@@ -291,65 +349,7 @@ const GalaxyTechProcess = () => {
             </div>
           </div>
 
-          <div className="bg-white shadow-xl rounded-xl border border-gray-200 overflow-hidden">
-            <div className="pp-advanced-tabs-wrapper flex flex-wrap border-b border-gray-200">
-              {tabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  className={`px-6 py-4 font-medium flex items-center transition-all ${
-                    activeTab === tab.id
-                      ? "text-orange-600 border-b-2 border-orange-600"
-                      : "text-gray-500 hover:text-orange-500"
-                  }`}
-                  onClick={() => setActiveTab(tab.id)}
-                >
-                  <i className={`${tab.icon} mr-2`} />
-                  <span>{tab.title}</span>
-                </button>
-              ))}
-            </div>
-
-            <div className="pp-advanced-tabs-content-wrapper">
-              {tabs.map((tab) => (
-                <div
-                  key={tab.id}
-                  className={`p-0 ${activeTab === tab.id ? "block" : "hidden"}`}
-                >
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-                    <div className="relative h-full min-h-[300px]">
-                      <img
-                        src={tab.image}
-                        alt={tab.heading}
-                        className="w-full h-full object-cover absolute inset-0"
-                        loading="lazy"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent opacity-70" />
-                    </div>
-
-                    <div className="bg-white p-8">
-                      <h3 className="text-2xl font-bold mb-4 text-orange-600">
-                        {tab.heading}
-                      </h3>
-                      {tab.content.map((paragraph, i) => (
-                        <p key={i} className="text-gray-700 mb-4">
-                          {paragraph}
-                        </p>
-                      ))}
-                      <button
-                        onClick={() => openPopup(tab)}
-                        className="inline-block mt-4 text-orange-600 hover:text-orange-500 transition-all group"
-                      >
-                        <span className="relative">
-                          {tab.linkText}
-                          <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-orange-500 transition-all group-hover:w-full"></span>
-                        </span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+         
         </div>
       </div>
     </section>

@@ -1,0 +1,615 @@
+{
+    "machineImages": [
+        "images/product-images/GS-20-HSI-home.jpg",
+        "images/product-images/galaxy-packtech-image-resize/GSC-14-PLUS-200.jpg",
+        "images/product-images/galaxy-packtech-image-resize/GS-24-TSG.jpg",
+        "images/product-images/galaxy-packtech-image-resize/GS-24-PLUS-200.jpg",
+        "images/product-images/galaxy-packtech-image-resize/GSC-20-plus-combi.jpg"
+    ],
+    "machines": [
+        {
+            "id": 1,
+            "model": "GSC 20 HSI",
+            "title": "Automatic Multi-Format Pouch Machine",
+            "tagline": "High-Speed Centre Seal & Quad Seal Pouch Machine",
+            "description": "High-precision machine for center seal, gusset, three side seal, and quad seal pouches",
+            "overview": "The GSC 20 HSI is Galaxy Packtech's multi-format pouch-making machine built for high precision and operational flexibility. It is ideal for manufacturers looking to produce a range of pouch types — from centre seal to optional quad seal — with the ability to manage longer pouch lengths and diverse film types.",
+            "applicationIndustries": [
+                "Food",
+                "Pet Care",
+                "Pharmaceuticals",
+                "Personal Care"
+            ],
+            "features": [
+                "Max web: 1000mm width, 600mm diameter",
+                "Speed: Up to 140 shots/min",
+                "Handles pouch widths up to 500mm",
+                "Supports recyclable films",
+                "Skip function for longer pouches"
+            ],
+            "stats": {
+                "speed": "140/min",
+                "width": "500mm",
+                "materials": "60-250µ",
+                "web_speed": "25 m/min",
+                "max_height": "600mm",
+                "gusset_size": "100mm"
+            },
+            "performance": {
+                "supportedPouchTypes": [
+                    "Centre Seal Pouch",
+                    "Centre Seal with Gusset",
+                    "Three Side Seal Pouch (optional)",
+                    "Quad Seal / Five Side Seal Pouch (optional)"
+                ],
+                "sizeCompatibility": {
+                    "maxWebWidth": "1000 mm",
+                    "maxWebDiameter": "600 mm",
+                    "maxPouchHeight": "600 mm (with skip function)"
+                },
+                "linearSpeed": "25 m/min",
+                "supportedMaterials": "Heat-sealable laminated films from 60 to 250 microns, including recyclable and multi-layer structures"
+            },
+            "advantages": [
+                "Versatile pouch formats from a single machine",
+                "Skip function for longer pouch formats up to 600 mm",
+                "Handles wide range of widths and gusset depths",
+                "Consistent cutting and sealing for large-format pouches",
+                "Setup and recipe management reduces downtime",
+                "Compatible with eco-friendly and high-barrier films"
+            ],
+            "technical_specs": {
+                "pouch_formats": "Centre Seal, Centre Seal with Gusset, Three Side Seal (Optional), Quad Seal (Optional)",
+                "max_web_size": "1000 mm width, 600 mm diameter",
+                "linear_speed": "Up to 25 m/min",
+                "three_side_seal": "Optional (up to 480 mm)",
+                "stand_up_pouch": "Not applicable",
+                "materials": "Heat-sealable laminated films from 60 to 250 microns",
+                "bag_width": {
+                    "centre_seal": "500 mm",
+                    "three_side_seal": "480 mm",
+                    "quad_seal": "350 mm"
+                },
+                "bag_height": "Up to 600 mm with skip function",
+                "gusset_size": "Up to 100 mm"
+            },
+            "full_description": "<h2>GSC 20 HSI (AUTOMATIC POUCH MAKING MACHINE)</h2><h3>Performance</h3><p>Centre Seal Pouch, Centre Seal with Gusset, Three Side Seal Pouch (optional), Quad Seal / Five Side Seal Pouch (optional). Designed for medium-to-large format pouches with precise sealing and cutting performance.</p><h3>Max Web Size</h3><p>Up to 1000 mm width, 600 mm diameter</p><h3>Linear Speed</h3><p>Up to 25 m/min (web speed)</p><h3>Pouch Types</h3><ul><li><strong>Three Side Seal:</strong> Yes – Optional; suitable for pouch widths up to 480 mm</li><li><strong>Stand-Up Pouch (Folded):</strong> Not applicable</li><li><strong>Stand-Up Pouch (Inserted):</strong> Not applicable</li></ul><h3>Suitable Materials</h3><p>Heat-sealable laminated films from 60 to 250 microns, including recyclable and multi-layer structures</p><h3>Advantages</h3><ul><li><strong>Versatile Pouch Formats:</strong> Capable of producing center seal, gusseted, three side seal, and quad seal pouches from a single machine with optional modules</li><li><strong>Extended Length Capability:</strong> Supports skip function for longer pouch formats up to 600 mm</li><li><strong>Flexible Pouch Sizes:</strong> Handles a wide range of widths and gusset depths for various market needs</li><li><strong>High Accuracy:</strong> Consistent cutting and sealing for large-format pouches</li><li><strong>Programmable Operation:</strong> Setup and recipe management reduces downtime and changeover time</li><li><strong>Sustainable Material Ready:</strong> Compatible with eco-friendly and high-barrier film structures</li></ul><h3>🟥 GSC 20 HSI — High-Speed Centre Seal & Quad Seal Pouch Machine</h3><p>With its expandable architecture and stable performance, the GSC 20 HSI is suited for industries like food, pet care, pharmaceuticals, and personal care. It ensures consistent output, optimized changeovers, and compatibility with modern sustainable packaging demands.</p><h3>Details</h3><table><thead><tr><th>Parameter</th><th>Specification</th></tr></thead><tbody><tr><td>Machine Model</td><td>GSC 20 HSI</td></tr><tr><td>Pouch Formats</td><td>Centre Seal, Centre Seal with Gusset, Three Side Seal (Optional), Quad Seal (Optional)</td></tr><tr><td>Max Web Size</td><td>Mother Film: 1000 mm, Ø600 mm</td></tr><tr><td>Speed</td><td>Up to 140 shots/min</td></tr><tr><td>Material Speed</td><td>Up to 25 m/min</td></tr><tr><td>Width of Bag</td><td>Up to 500 mm (Centre Seal), 480 mm (3-Side Seal), 350 mm (Quad Seal)</td></tr><tr><td>Height of Bag</td><td>Up to 600 mm with skip function</td></tr><tr><td>Gusset Size</td><td>Up to 100 mm (Centre Seal Gusset and Quad Seal)</td></tr></tbody></table>"
+        },
+        {
+            "id": 2,
+            "model": "GSC 14 PLUS 300",
+            "title": "High-Speed Pouch Machine",
+            "tagline": "Compact High-Speed Pouch Production",
+            "description": "Compact, high-speed machine delivering up to 300 pouches per minute efficiently.",
+            "overview": "The GSC 14 PLUS 300 is a high-speed, multi-format pouch-making machine optimized for centre seal and gusset pouch applications. Its robust design and streamlined operation make it ideal for converters seeking high output with minimal waste and fast changeovers.",
+            "applicationIndustries": [
+                "Food",
+                "Snacks",
+                "Pharmaceuticals",
+                "Personal Care"
+            ],
+            "features": [
+                "Max web: 700mm width",
+                "Speed: Up to 300 pouches/min",
+                "Quick changeover system",
+                "Remote diagnostics support",
+                "Compact footprint"
+            ],
+            "stats": {
+                "speed": "300/min",
+                "width": "340mm",
+                "materials": "40-100µ",
+                "web_speed": "50 m/min",
+                "max_height": "400mm",
+                "gusset_size": "20-100mm"
+            },
+            "performance": {
+                "supportedPouchTypes": [
+                    "Centre Seal Pouch",
+                    "Centre Seal with Gusset Pouch",
+                    "Three Side Seal Pouch",
+                    "Side Seal Pouch",
+                    "Quad Seal Pouch (optional)"
+                ],
+                "sizeCompatibility": {
+                    "maxWebWidth": "700 mm",
+                    "maxWebDiameter": "600 mm",
+                    "maxPouchHeight": "400 mm"
+                },
+                "linearSpeed": "50 m/min",
+                "supportedMaterials": "Heat-sealable laminated films from 40 to 100 microns, including recyclable structures"
+            },
+            "advantages": [
+                "High output up to 300 pouches per minute",
+                "Flexible formats with optional attachments",
+                "User-friendly operation with quick setup",
+                "Compact design for limited floor space",
+                "Supports recyclable and lightweight films",
+                "Remote maintenance support"
+            ],
+            "technical_specs": {
+                "pouch_formats": "Centre Seal Pouch, Centre Seal with Gusset, Three Side Seal, Side Seal (Optional), Quad Seal (Optional)",
+                "max_web_size": "700 mm width, 600 mm diameter",
+                "linear_speed": "Up to 50 m/min",
+                "three_side_seal": "Optional (range of widths and lengths)",
+                "stand_up_pouch": "Not applicable",
+                "materials": "Heat-sealable laminated films from 40 to 100 microns",
+                "bag_width": "Up to 340 mm (depending on format)",
+                "bag_height": "Up to 400 mm",
+                "gusset_size": "20 mm – 100 mm (format dependent)"
+            },
+            "full_description": "<h2>GSC 14 PLUS 300 (AUTOMATIC POUCH MAKING MACHINE)</h2><h3>Performance</h3><p>Centre Seal Pouch, Centre Seal with Gusset Pouch, Three Side Seal Pouch, Side Seal Pouch, and Quad Seal Pouch (optional). Designed for high-speed continuous production with compact footprint and adaptable configuration.</p><h3>Max Web Size</h3><p>Up to 700 mm width, 600 mm diameter</p><h3>Linear Speed</h3><p>Up to 50 m/min (application-specific)</p><h3>Pouch Types</h3><ul><li><strong>Three Side Seal:</strong> Yes – Optional, suitable for a range of pouch widths and lengths</li><li><strong>Stand-Up Pouch (Folded):</strong> Not applicable</li><li><strong>Stand-Up Pouch (Inserted):</strong> Not applicable</li></ul><h3>Suitable Materials</h3><p>Heat-sealable laminated films from 40 to 100 microns, including recyclable and multi-layer structures</p><h3>Advantages</h3><ul><li><strong>High Output:</strong> Delivers up to 300 pouches per minute depending on pouch size and film</li><li><strong>Flexible Formats:</strong> Supports multiple pouch types with optional attachments for 3-side and quad seal formats</li><li><strong>User-Friendly Operation:</strong> Quick setup, intuitive controls, and consistent sealing performance</li><li><strong>Compact Design:</strong> Efficient layout suitable for limited floor space</li><li><strong>Sustainable Packaging Ready:</strong> Supports recyclable and lightweight film structures</li><li><strong>Remote Maintenance Support:</strong> Connectivity enabled for remote diagnostics and support</li></ul><h3>🟥 GSC 14 PLUS 300 — High-Speed Centre Seal & Gusset Pouch Machine</h3><p>With a space-efficient footprint and production speed of up to 300 pouches per minute, the GSC 14 PLUS 300 delivers a competitive edge in mid- to large-scale manufacturing environments focused on flexible packaging formats.</p><h3>Details</h3><table><thead><tr><th>Parameter</th><th>Specification</th></tr></thead><tbody><tr><td>Machine Model</td><td>GSC 14 PLUS 300</td></tr><tr><td>Pouch Formats</td><td>Centre Seal Pouch, Centre Seal with Gusset, Three Side Seal, Side Seal (Optional), Quad Seal (Optional)</td></tr><tr><td>Max Web Size</td><td>700 mm width, Ø600 mm diameter</td></tr><tr><td>Speed</td><td>Up to 300 shots/min</td></tr><tr><td>Material Speed</td><td>Up to 50 m/min</td></tr><tr><td>Width of Bag</td><td>Up to 340 mm (depending on format)</td></tr><tr><td>Height of Bag</td><td>Up to 400 mm</td></tr><tr><td>Gusset Size</td><td>20 mm – 100 mm (format dependent)</td></tr></tbody></table>"
+        },
+        {
+            "id": 3,
+            "model": "GS 24 TSG",
+            "title": "Automatic Flat Bottom Pouch Machine",
+            "tagline": "Specialized for Flat Bottom and Gusset Pouches",
+            "description": "Specialized for flat bottom and gusset pouches with precise sealing technology.",
+            "overview": "The GS 24 TSG is Galaxy Packtech's advanced automatic pouch-making machine dedicated to flat bottom and gusset pouch production. Engineered to deliver consistent output with minimal waste, it offers versatility across formats while supporting sustainable packaging materials.",
+            "applicationIndustries": [
+                "Food",
+                "Pet Care",
+                "Personal Care"
+            ],
+            "features": [
+                "Max web: 1250mm width",
+                "Speed: Up to 70 shots/min",
+                "2-web or 3-web configurations",
+                "Precision sealing and cutting",
+                "Supports mono-material films"
+            ],
+            "stats": {
+                "speed": "70 shots/min",
+                "width": "400mm",
+                "materials": "70-250µ",
+                "web_speed": "60 m/min",
+                "max_height": "580mm",
+                "gusset_size": "200mm"
+            },
+            "performance": {
+                "supportedPouchTypes": [
+                    "Both Side Gusset Pouch (with or without zipper)",
+                    "Three Side Gusset Pouch (with or without zipper)",
+                    "Flat Bottom and Inserted Gusset Pouches"
+                ],
+                "sizeCompatibility": {
+                    "maxWebWidth": "1250 mm",
+                    "maxWebDiameter": "600 mm",
+                    "maxPouchHeight": "580 mm (Single Line)"
+                },
+                "linearSpeed": "60 m/min",
+                "supportedMaterials": "Heat-sealable laminated films from 70 to 250 microns, including recyclable and multi-layer structures"
+            },
+            "advantages": [
+                "Flexible production with 2-web or 3-web configurations",
+                "Quick changeover with programmable settings",
+                "High accuracy in sealing and cutting",
+                "Modular design for future expansion",
+                "Sustainability ready for recyclable films",
+                "Remote monitoring and diagnostics"
+            ],
+            "technical_specs": {
+                "pouch_formats": "Both Side Gusset, Three Side Gusset, Inserted Gusset Flat Bottom",
+                "max_web_size": "Main Web: 1250 mm width / Ø600 mm diameter",
+                "linear_speed": "Up to 60 m/min",
+                "three_side_seal": "Yes – Suitable for various pouch sizes",
+                "stand_up_pouch": "Yes – Supports inserted gusset/bottom web",
+                "materials": "Heat-sealable laminated films from 70 to 250 microns",
+                "bag_width": {
+                    "single_line": "100-400 mm",
+                    "double_line": "100-200 mm"
+                },
+                "bag_height": {
+                    "single_line": "200-580 mm",
+                    "double_line": "150-290 mm"
+                },
+                "gusset_size": "Up to 200 mm"
+            },
+            "full_description": "<h2>GS 24 TSG (AUTOMATIC POUCH MAKING MACHINE)</h2><h3>Performance</h3><p>Both Side Gusset Pouch (with or without zipper), Three Side Gusset Pouch (with or without zipper), Flat Bottom and Inserted Gusset Pouches. Designed for high-speed, continuous production with flexible pouch configurations.</p><h3>Max Web Size</h3><p>Main Web up to 1250 mm width, 600 mm diameter</p><h3>Linear Speed</h3><p>Up to 60 m/min (application-specific)</p><h3>Pouch Types</h3><ul><li><strong>Three Side Seal:</strong> Yes – Suitable for a variety of pouch sizes and formats</li><li><strong>Stand-Up Pouch (Folded):</strong> Not applicable</li><li><strong>Stand-Up Pouch (Inserted):</strong> Yes – Supports inserted gusset/bottom web for flat bottom style</li></ul><h3>Suitable Materials</h3><p>Heat-sealable laminated films from 70 to 250 microns, including recyclable and multi-layer structures</p><h3>Advantages</h3><ul><li><strong>Flexible Production:</strong> Single- or double-line operation with 2-web or 3-web configurations</li><li><strong>Quick Changeover:</strong> Programmable settings and recipe storage reduce setup time</li><li><strong>High Accuracy:</strong> Precision sealing, forming, and cutting of large and small pouch formats</li><li><strong>Modular Design:</strong> Expandable architecture to adapt to future requirements</li><li><strong>Sustainability Ready:</strong> Supports recyclable and mono-material films</li><li><strong>Remote Support:</strong> Enabled for remote monitoring and diagnostics</li></ul><h3>🟥 GS 24 TSG — Automatic Flat Bottom & Gusset Pouch Machine</h3><p>Designed for maximum performance and adaptability, the GS 24 TSG combines high-speed operation, recipe-controlled changeovers, and precise sealing to produce high-quality pouches for modern packaging needs.</p><h3>Details</h3><table><thead><tr><th>Parameter</th><th>Specification</th></tr></thead><tbody><tr><td>Machine Model</td><td>GS 24 TSG</td></tr><tr><td>Pouch Formats</td><td>Both Side Gusset, Three Side Gusset, Inserted Gusset Flat Bottom</td></tr><tr><td>Max Web Size</td><td>Main Web: 1250 mm width / Ø600 mm diameter</td></tr><tr><td>Speed</td><td>Up to 70 shots/min</td></tr><tr><td>Material Speed</td><td>Up to 60 m/min</td></tr><tr><td>Width of Bag</td><td>100 mm – 400 mm (Single Line), 100 mm – 200 mm (Double Line)</td></tr><tr><td>Height of Bag</td><td>200 mm – 580 mm (Single Line), 150 mm – 290 mm (Double Line)</td></tr></tbody></table>"
+        },
+        {
+            "id": 4,
+            "model": "GS 24 PLUS 200",
+            "title": "High-Speed Stand-Up Pouch Machine",
+            "tagline": "Versatile Machine for Stand-Up, Zipper, and Shaped Pouches",
+            "description": "Versatile machine for stand-up, zipper, and shaped pouches",
+            "overview": "GS 24 PLUS 200 is a high-performance automatic pouch-making machine developed by Galaxy Packtech, designed to run at speeds up to 200 cuts per minute. Engineered for consistency, this machine ensures precise sealing, cutting, and forming using an advanced servo system.",
+            "applicationIndustries": [
+                "Snacks",
+                "Pharma",
+                "Dry Foods",
+                "Pet Treats",
+                "Detergents"
+            ],
+            "features": [
+                "Max web: 1220mm width",
+                "Speed: Up to 200 cuts/min",
+                "Ultrasonic bit fusing",
+                "Vision QC system",
+                "Supports compostable films"
+            ],
+            "stats": {
+                "speed": "200/min",
+                "width": "500mm",
+                "materials": "Multi-layer",
+                "web_speed": "35 m/min",
+                "max_height": "600mm",
+                "gusset_size": "200mm"
+            },
+            "performance": {
+                "supportedPouchTypes": [
+                    "Three Side Seal",
+                    "Stand-Up Pouch with Insert Gusset",
+                    "Same Roll Standup Pouch",
+                    "Both Side Gusset Pouch",
+                    "Shape Pouch",
+                    "Quad Seal Pouch",
+                    "Zipper Pouch"
+                ],
+                "sizeCompatibility": {
+                    "maxWebWidth": "1220 mm",
+                    "maxWebDiameter": "700 mm",
+                    "maxPouchHeight": "600 mm"
+                },
+                "linearSpeed": "35 m/min",
+                "supportedMaterials": "Heat-sealable, compostable, lacquer-coated paper, recyclable mono-family films, and standard multi-layer laminated films"
+            },
+            "advantages": [
+                "Automatic setup with recipe control",
+                "Ultrasonic bit fusing for precise sealing",
+                "Two-head zipper sealing with cooling stations",
+                "Supports micro-perforation and vision QC",
+                "Compatible with recyclable and compostable films",
+                "Live monitoring and reporting"
+            ],
+            "technical_specs": {
+                "pouch_formats": "Stand-up Pouch, Zipper Pouch, Shape Pouch, Quad Seal Pouch, Three-Side Seal Pouch",
+                "max_web_size": "1220 mm (Mother Film), Ø700 mm; 200 mm (Bottom/Gusset), Ø600 mm",
+                "linear_speed": "Up to 35 m/min (servo-controlled)",
+                "three_side_seal": "20 to 200 cuts/min",
+                "stand_up_pouch": "30 to 200 cuts/min",
+                "materials": "PET/PE, MET PET/PE, PET/Alu Foil/PE, PET/Paper/PE, multi-layer & mono-material films",
+                "bag_width": "50 mm – 500 mm",
+                "bag_height": "100 mm – 600 mm",
+                "gusset_size": "Up to 200 mm"
+            },
+            "full_description": "<h2>GS 24 PLUS 200 (AUTOMATIC POUCH MAKING MACHINE)</h2><h3>Performance</h3><p>Three Side Seal, Stand-Up Pouch with Insert Gusset, Same Roll Standup Pouch, Both Side Gusset Pouch, Shape Pouch, Quad Seal Pouch, and Zipper Pouch — this model is built for versatility across packaging formats.</p><h3>Max Web Size</h3><p>Mother Film 1220 mm width / Ø700 mm diameter<br>Bottom & Side Gusset Film: 200 mm width / Ø600 mm diameter</p><h3>Linear Speed</h3><p>Up to 35 m/min web speed (servo-controlled)</p><h3>Pouch Types & Speeds</h3><ul><li><strong>Three Side Seal:</strong> 20 to 200 cuts/min</li><li><strong>Stand-Up Pouch (Folded):</strong> 30 to 200 cuts/min</li><li><strong>Stand-Up Pouch (Inserted):</strong> 30 to 200 cuts/min</li></ul><h3>Suitable Materials</h3><p>Supports heat-sealable, compostable, lacquer-coated paper, recyclable mono-family films, and standard multi-layer laminated films.</p><h3>Advantages</h3><ul><li><strong>Automatic Setup & Recipe Control:</strong> Stores production recipes; servo-driven time and tension adjustments reduce changeover time.</li><li><strong>Cutting & Sealing:</strong> Ultrasonic bit fusing; multiple cross stations with skip functionality; high-speed servo cutting system for thick films.</li><li><strong>Zipper & Longitudinal Sealing:</strong> Two-head zipper sealing plus triple-head longitudinal sealing; cooling stations integrated.</li><li><strong>Additional Attachments:</strong> Micro-perforation, vision QC, punch waste suction, air-flash cooling, coreless trim winding.</li><li><strong>Sustainable-Film Ready:</strong> Compatible with recyclable and compostable packaging substrates.</li><li><strong>Live Monitoring & Reporting:</strong> Real-time production data viewable on smartphones/tablets.</li><li><strong>Online Vision System:</strong> Real-time cutting and punch correction system enhances pouch quality and reduces rejection rate.</li></ul><h3>🟥 GS 24 PLUS 200 – High Speed Automatic Pouch Making Machine</h3><p>Ideal for packaging applications in snacks, pharma, dry foods, pet treats, detergents, and more, the GS 24 PLUS 200 helps manufacturers scale production while meeting global sustainability goals. It combines speed, flexibility, and automation in a compact, durable frame.</p><h3>Details</h3><table><thead><tr><th>Parameter</th><th>Specification</th></tr></thead><tbody><tr><td>Machine Model</td><td>GS 24 PLUS 200</td></tr><tr><td>Pouch Formats</td><td>Stand-up Pouch, Zipper Pouch, Shape Pouch, Quad Seal Pouch, Three-Side Seal Pouch</td></tr><tr><td>Max Web Size</td><td>1220 mm (Mother Film), Ø700 mm; 200 mm (Bottom/Gusset), Ø600 mm</td></tr><tr><td>Speed</td><td>Up to 200 cuts/min</td></tr><tr><td>Material Speed</td><td>Up to 35 m/min (servo-controlled)</td></tr><tr><td>Width of Bag</td><td>50 mm – 500 mm</td></tr><tr><td>Height of Bag</td><td>100 mm – 600 mm</td></tr></tbody></table>"
+        },
+        {
+            "id": 5,
+            "model": "GT 24 PLUS 200",
+            "title": "Multi-Format Pouch Machine",
+            "tagline": "Advanced Machine for Stand-Up, Zipper, and Quad Seal Pouches",
+            "description": "Advanced machine for stand-up, zipper, and quad seal pouches",
+            "overview": "In the competitive world of flexible packaging, versatility and speed define success. The GT 24 PLUS 200 is engineered to handle this challenge with ease. From three-side seal to stand-up, shape, and quad seal formats — this pouch-making machine combines precision, efficiency, and adaptability.",
+            "applicationIndustries": [
+                "Snacks",
+                "Pharma",
+                "Pet Food",
+                "Home Care"
+            ],
+            "features": [
+                "Max web: 1200mm width",
+                "Speed: Up to 200 cuts/min",
+                "Automatic recipe storage",
+                "LAN-enabled remote access",
+                "Compact design"
+            ],
+            "stats": {
+                "speed": "200/min",
+                "width": "600mm",
+                "materials": "Multi-layer",
+                "web_speed": "35 m/min",
+                "max_height": "600mm",
+                "gusset_size": "200mm"
+            },
+            "performance": {
+                "supportedPouchTypes": [
+                    "Three Side Seal",
+                    "Stand-Up Pouch with or without Zipper",
+                    "Same Roll Stand-Up Pouch",
+                    "Both Side Gusset Pouch",
+                    "Shape Pouch (Optional)",
+                    "Quad Seal Pouch (Optional)"
+                ],
+                "sizeCompatibility": {
+                    "maxWebWidth": "1200 mm",
+                    "maxWebDiameter": "600 mm",
+                    "maxPouchHeight": "600 mm"
+                },
+                "linearSpeed": "35 m/min",
+                "supportedMaterials": "PET/PE, MET PET/PE, PET/Alu Foil/PE, PET/Paper/PE, multi-layer barrier films, and recyclable mono-material structures"
+            },
+            "advantages": [
+                "Automatic recipe storage for repeat jobs",
+                "Multi-skip system for large-format pouches",
+                "Flexible format switching between pouch styles",
+                "LAN-enabled for remote access",
+                "Compact design for modern production floors",
+                "Compatible with recyclable and paper-based films"
+            ],
+            "technical_specs": {
+                "pouch_formats": "Three-Side Seal, Zipper, Stand-Up, Gusset, Shape (Optional), Quad Seal (Optional)",
+                "max_web_size": "Mother: 1200 mm / Ø600 mm; Gusset: 200 mm / Ø600 mm",
+                "linear_speed": "Up to 35 m/min (servo-controlled)",
+                "three_side_seal": "Up to 200 pouches/min",
+                "stand_up_pouch": "30 to 200 cuts/min",
+                "materials": "PET/PE, MET PET/PE, PET/Alu Foil/PE, PET/Paper/PE, Multi-layer & mono-material films",
+                "bag_width": "100 mm – 600 mm",
+                "bag_height": "100 mm – 600 mm (based on mode)",
+                "gusset_size": "Up to 200 mm"
+            },
+            "full_description": "<h2>GT 24 PLUS 200 – Automatic Pouch Making Machine</h2><h3>Performance</h3><p>Supports Three Side Seal, Stand-Up Pouch with or without Zipper, Same Roll Stand-Up Pouch, Both Side Gusset Pouch, and optionally Shape Pouch and Quad Seal Pouch.</p><h3>Max Web Size</h3><p>Mother Film: 1200 mm width, Ø600 mm diameter<br>Bottom & Side Gusset Film: 200 mm width, Ø600 mm diameter</p><h3>Linear Speed</h3><p>Up to 35 m/min (web speed, variable by pouch type and laminate)</p><h3>Pouch Output Speed</h3><ul><li><strong>Three Side Seal:</strong> Up to 200 pouches/min (1–2 line operations)</li><li><strong>Stand-Up Pouch (Folded or Inserted Gusset):</strong> 30 to 200 cuts/min (Single/Double line)</li><li><strong>Quad Seal / Shape / Gusset Pouches:</strong> Output varies based on format and skip length</li></ul><h3>Suitable Materials</h3><p>Compatible with heat-sealable laminated films including PET/PE, MET PET/PE, PET/Alu Foil/PE, PET/Paper/PE, multi-layer barrier films, and recyclable mono-material structures.</p><h3>Bag Size Range</h3><table><thead><tr><th>Pouch Type</th><th>Width (mm)</th><th>Height (mm)</th><th>Gusset (mm)</th></tr></thead><tbody><tr><td>Three Side Seal (1–2 Line)</td><td>100 – 600</td><td>100 – 400</td><td>–</td></tr><tr><td>Stand-Up Pouch (Single Line)</td><td>80 – 320</td><td>150 – 600</td><td>60 – 200</td></tr><tr><td>Stand-Up Pouch (Double Line)</td><td>80 – 320</td><td>100 – 300</td><td>60 – 200</td></tr><tr><td>Shape Pouch (Optional)</td><td>80 – 260</td><td>100 – 570</td><td>60 – 200</td></tr><tr><td>Quad Seal Pouch (Optional)</td><td>Up to 500</td><td>Up to 400</td><td>Up to 100</td></tr><tr><td>Both Side Gusset Pouch</td><td>Up to 600</td><td>Up to 400</td><td>Up to 200</td></tr></tbody></table><h3>Advantages</h3><ul><li>Automatic Recipe Storage for repeat jobs and faster setup</li><li>Multi-Skip System for large-format pouches</li><li>Flexible Format Switching between multiple pouch styles</li><li>Optional Attachments for Shape & Quad Seal Pouches</li><li>LAN-Enabled for remote access and diagnostics</li><li>Compatible with Recyclable and Paper-Based Films</li><li>Compact Design for modern production floors</li></ul><h3>🟥 GT 24 PLUS 200 – Performance Without Compromise</h3><p>With smart job recall features, remote monitoring capability, and compatibility with sustainable film structures, the GT 24 PLUS 200 helps manufacturers scale up without sacrificing speed or sustainability.</p><h3>Details</h3><table><thead><tr><th>Parameter</th><th>Specification</th></tr></thead><tbody><tr><td>Machine Model</td><td>GT 24 PLUS 200</td></tr><tr><td>Pouch Formats</td><td>Three-Side Seal, Zipper, Stand-Up, Gusset, Shape (Optional), Quad Seal (Optional)</td></tr><tr><td>Max Web Size</td><td>Mother: 1200 mm / Ø600 mm; Gusset: 200 mm / Ø600 mm</td></tr><tr><td>Speed</td><td>Up to 200 cuts/min</td></tr><tr><td>Material Speed</td><td>Up to 35 m/min (servo-controlled)</td></tr><tr><td>Width of Bag</td><td>100 mm – 600 mm</td></tr><tr><td>Height of Bag</td><td>100 mm – 600 mm (based on mode)</td></tr><tr><td>Gusset Depth</td><td>Up to 200 mm</td></tr><tr><td>Suitable Materials</td><td>PET/PE, MET PET/PE, PET/Alu Foil/PE, PET/Paper/PE, Multi-layer & mono-material films</td></tr></tbody></table>"
+        },
+        {
+            "id": 6,
+            "model": "GS 20 PLUS",
+            "title": "Automatic Pouch Making Machine",
+            "tagline": "Versatile Machine for Stand-Up, Gusset, and Zipper Pouches",
+            "description": "Versatile machine for stand-up, gusset, and zipper pouches",
+            "overview": "Stand-up, gusset, and zipper pouches continue to dominate the flexible packaging market — offering brands both shelf appeal and functional utility. The GS 20 PLUS from Galaxy Packtech is built to deliver these pouch styles with high accuracy and efficiency.",
+            "applicationIndustries": [
+                "Food",
+                "Pharmaceuticals",
+                "Personal Care",
+                "Pet Food"
+            ],
+            "features": [
+                "Max web: 1000mm width",
+                "Speed: Up to 160 shots/min",
+                "Recyclable film compatible",
+                "Quick setup with job recall",
+                "Precision web handling"
+            ],
+            "stats": {
+                "speed": "160/min",
+                "width": "450mm",
+                "materials": "Mono-family",
+                "web_speed": "30 m/min",
+                "max_height": "490mm",
+                "gusset_size": "200mm"
+            },
+            "performance": {
+                "supportedPouchTypes": [
+                    "Three Side Seal",
+                    "Zipper Pouch",
+                    "Stand-Up Pouch (Folded & Inserted Gusset)",
+                    "Both Side Gusset Pouch"
+                ],
+                "sizeCompatibility": {
+                    "maxWebWidth": "1000 mm",
+                    "maxWebDiameter": "600 mm",
+                    "maxPouchHeight": "490 mm (Single Line)"
+                },
+                "linearSpeed": "30 m/min",
+                "supportedMaterials": "PET/PE, PET/METPET/PE, PET/AL Foil/PE, Paper-Based Laminates, MDO PE + PE, PA-based Films, and other recyclable mono-family structures"
+            },
+            "advantages": [
+                "Multi-format versatility across pouch types",
+                "Compatible with recyclable mono-materials",
+                "Quick setup with recipe-based switching",
+                "Stable pouch forming for various laminates",
+                "Live monitoring ready via LAN",
+                "Precision web handling with smart skip cutting",
+                "Compact footprint for efficient production"
+            ],
+            "technical_specs": {
+                "pouch_formats": "Three Side Seal, Zipper Pouch, Stand-Up (Folded & Inserted), Both Side Gusset",
+                "max_web_size": "1000 mm width, Ø600 mm",
+                "linear_speed": "Up to 30 Meters/min",
+                "three_side_seal": "Up to 160 shots/min",
+                "stand_up_pouch": "Single or Double Line (with Multi Skip Function)",
+                "materials": "PET/PE, PET/METPET/PE, PET/AL Foil/PE, Paper-Based Laminates, MDO PE + PE, PA-based Films",
+                "bag_width": "Up to 450 mm (Multi-format Range)",
+                "bag_height": {
+                    "single_line": "Up to 490 mm",
+                    "double_line": "Up to 245 mm"
+                },
+                "gusset_size": "Up to 200 mm"
+            },
+            "full_description": "<h2>🟥 GS 20 PLUS<br>Automatic Pouch Making Machine</h2><hr/><h3>Performance</h3><p><strong>Pouch Types:</strong> Three Side Seal, Zipper Pouch, Stand-Up Pouch (Folded & Inserted Gusset), Both Side Gusset Pouch<br><strong>Max Web Size:</strong> 1000 mm with Ø600 mm Diameter<br><strong>Linear Speed:</strong> Up to 30 m/min web speed<br><strong>Three Side Seal:</strong> Up to 160 shots/min<br><strong>Stand-Up Pouch (Folded & Inserted):</strong> Single Line or Double Line (with Multi Skip Function)</p><p><strong>Suitable Materials:</strong> PET/PE, PET/METPET/PE, PET/AL Foil/PE, Paper-Based Laminates, MDO PE + PE, PA-based Films, and other recyclable mono-family structures</p><h3>Advantages</h3><ul><li><strong>Multi-Format Versatility:</strong> Capable of producing 3-side seal, stand-up, zipper, and gusset pouches</li><li><strong>Recyclable Film Compatible:</strong> Runs mono-materials including MDO PE + PE with precision</li><li><strong>Quick Setup & Job Recall:</strong> Servo-driven automation with recipe-based format switching</li><li><strong>Stable Pouch Forming:</strong> Designed for consistent forming of thick and thin laminates</li><li><strong>Live Monitoring Ready:</strong> Remote LAN access for diagnostics and machine analytics</li><li><strong>Precision Web Handling:</strong> Smart skip cutting with adjustable cut lengths</li><li><strong>Efficient Layout:</strong> Compact footprint ideal for mid- to high-output plants</li></ul><h3>Details</h3><table><thead><tr><th>Parameter</th><th>Specification</th></tr></thead><tbody><tr><td>Machine Model</td><td>GS 20 PLUS</td></tr><tr><td>Pouch Formats</td><td>Three Side Seal, Zipper Pouch, Stand-Up (Folded & Inserted), Both Side Gusset</td></tr><tr><td>Max Web Size</td><td>1000 mm width, Ø600 mm</td></tr><tr><td>Speed</td><td>Up to 160 shots/min</td></tr><tr><td>Material Speed</td><td>Up to 30 Meters/min</td></tr><tr><td>Width of Bag</td><td>Up to 450 mm (Multi-format Range)</td></tr><tr><td>Height of Bag</td><td>Up to 490 mm (Single Line) / Up to 245 mm (Double Line)</td></tr></tbody></table>"
+        },
+        {
+            "id": 7,
+            "model": "GSC 20 PLUS COMBI",
+            "title": "Multi-Format Combi Pouch Machine",
+            "tagline": "All-in-One Solution for Various Pouch Types Including Quad Seal",
+            "description": "All-in-one solution for various pouch types including quad seal",
+            "overview": "GSC 20 PLUS COMBI is a highly flexible automatic pouch-making machine designed to meet the growing demand for premium pouches across various industries. From simple three-side seal pouches to complex five-side and stand-up zipper pouches — this machine handles it all with exceptional consistency.",
+            "applicationIndustries": [
+                "FMCG",
+                "Dry Food",
+                "Agrochemical",
+                "Pet Food"
+            ],
+            "features": [
+                "Max web: 1000mm width",
+                "Speed: Up to 170 shots/min",
+                "Handles 5+ pouch formats",
+                "Modular design",
+                "Sustainable film ready"
+            ],
+            "stats": {
+                "speed": "170/min",
+                "width": "480mm",
+                "materials": "60-200µ",
+                "web_speed": "30 m/min",
+                "max_height": "500mm",
+                "gusset_size": "200mm"
+            },
+            "performance": {
+                "supportedPouchTypes": [
+                    "Centre Seal",
+                    "Centre Seal with Gusset",
+                    "Off-Centre Seal with Gusset",
+                    "Five Side / Quad Seal",
+                    "Three Side Seal (With/Without Zipper)",
+                    "Stand-Up Pouch (With/Without Zipper from Same Roll)"
+                ],
+                "sizeCompatibility": {
+                    "maxWebWidth": "1000 mm",
+                    "maxWebDiameter": "600 mm",
+                    "maxPouchHeight": "500 mm"
+                },
+                "linearSpeed": "30 m/min",
+                "supportedMaterials": "Heat-sealable laminated films including PET/PE, METPET/PE, ALU FOIL/PE, and paper-based multilayer structures (60–200 microns)"
+            },
+            "advantages": [
+                "Multi-format capability on single machine",
+                "Modular design for fast changeover",
+                "Servo-driven accuracy with skip function",
+                "Supports both zipper and gusset configurations",
+                "Compact footprint with wide size range",
+                "Designed for recyclable film structures",
+                "Ideal for diverse industry applications"
+            ],
+            "technical_specs": {
+                "pouch_formats": "Centre Seal, Gusset Pouch, Three Side Seal, Quad Seal, Stand-Up with Zipper",
+                "max_web_size": "Web Width: 1000 mm; Max Dia: 600 mm",
+                "linear_speed": "Up to 30 meters/min",
+                "three_side_seal": "Output varies by pouch size",
+                "stand_up_pouch": "Output varies by pouch size",
+                "materials": "PET/PE, METPET/PE, ALU FOIL/PE, and paper-based multilayer structures (60–200 microns)",
+                "bag_width": "Up to 480 mm",
+                "bag_height": "Up to 500 mm",
+                "gusset_size": "Up to 200 mm"
+            },
+            "full_description": "<h2>🟥 GSC 20 PLUS COMBI<br>AUTOMATIC POUCH MAKING MACHINE</h2><hr/><h3>Performance</h3><p><strong>Pouch Types:</strong> Centre Seal, Centre Seal with Gusset, Off-Centre Seal with Gusset, Five Side / Quad Seal (Both Side Gusset from Single Roll), Three Side Seal (With/Without Zipper), Stand-Up Pouch (With/Without Zipper from Same Roll)</p><h3>Max Web Size</h3><p>Primary Web Width: 1000 mm<br>Maximum Web Diameter: 600 mm</p><h3>Linear Speed</h3><p>Up to 30 meters/min</p><h3>Pouch Output (Approximate)</h3><ul><li><strong>Centre Seal / Gusset / Quad Seal:</strong> Up to 170 shots/min</li><li><strong>Three Side Seal / Stand-Up Pouch:</strong> Output varies by pouch size and laminate type</li></ul><h3>Suitable Materials</h3><p>Heat-sealable laminated films including PET/PE, METPET/PE, ALU FOIL/PE, and paper-based multilayer structures<br><strong>Film Thickness:</strong> 60–200 microns</p><h3>Advantages</h3><ul><li>Multi-format pouch capability on a single machine</li><li>Modular design for fast changeover</li><li>Servo-driven accuracy with skip function support</li><li>Supports both zipper and gusset configurations</li><li>Compact footprint with wide pouch size range</li><li>Designed for recyclable and sustainable film structures</li><li>Ideal for FMCG, dry food, agrochemical, and pet food applications</li></ul><h3>Details</h3><table><thead><tr><th>Parameter</th><th>Specification</th></tr></thead><tbody><tr><td>Machine Model</td><td>GSC 20 PLUS COMBI</td></tr><tr><td>Pouch Formats</td><td>Centre Seal, Gusset Pouch, Three Side Seal, Quad Seal, Stand-Up with Zipper</td></tr><tr><td>Max Web Size</td><td>Web Width: 1000 mm; Max Dia: 600 mm</td></tr><tr><td>Speed</td><td>Up to 170 shots/min (Depending on format)</td></tr><tr><td>Material Speed</td><td>Up to 30 meters/min</td></tr><tr><td>Width of Bag</td><td>Up to 480 mm</td></tr><tr><td>Height of Bag</td><td>Up to 500 mm</td></tr></tbody></table>"
+        },
+        {
+            "id": 8,
+            "model": "GSC 20 PLUS COMBI",
+            "title": "Multi-Format Combi Pouch Machine",
+            "tagline": "All-in-One Solution for Various Pouch Types Including Quad Seal",
+            "description": "All-in-one solution for various pouch types including quad seal",
+            "overview": "GSC 20 PLUS COMBI is a highly flexible automatic pouch-making machine designed to meet the growing demand for premium pouches across various industries. From simple three-side seal pouches to complex five-side and stand-up zipper pouches — this machine handles it all with exceptional consistency.",
+            "applicationIndustries": [
+                "FMCG",
+                "Dry Food",
+                "Agrochemical",
+                "Pet Food"
+            ],
+            "features": [
+                "Max web: 1000mm width",
+                "Speed: Up to 170 shots/min",
+                "Handles 5+ pouch formats",
+                "Modular design",
+                "Sustainable film ready"
+            ],
+            "stats": {
+                "speed": "170/min",
+                "width": "480mm",
+                "materials": "60-200µ",
+                "web_speed": "30 m/min",
+                "max_height": "500mm",
+                "gusset_size": "200mm"
+            },
+            "performance": {
+                "supportedPouchTypes": [
+                    "Centre Seal",
+                    "Centre Seal with Gusset",
+                    "Off-Centre Seal with Gusset",
+                    "Five Side / Quad Seal",
+                    "Three Side Seal (With/Without Zipper)",
+                    "Stand-Up Pouch (With/Without Zipper from Same Roll)"
+                ],
+                "sizeCompatibility": {
+                    "maxWebWidth": "1000 mm",
+                    "maxWebDiameter": "600 mm",
+                    "maxPouchHeight": "500 mm"
+                },
+                "linearSpeed": "30 m/min",
+                "supportedMaterials": "Heat-sealable laminated films including PET/PE, METPET/PE, ALU FOIL/PE, and paper-based multilayer structures (60–200 microns)"
+            },
+            "advantages": [
+                "Multi-format capability on single machine",
+                "Modular design for fast changeover",
+                "Servo-driven accuracy with skip function",
+                "Supports both zipper and gusset configurations",
+                "Compact footprint with wide size range",
+                "Designed for recyclable film structures",
+                "Ideal for diverse industry applications"
+            ],
+            "technical_specs": {
+                "pouch_formats": "Centre Seal, Gusset Pouch, Three Side Seal, Quad Seal, Stand-Up with Zipper",
+                "max_web_size": "Web Width: 1000 mm; Max Dia: 600 mm",
+                "linear_speed": "Up to 30 meters/min",
+                "three_side_seal": "Output varies by pouch size",
+                "stand_up_pouch": "Output varies by pouch size",
+                "materials": "PET/PE, METPET/PE, ALU FOIL/PE, and paper-based multilayer structures (60–200 microns)",
+                "bag_width": "Up to 480 mm",
+                "bag_height": "Up to 500 mm",
+                "gusset_size": "Up to 200 mm"
+            },
+            "full_description": "<h2>🟥 GSC 20 PLUS COMBI<br>AUTOMATIC POUCH MAKING MACHINE</h2><hr/><h3>Performance</h3><p><strong>Pouch Types:</strong> Centre Seal, Centre Seal with Gusset, Off-Centre Seal with Gusset, Five Side / Quad Seal (Both Side Gusset from Single Roll), Three Side Seal (With/Without Zipper), Stand-Up Pouch (With/Without Zipper from Same Roll)</p><h3>Max Web Size</h3><p>Primary Web Width: 1000 mm<br>Maximum Web Diameter: 600 mm</p><h3>Linear Speed</h3><p>Up to 30 meters/min</p><h3>Pouch Output (Approximate)</h3><ul><li><strong>Centre Seal / Gusset / Quad Seal:</strong> Up to 170 shots/min</li><li><strong>Three Side Seal / Stand-Up Pouch:</strong> Output varies by pouch size and laminate type</li></ul><h3>Suitable Materials</h3><p>Heat-sealable laminated films including PET/PE, METPET/PE, ALU FOIL/PE, and paper-based multilayer structures<br><strong>Film Thickness:</strong> 60–200 microns</p><h3>Advantages</h3><ul><li>Multi-format pouch capability on a single machine</li><li>Modular design for fast changeover</li><li>Servo-driven accuracy with skip function support</li><li>Supports both zipper and gusset configurations</li><li>Compact footprint with wide pouch size range</li><li>Designed for recyclable and sustainable film structures</li><li>Ideal for FMCG, dry food, agrochemical, and pet food applications</li></ul><h3>Details</h3><table><thead><tr><th>Parameter</th><th>Specification</th></tr></thead><tbody><tr><td>Machine Model</td><td>GSC 20 PLUS COMBI</td></tr><tr><td>Pouch Formats</td><td>Centre Seal, Gusset Pouch, Three Side Seal, Quad Seal, Stand-Up with Zipper</td></tr><tr><td>Max Web Size</td><td>Web Width: 1000 mm; Max Dia: 600 mm</td></tr><tr><td>Speed</td><td>Up to 170 shots/min (Depending on format)</td></tr><tr><td>Material Speed</td><td>Up to 30 meters/min</td></tr><tr><td>Width of Bag</td><td>Up to 480 mm</td></tr><tr><td>Height of Bag</td><td>Up to 500 mm</td></tr></tbody></table>"
+        },
+        {
+            "id": 7,
+            "model": "GSC 20 PLUS COMBI",
+            "title": "Multi-Format Combi Pouch Machine",
+            "tagline": "All-in-One Solution for Various Pouch Types Including Quad Seal",
+            "description": "All-in-one solution for various pouch types including quad seal",
+            "overview": "GSC 20 PLUS COMBI is a highly flexible automatic pouch-making machine designed to meet the growing demand for premium pouches across various industries. From simple three-side seal pouches to complex five-side and stand-up zipper pouches — this machine handles it all with exceptional consistency.",
+            "applicationIndustries": [
+                "FMCG",
+                "Dry Food",
+                "Agrochemical",
+                "Pet Food"
+            ],
+            "features": [
+                "Max web: 1000mm width",
+                "Speed: Up to 170 shots/min",
+                "Handles 5+ pouch formats",
+                "Modular design",
+                "Sustainable film ready"
+            ],
+            "stats": {
+                "speed": "170/min",
+                "width": "480mm",
+                "materials": "60-200µ",
+                "web_speed": "30 m/min",
+                "max_height": "500mm",
+                "gusset_size": "200mm"
+            },
+            "performance": {
+                "supportedPouchTypes": [
+                    "Centre Seal",
+                    "Centre Seal with Gusset",
+                    "Off-Centre Seal with Gusset",
+                    "Five Side / Quad Seal",
+                    "Three Side Seal (With/Without Zipper)",
+                    "Stand-Up Pouch (With/Without Zipper from Same Roll)"
+                ],
+                "sizeCompatibility": {
+                    "maxWebWidth": "1000 mm",
+                    "maxWebDiameter": "600 mm",
+                    "maxPouchHeight": "500 mm"
+                },
+                "linearSpeed": "30 m/min",
+                "supportedMaterials": "Heat-sealable laminated films including PET/PE, METPET/PE, ALU FOIL/PE, and paper-based multilayer structures (60–200 microns)"
+            },
+            "advantages": [
+                "Multi-format capability on single machine",
+                "Modular design for fast changeover",
+                "Servo-driven accuracy with skip function",
+                "Supports both zipper and gusset configurations",
+                "Compact footprint with wide size range",
+                "Designed for recyclable film structures",
+                "Ideal for diverse industry applications"
+            ],
+            "technical_specs": {
+                "pouch_formats": "Centre Seal, Gusset Pouch, Three Side Seal, Quad Seal, Stand-Up with Zipper",
+                "max_web_size": "Web Width: 1000 mm; Max Dia: 600 mm",
+                "linear_speed": "Up to 30 meters/min",
+                "three_side_seal": "Output varies by pouch size",
+                "stand_up_pouch": "Output varies by pouch size",
+                "materials": "PET/PE, METPET/PE, ALU FOIL/PE, and paper-based multilayer structures (60–200 microns)",
+                "bag_width": "Up to 480 mm",
+                "bag_height": "Up to 500 mm",
+                "gusset_size": "Up to 200 mm"
+            },
+            "full_description": "<h2>🟥 GSC 20 PLUS COMBI<br>AUTOMATIC POUCH MAKING MACHINE</h2><hr/><h3>Performance</h3><p><strong>Pouch Types:</strong> Centre Seal, Centre Seal with Gusset, Off-Centre Seal with Gusset, Five Side / Quad Seal (Both Side Gusset from Single Roll), Three Side Seal (With/Without Zipper), Stand-Up Pouch (With/Without Zipper from Same Roll)</p><h3>Max Web Size</h3><p>Primary Web Width: 1000 mm<br>Maximum Web Diameter: 600 mm</p><h3>Linear Speed</h3><p>Up to 30 meters/min</p><h3>Pouch Output (Approximate)</h3><ul><li><strong>Centre Seal / Gusset / Quad Seal:</strong> Up to 170 shots/min</li><li><strong>Three Side Seal / Stand-Up Pouch:</strong> Output varies by pouch size and laminate type</li></ul><h3>Suitable Materials</h3><p>Heat-sealable laminated films including PET/PE, METPET/PE, ALU FOIL/PE, and paper-based multilayer structures<br><strong>Film Thickness:</strong> 60–200 microns</p><h3>Advantages</h3><ul><li>Multi-format pouch capability on a single machine</li><li>Modular design for fast changeover</li><li>Servo-driven accuracy with skip function support</li><li>Supports both zipper and gusset configurations</li><li>Compact footprint with wide pouch size range</li><li>Designed for recyclable and sustainable film structures</li><li>Ideal for FMCG, dry food, agrochemical, and pet food applications</li></ul><h3>Details</h3><table><thead><tr><th>Parameter</th><th>Specification</th></tr></thead><tbody><tr><td>Machine Model</td><td>GSC 20 PLUS COMBI</td></tr><tr><td>Pouch Formats</td><td>Centre Seal, Gusset Pouch, Three Side Seal, Quad Seal, Stand-Up with Zipper</td></tr><tr><td>Max Web Size</td><td>Web Width: 1000 mm; Max Dia: 600 mm</td></tr><tr><td>Speed</td><td>Up to 170 shots/min (Depending on format)</td></tr><tr><td>Material Speed</td><td>Up to 30 meters/min</td></tr><tr><td>Width of Bag</td><td>Up to 480 mm</td></tr><tr><td>Height of Bag</td><td>Up to 500 mm</td></tr></tbody></table>"
+        }
+    ]
+}

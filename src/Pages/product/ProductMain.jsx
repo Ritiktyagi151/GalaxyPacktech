@@ -5,7 +5,7 @@ import MachineCategorySelector from "./Chooseproducts";
 const ProductPage = () => {
   return (
     <div>
-      <MachineCategorySelector />
+      {/* <MachineCategorySelector /> */}
     </div>
   );
 };

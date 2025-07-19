@@ -1,4 +1,11 @@
 import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const GlobalPresence = () => {
   const [hoveredCountry, setHoveredCountry] = useState(null);
@@ -10,7 +17,7 @@ const GlobalPresence = () => {
     </svg>
   );
 
-  // Country Flag SVG Components
+  // Country Flag SVG Components (same as before)
   const FlagSVGs = {
     Bhutan: ({ className = "w-12 h-8" }) => (
       <svg
@@ -325,7 +332,7 @@ const GlobalPresence = () => {
   );
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-orange-50 to-orange-100 ">
+    <div className="relative overflow-hidden bg-gradient-to-br from-orange-50 to-orange-100">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(15)].map((_, i) => (
@@ -374,27 +381,30 @@ const GlobalPresence = () => {
           </div>
         </div>
 
-        {/* Flags Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 mb-16">
+        {/* Flags Grid (Desktop) */}
+        <div className="hidden md:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-12">
           {countries.map((country, index) => {
             const FlagComponent = FlagSVGs[country.name];
             return (
               <div
                 key={index}
-                className="bg-white/90 backdrop-blur-sm rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-xl border border-orange-200"
+                className="bg-white/90 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-xl border border-orange-200"
                 onMouseEnter={() => setHoveredCountry(index)}
                 onMouseLeave={() => setHoveredCountry(null)}
               >
-                <div className="p-6 text-center">
-                  <div className="mb-3 transform transition-transform duration-300 hover:scale-110">
-                    {FlagComponent ? <FlagComponent /> : country.flag}
+                <div className="p-4 text-center">
+                  <div className="mb-2 transform transition-transform duration-300 hover:scale-110">
+                    {/* Smaller Flag */}
+                    <div className="w-10 h-6 mx-auto">
+                      {FlagComponent ? <FlagComponent /> : country.flag}
+                    </div>
                   </div>
-                  <div className="text-sm text-gray-600 mb-1">
+                  <div className="text-xs text-gray-600 mb-1">
                     {country.region}
                   </div>
                 </div>
                 <div
-                  className={`bg-gradient-to-r from-orange-500 to-orange-600 text-white text-center py-3 font-medium transition-all duration-300 ${
+                  className={`bg-gradient-to-r from-orange-500 to-orange-600 text-white text-center py-2 text-sm font-medium transition-all duration-300 ${
                     hoveredCountry === index
                       ? "from-orange-600 to-orange-700"
                       : ""
@@ -405,6 +415,57 @@ const GlobalPresence = () => {
               </div>
             );
           })}
+        </div>
+
+        {/* Flags Slider (Mobile) */}
+        <div className="md:hidden mb-16 px-4">
+          <Swiper
+            modules={[]} // Remove Navigation and Pagination modules
+            spaceBetween={20}
+            slidesPerView={2}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            speed={800}
+            breakpoints={{
+              640: {
+                slidesPerView: 3,
+              },
+            }}
+          >
+            {countries.map((country, index) => {
+              const FlagComponent = FlagSVGs[country.name];
+              return (
+                <SwiperSlide key={index}>
+                  <div
+                    className="bg-white/90 backdrop-blur-sm rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-xl border border-orange-200"
+                    onMouseEnter={() => setHoveredCountry(index)}
+                    onMouseLeave={() => setHoveredCountry(null)}
+                  >
+                    <div className="p-6 text-center">
+                      <div className="mb-3 transform transition-transform duration-300 hover:scale-110">
+                        {FlagComponent ? <FlagComponent /> : country.flag}
+                      </div>
+                      <div className="text-sm text-gray-600 mb-1">
+                        {country.region}
+                      </div>
+                    </div>
+                    <div
+                      className={`bg-gradient-to-r from-orange-500 to-orange-600 text-white text-center py-3 font-medium transition-all duration-300 ${
+                        hoveredCountry === index
+                          ? "from-orange-600 to-orange-700"
+                          : ""
+                      }`}
+                    >
+                      {country.name}
+                    </div>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </div>
 
         {/* Three Column Section */}
@@ -455,9 +516,10 @@ const GlobalPresence = () => {
               <div className="relative rounded-lg p-8 min-h-80">
                 {/* World Map Background Image */}
                 <div
-                  className="absolute object-fill inset-0 rounded-lg bg-gray-100 opacity-90"
+                  className="absolute inset-0 rounded-lg bg-gray-100 opacity-90"
                   style={{
-                    backgroundImage: "url('public/images/mapbase.svg')",
+                    backgroundImage:
+                      "url('/images/extra-images/global-presence.jpg')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
@@ -465,7 +527,7 @@ const GlobalPresence = () => {
                 ></div>
 
                 {/* Country Markers */}
-                {mapCountries.map((country, index) => {
+                {/* {mapCountries.map((country, index) => {
                   const FlagComponent = FlagSVGs[country.name];
                   return (
                     <div
@@ -499,7 +561,7 @@ const GlobalPresence = () => {
                       </div>
                     </div>
                   );
-                })}
+                })} */}
               </div>
             </div>
           </div>

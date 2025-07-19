@@ -19,7 +19,7 @@ import "swiper/css/pagination";
 const PremiumBlogSlider = () => {
   const swiperRef = useRef(null);
 
-   const blogs = [
+  const blogs = [
     {
       id: 1,
       title: "Advanced Pouch Making Machines",
@@ -168,7 +168,7 @@ const PremiumBlogSlider = () => {
                 spaceBetween: 20,
               },
               1024: {
-                slidesPerView: 4,  // Now shows 4 cards on large screens
+                slidesPerView: 4, // Now shows 4 cards on large screens
                 spaceBetween: 20,
               },
             }}
@@ -189,10 +189,14 @@ const PremiumBlogSlider = () => {
           >
             {blogs.map((blog) => (
               <SwiperSlide key={blog.id}>
-                <div className="h-[380px]">  {/* Slightly reduced height */}
+                <div className="h-[380px]">
+                  {" "}
+                  {/* Slightly reduced height */}
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden h-full border border-orange-100 hover:shadow-xl transition-shadow duration-300 flex flex-col">
                     {/* Image */}
-                    <div className="relative h-36 overflow-hidden">  {/* Reduced image height */}
+                    <div className="relative h-36 overflow-hidden">
+                      {" "}
+                      {/* Reduced image height */}
                       <img
                         src={blog.image}
                         alt={blog.title}
@@ -216,11 +220,11 @@ const PremiumBlogSlider = () => {
                         <span>{blog.readTime}</span>
                       </div>
 
-                      <h3 className="text-sm font-bold text-gray-900 mb-2 line-clamp-2">
+                      <h3 className="text-[18px] font-bold text-gray-900 mb-2 line-clamp-2">
                         {blog.title}
                       </h3>
 
-                      <p className="text-xs text-gray-600 mb-3 flex-1 line-clamp-3">
+                      <p className="text-[15px] text-gray-600 mb-3 flex-1 line-clamp-3">
                         {blog.excerpt}
                       </p>
 
@@ -230,7 +234,7 @@ const PremiumBlogSlider = () => {
                       </div>
 
                       {/* Tags */}
-                      <div className="flex flex-wrap gap-1 mt-auto">
+                      <div className="flex flex-wrap gap-1 mt-auto mb-3">
                         {blog.tags.map((tag, index) => (
                           <span
                             key={index}
@@ -240,6 +244,14 @@ const PremiumBlogSlider = () => {
                           </span>
                         ))}
                       </div>
+
+                      {/* Read More Button with React Router Link */}
+                      <Link
+                        to={`/blog/${blog.id}`} // or blog.slug depending on your data structure
+                        className="inline-block mt-2 px-4 py-2 bg-orange-500 text-white text-sm font-medium rounded-md hover:bg-orange-600 transition-colors duration-200 text-center"
+                      >
+                        Read More
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -247,14 +259,14 @@ const PremiumBlogSlider = () => {
             ))}
 
             {/* Custom Pagination */}
-            <div className="swiper-pagination !bottom-0 !relative mt-8"></div>
+            {/* <div className="swiper-pagination !bottom-0 !relative mt-8"></div> */}
           </Swiper>
 
           {/* Navigation Buttons (slightly smaller) */}
-          <button className="swiper-button-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-3 z-10 w-10 h-10 rounded-full flex items-center justify-center bg-white/90 backdrop-blur-sm text-orange-600 hover:text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500 transition-all duration-300 shadow-lg border border-orange-100">
+          <button className="swiper-button-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-3 z-10 w-10 h-10 rounded-full flex items-center justify-center bg-white/90 backdrop-blur-sm text-orange-600 hover:text-white hover:bg-gradient-to-r  hover:to-yellow-500 transition-all duration-300 shadow-lg border border-orange-100">
             <ChevronLeft className="w-4 h-4" />
           </button>
-          <button className="swiper-button-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-3 z-10 w-10 h-10 rounded-full flex items-center justify-center bg-white/90 backdrop-blur-sm text-orange-600 hover:text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-500 transition-all duration-300 shadow-lg border border-orange-100">
+          <button className="swiper-button-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-3 z-10 w-10 h-10 rounded-full flex items-center justify-center bg-white/90 backdrop-blur-sm text-orange-600 hover:text-white hover:bg-gradient-to-r  hover:to-yellow-500 transition-all duration-300 shadow-lg border border-orange-100">
             <ChevronRight className="w-4 h-4" />
           </button>
         </div>

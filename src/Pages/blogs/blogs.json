@@ -1,0 +1,161 @@
+[
+    {
+        "id": 1,
+        "title": "Advanced Pouch Making Machines",
+        "excerpt": "Discover Galaxy PackTech's cutting-edge automated pouch packaging solutions.",
+        "content": "<h2>FFS-3000 Vertical Form-Fill-Seal Machine</h2><p>At Galaxy PackTech, we take pride in delivering innovative packaging machinery that sets new benchmarks in efficiency, automation, and precision. One of our most advanced models, the <strong>FFS-3000 Vertical Form-Fill-Seal (VFFS) Machine</strong>, stands at the forefront of modern packaging technology. Engineered to meet the demanding needs of industries ranging from food and beverage to pharmaceuticals and chemicals, this machine offers a perfect blend of performance, reliability, and versatility.</p><h3>High-Speed Packaging with Precision</h3><p>The FFS-3000 is designed for high-speed operation, capable of producing up to <strong>120 pouches per minute</strong>. This makes it an ideal solution for companies looking to scale their operations without compromising on accuracy. The machine achieves <strong>±0.2mm registration accuracy</strong>, ensuring that every pouch is perfectly aligned and sealed. This high level of precision minimizes product waste and enhances the visual appeal of packaged goods, which is crucial in competitive retail markets.</p><h3>Built for Versatility</h3><p>One of the standout features of the FFS-3000 is its versatility. It can handle a wide range of flexible films, from <strong>15 to 200 microns</strong>, making it suitable for various packaging types such as snack foods, powders, liquids, and granules. Whether you're packaging sugar, detergent, ketchup, or dry fruits, this machine adapts to your material requirements with ease.</p><h3>Integrated Smart Technology</h3><p>This machine is equipped with an <strong>integrated vision inspection system</strong> that ensures each pouch meets quality standards before it reaches the consumer. The <strong>servo-driven motion control</strong> delivers smooth, accurate movements during the form-fill-seal cycle, reducing wear and tear and extending machine life. The <strong>touchscreen HMI</strong> (Human Machine Interface) with recipe storage simplifies operation and allows for quick changeovers between different packaging configurations.</p><h3>Efficient and User-Friendly Design</h3><p>Operators benefit from the <strong>quick-change tooling system</strong>, which significantly reduces downtime during product or size changeovers. In addition, the built-in <strong>leak detection system</strong> helps identify and reject faulty pouches on the go, enhancing overall production quality and safety. These features contribute to reduced operational costs and increased uptime, making the FFS-3000 a valuable asset for any packaging line.</p><h3>Technical Specifications</h3><ul><li><strong>Dimensions:</strong> 1500 × 800 × 1800 mm</li><li><strong>Weight:</strong> 1200 kg</li><li><strong>Power Requirement:</strong> 5.5 kW, 380V, 50Hz</li><li><strong>Air Pressure:</strong> 0.6 MPa</li><li><strong>Production Capacity:</strong> 120 pouches/min</li></ul>",
+        "date": "2023-05-15",
+        "author": "Dr. Sarah Chen",
+        "image": "/images/blogs-images/advanced-pouches-making machine.png",
+        "category": "Technology",
+        "specifications": {
+            "Dimensions": "1500×800×1800mm",
+            "Weight": "1200kg",
+            "Power": "5.5kW, 380V 50Hz",
+            "Air Pressure": "0.6MPa",
+            "Production Capacity": "120 pouches/min"
+        },
+        "features": [
+            "Servo-driven motion control",
+            "Touchscreen HMI with recipe storage",
+            "Quick-change tooling system",
+            "Integrated leak detection"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Sustainable Pouch Packaging Solutions",
+        "excerpt": "Eco-friendly pouch production with our GreenLine series",
+        "content": "<h2>GreenLine Eco-Pouch Systems</h2><p>As global industries move toward sustainability, Galaxy PackTech leads the charge with our innovative <strong>GreenLine Eco-Pouch Systems</strong>. These specialized machines are engineered to support eco-friendly packaging by processing biodegradable, recyclable, and compostable materials without compromising on efficiency or product quality.</p><h3>Designed for Sustainable Materials</h3><p>The GreenLine systems are compatible with modern bio-films such as <strong>PLA (Polylactic Acid)</strong>, <strong>PBAT (Polybutylene Adipate Terephthalate)</strong>, and other plant-based polymers. These films offer an environmentally friendly alternative to conventional plastics, and our machines are built to handle their unique sealing and forming properties with ease. In addition, the systems support packaging with up to <strong>30% recycled content</strong>, helping reduce reliance on virgin materials and supporting circular economy goals.</p><h3>Energy-Efficient Technology</h3><p>One of the hallmarks of the GreenLine series is its <strong>low-energy sealing technology</strong>, which minimizes electricity usage during operation. This not only lowers your facility’s power consumption but also contributes to your overall sustainability targets. With a built-in <strong>carbon footprint monitoring system</strong>, operators can track emissions in real time, ensuring regulatory compliance and internal environmental reporting.</p><h3>Eco-Optimized Performance</h3><p>Despite its eco-conscious focus, the GreenLine system does not sacrifice output or accuracy. The machine delivers a robust <strong>production speed of 90 pouches per minute</strong>, suitable for both small and medium-scale operations. Additionally, with <strong>15% material savings</strong> due to precision cutting and sealing, companies can reduce their raw material costs while minimizing waste generation.</p><h3>Compact, Durable, and Smart</h3><p>With compact dimensions of <strong>1400×750×1700mm</strong> and a sturdy build weighing <strong>1100kg</strong>, the GreenLine fits easily into most production floors while offering industrial-grade durability. The control interface is intuitive and user-friendly, enabling quick setup and material changeovers. These smart features make it ideal for packaging organic food items, health products, eco-beauty goods, and more.</p><h3>Technical Specifications</h3><ul><li><strong>Dimensions:</strong> 1400 × 750 × 1700 mm</li><li><strong>Weight:</strong> 1100 kg</li><li><strong>Power:</strong> 4.5 kW, 380V, 50Hz</li><li><strong>Production Capacity:</strong> 90 pouches/min</li><li><strong>Material Savings:</strong> 15% reduction</li></ul><p>The GreenLine Eco-Pouch System reflects Galaxy PackTech’s commitment to a greener future—offering performance, sustainability, and savings in a single machine.</p>",
+        "date": "2023-04-28",
+        "author": "Emily Rodriguez",
+        "image": "/images/blogs-images/sustainable-pouch-.png",
+        "category": "Sustainability",
+        "specifications": {
+            "Dimensions": "1400×750×1700mm",
+            "Weight": "1100kg",
+            "Power": "4.5kW, 380V 50Hz",
+            "Production Capacity": "90 pouches/min",
+            "Material Savings": "15% reduction"
+        }
+    },
+    {
+        "id": 3,
+        "title": "High-Speed Stand-Up Pouch Machine",
+        "excerpt": "Galaxy PackTech's UltraSpeed series redefines production efficiency",
+        "content": "<h2>US-500 Stand-Up Pouch System</h2><p>The <strong>US-500 Stand-Up Pouch System</strong> from Galaxy PackTech's UltraSpeed series is designed for manufacturers who demand speed, precision, and reliability in their high-volume packaging operations. Built with state-of-the-art engineering and intelligent automation, the US-500 sets a new industry benchmark for pouch packaging efficiency.</p><h3>Unmatched Production Speed</h3><p>Capable of producing up to <strong>200 stand-up pouches per minute</strong>, the US-500 is among the fastest machines in its class. This exceptional throughput allows large-scale producers to meet high-demand requirements without sacrificing consistency or quality. Whether packaging food, pharmaceuticals, personal care items, or industrial products, the US-500 delivers flawless results at record speed.</p><h3>Advanced Pouch Forming Features</h3><p>One of the key innovations of this machine is its <strong>automatic gusset formation</strong>, which enables the creation of high-quality stand-up pouches with improved shelf presence and stability. It also integrates a <strong>precision zipper application system</strong>, ensuring perfect alignment and sealing for consumer convenience and product freshness. These features make it an ideal choice for brands focused on both performance and customer experience.</p><h3>Intelligent Control and Film Handling</h3><p>Maintaining film integrity at high speeds is critical. That’s why the US-500 comes equipped with a <strong>smart tension control system</strong> that automatically adjusts film tension in real time. This prevents wrinkles, misalignments, and stretching, ensuring every pouch maintains uniform quality. Compatible with a wide range of flexible packaging films from <strong>50mm to 400mm</strong> in width, the system handles materials with care and precision.</p><h3>Robust and Compact Design</h3><p>The US-500 is engineered for durability and performance with a robust build weighing <strong>1500kg</strong>. Despite its heavy-duty capabilities, it maintains a compact footprint of <strong>1800×900×2000mm</strong>, making it suitable for integration into both new and existing production lines. The machine's ergonomic design and user-friendly interface reduce operator fatigue and streamline maintenance tasks.</p><h3>Technical Specifications</h3><ul><li><strong>Dimensions:</strong> 1800 × 900 × 2000 mm</li><li><strong>Weight:</strong> 1500 kg</li><li><strong>Power:</strong> 7.5 kW, 380V, 50Hz</li><li><strong>Production Capacity:</strong> 200 pouches/min</li><li><strong>Film Width:</strong> 50–400 mm</li></ul><p>With the US-500, Galaxy PackTech empowers manufacturers to achieve higher productivity, greater packaging consistency, and enhanced product appeal. It’s more than just a machine—it's a solution built for the future of packaging.</p>",
+        "date": "2023-06-10",
+        "author": "Michael Tanaka",
+        "image": "/images/blogs-images/high-speed-stand-up.png",
+        "category": "Technology",
+        "specifications": {
+            "Dimensions": "1800×900×2000mm",
+            "Weight": "1500kg",
+            "Power": "7.5kW, 380V 50Hz",
+            "Production Capacity": "200 pouches/min",
+            "Film Width": "50-400mm"
+        }
+    },
+    {
+        "id": 4,
+        "title": "Pharmaceutical Pouch Packaging System",
+        "excerpt": "GMP-compliant pouch machines for medical applications",
+        "content": "<h2>MediPouch 300 Series</h2><p>The <strong>MediPouch 300 Series</strong> by Galaxy PackTech is purpose-built for the stringent needs of the pharmaceutical and medical device packaging industry. Designed with a deep focus on compliance, cleanliness, and reliability, this system supports manufacturers in maintaining product integrity and regulatory standards throughout the packaging process.</p><h3>Engineered for Medical Environments</h3><p>This machine is fully <strong>Class 10000 cleanroom compatible (ISO 7)</strong>, making it ideal for critical medical and pharmaceutical packaging applications where hygiene is non-negotiable. The entire construction features <strong>anti-static working surfaces</strong> to prevent contamination caused by airborne particulates, ensuring sterility and consistent packaging quality.</p><h3>Compliance and Traceability</h3><p>To meet global pharmaceutical regulations, the MediPouch 300 Series includes <strong>21 CFR Part 11 compliant software</strong>. This ensures electronic records and signatures are secure, traceable, and auditable. It allows operators and quality control managers to manage production data with confidence, helping your operation stay inspection-ready at all times.</p><h3>Product Integrity Through Nitrogen Flushing</h3><p>One of the key features of this model is its <strong>integrated nitrogen flushing system</strong>, which helps displace oxygen inside the pouch, preserving the active pharmaceutical ingredients (APIs), extending shelf life, and preventing oxidation. This is particularly valuable when packaging sensitive materials such as powders, tablets, injectables, and diagnostic kits.</p><h3>Consistent Performance with Safety</h3><p>With a production capacity of <strong>80 pouches per minute</strong>, the MediPouch 300 Series balances speed and reliability without compromising safety. Its automated controls are designed to maintain consistent seal integrity and pouch quality, while built-in safety systems ensure operator protection and system reliability in every cycle.</p><h3>Compact, Cleanroom-Friendly Design</h3><p>The machine’s compact dimensions of <strong>1600×850×1900mm</strong> allow it to fit seamlessly into existing cleanroom facilities. Weighing <strong>1350kg</strong>, it is robustly built using stainless steel and non-corrosive materials to withstand daily sanitization protocols.</p><h3>Technical Specifications</h3><ul><li><strong>Dimensions:</strong> 1600 × 850 × 1900 mm</li><li><strong>Weight:</strong> 1350 kg</li><li><strong>Power:</strong> 6.0 kW, 380V, 50Hz</li><li><strong>Production Capacity:</strong> 80 pouches/min</li><li><strong>Cleanroom Class:</strong> ISO 7 (Class 10000)</li></ul><p>Whether you're packaging sterile surgical tools, prescription medications, or diagnostic supplies, the MediPouch 300 Series offers the safety, compliance, and efficiency that pharmaceutical production demands. It’s the trusted solution for GMP-compliant, cleanroom-grade pouch packaging.</p>",
+        "date": "2023-03-22",
+        "author": "Dr. James Wilson",
+        "image": "/images/blogs-images/Pharmaceutical-Packaging.png",
+        "category": "Medical",
+        "specifications": {
+            "Dimensions": "1600×850×1900mm",
+            "Weight": "1350kg",
+            "Power": "6.0kW, 380V 50Hz",
+            "Production Capacity": "80 pouches/min",
+            "Cleanroom Class": "ISO 7"
+        }
+    },
+    {
+        "id": 5,
+        "title": "Compact Pouch Machine for SMEs",
+        "excerpt": "Affordable, space-saving solution for small businesses",
+        "content": "<h2>MiniPouch 100</h2><p>The <strong>MiniPouch 100</strong> is Galaxy PackTech's most compact and affordable pouch packaging solution, specially designed for small and medium-sized enterprises (SMEs), startups, and R&D labs. Despite its small footprint, this machine delivers reliable and professional-grade performance, making it an excellent choice for businesses with limited space or budget.</p><h3>Space-Saving, User-Friendly Design</h3><p>With a compact footprint of under <strong>1 square meter</strong>, the MiniPouch 100 can be easily installed in small workshops, test labs, or commercial kitchens without requiring major changes to infrastructure. Its slim build and <strong>dimensions of 900×600×1500mm</strong> ensure it fits comfortably in tight production areas while offering full-scale pouch-making capabilities.</p><h3>Simple Operation, Fast Results</h3><p>Ideal for new operators and small teams, the MiniPouch 100 features a <strong>simple one-button operation</strong> that streamlines the packaging process. No complex setup or programming is needed—just load the film, press the button, and begin. The machine delivers a consistent output of <strong>30 to 50 pouches per minute</strong>, perfect for small batch production, sample packaging, or limited product runs.</p><h3>Perfect for Sampling and Product Development</h3><p>This model is particularly suited for companies in the early stages of product development. Whether you're preparing <strong>product samples</strong> for exhibitions or testing new packaging materials and designs, the MiniPouch 100 allows you to bring concepts to life with minimal overhead and fast turnaround. It supports flexible films between <strong>30mm to 200mm</strong> in width, offering versatility across various pouch sizes and formats.</p><h3>Reliable Performance in a Compact Package</h3><p>Despite its size, the machine is built with industrial-grade components and delivers stable performance. Weighing <strong>600kg</strong>, it’s sturdy and built to last, with a durable structure that minimizes vibration and enhances safety. Operating at <strong>3.0 kW</strong> on a standard <strong>220V, 50Hz</strong> supply, it is energy-efficient and compatible with most facility power setups.</p><h3>Technical Specifications</h3><ul><li><strong>Dimensions:</strong> 900 × 600 × 1500 mm</li><li><strong>Weight:</strong> 600 kg</li><li><strong>Power:</strong> 3.0 kW, 220V, 50Hz</li><li><strong>Production Capacity:</strong> 50 pouches/min</li><li><strong>Film Width:</strong> 30–200 mm</li></ul><p>If you're a growing business looking for an entry-level yet professional pouch packaging machine, the MiniPouch 100 delivers dependable performance in a space-saving and budget-friendly package. It's the perfect first step into automated packaging.</p>",
+        "date": "2023-07-05",
+        "author": "Lisa Zhang",
+        "image": "/images/blogs-images/Compact-Pouch-Machine-for-SMEs.png",
+        "category": "Compact",
+        "specifications": {
+            "Dimensions": "900×600×1500mm",
+            "Weight": "600kg",
+            "Power": "3.0kW, 220V 50Hz",
+            "Production Capacity": "50 pouches/min",
+            "Film Width": "30-200mm"
+        }
+    },
+    {
+        "id": 6,
+        "title": "Retort Pouch Packaging System",
+        "excerpt": "High-barrier packaging solutions for sterilized products",
+        "content": "<h2>RetortMaster 400</h2><p>The <strong>RetortMaster 400</strong> is Galaxy PackTech’s high-performance pouch packaging solution designed specifically for retort and sterilized food products. Tailored for industries like ready-to-eat meals, soups, sauces, and pet food, this machine ensures that products are sealed with precision and can withstand high-temperature sterilization without compromising pouch integrity.</p><h3>Built for Retort Applications</h3><p>The RetortMaster 400 is engineered to handle <strong>multi-layer high-barrier films</strong> that protect products during retort sterilization processes. These materials often include aluminum or EVOH layers and are essential for maintaining freshness, preventing microbial growth, and extending shelf life. This machine supports precise <strong>pre-sterilization sealing</strong> to ensure that pouches remain intact and leak-free even after exposure to high heat and pressure inside autoclaves or retort chambers.</p><h3>Heat Resistance and Durability</h3><p>All mechanical and sealing components in the RetortMaster 400 are made from <strong>high-temperature resistant materials</strong> to support consistent, long-term operation in harsh thermal environments. This ensures that the machine can operate efficiently and safely during continuous production shifts, even in demanding industrial food processing conditions.</p><h3>Integrated Leak Detection</h3><p>For added product safety and quality assurance, the machine features a fully <strong>automated leak testing system</strong>. This ensures that every sealed pouch undergoes real-time inspection for integrity before moving to the next stage of processing. Faulty or weak seals are identified and rejected automatically, minimizing risk and product recalls.</p><h3>Reliable, Mid-Speed Performance</h3><p>With a <strong>production capacity of 70 pouches per minute</strong>, the RetortMaster 400 strikes a balance between speed and sealing reliability. Its <strong>seal strength of ≥50N/15mm</strong> ensures secure containment of even liquid-rich or dense food contents under intense sterilization conditions, which is critical in food safety and shelf-stable packaging.</p><h3>Robust and Hygienic Construction</h3><p>The machine is built using food-grade stainless steel with smooth surfaces and minimal crevices for easy cleaning and sanitation. Its footprint of <strong>1700×850×1950mm</strong> fits well in medium to large-scale food processing environments, and the <strong>1400kg</strong> weight reflects its heavy-duty construction.</p><h3>Technical Specifications</h3><ul><li><strong>Dimensions:</strong> 1700 × 850 × 1950 mm</li><li><strong>Weight:</strong> 1400 kg</li><li><strong>Power:</strong> 6.5 kW, 380V, 50Hz</li><li><strong>Production Capacity:</strong> 70 pouches/min</li><li><strong>Seal Strength:</strong> ≥50N/15mm</li></ul><p>For food producers seeking robust, safe, and compliant packaging for retort applications, the RetortMaster 400 offers the reliability and precision needed to meet today’s food safety and shelf-life standards.</p>",
+        "date": "2023-02-18",
+        "author": "Carlos Mendez",
+        "image": "/images/blogs-images/Retort-Pouch-System-simple-compose.png",
+        "category": "Food",
+        "specifications": {
+            "Dimensions": "1700×850×1950mm",
+            "Weight": "1400kg",
+            "Power": "6.5kW, 380V 50Hz",
+            "Production Capacity": "70 pouches/min",
+            "Seal Strength": "≥50N/15mm"
+        }
+    },
+    {
+        "id": 7,
+        "title": "Smart Pouch Factory 4.0 Solutions",
+        "excerpt": "IoT-enabled pouch machines with predictive maintenance",
+        "content": "<h2>ConnectedPouch System</h2><p>The <strong>ConnectedPouch System</strong> by Galaxy PackTech is a state-of-the-art pouch packaging machine designed to meet the demands of Industry 4.0. With its fully integrated IoT (Internet of Things) capabilities, this solution enables manufacturers to move beyond traditional automation and into the world of smart, data-driven production. Built for performance, insight, and connectivity, the ConnectedPouch System ensures that your packaging line stays efficient, informed, and future-ready.</p><h3>Real-Time Production Intelligence</h3><p>The ConnectedPouch System provides <strong>real-time production monitoring</strong> across all key metrics including speed, uptime, output quality, and machine health. With seamless data acquisition, operators and supervisors gain instant visibility into performance trends, allowing quicker decision-making and agile production control. Whether you're managing a single machine or an entire fleet, centralized dashboards offer granular insights from anywhere.</p><h3>Predictive Maintenance and Uptime Optimization</h3><p>Thanks to embedded sensors and smart algorithms, the system offers <strong>predictive maintenance alerts</strong> that notify users of potential faults before they escalate. This minimizes unplanned downtime, reduces maintenance costs, and extends the machine’s operational life. Early detection of mechanical wear, overheating, or misalignment helps teams stay proactive and maintain consistent productivity levels.</p><h3>Cloud-Integrated Analytics</h3><p>Performance data from the ConnectedPouch System is securely transmitted to the cloud using <strong>OPC UA and MQTT protocols</strong>, supporting advanced data analytics and long-term trend tracking. Cloud-based dashboards allow remote access to KPIs, maintenance logs, and efficiency reports. This facilitates informed strategic planning, particularly for multi-location enterprises aiming for consistent quality and throughput across production sites.</p><h3>Remote Troubleshooting and Support</h3><p>The system supports <strong>remote diagnostics</strong> and firmware upgrades, reducing service wait times and empowering technical support teams to resolve issues quickly. Remote troubleshooting helps minimize operational disruptions while keeping service costs in check. Combined with intuitive user interfaces and touchscreen HMIs, operators can easily manage settings or run diagnostics without specialist intervention.</p><h3>Technical Specifications</h3><ul><li><strong>Dimensions:</strong> 1600 × 800 × 1850 mm</li><li><strong>Weight:</strong> 1300 kg</li><li><strong>Power:</strong> 6.0 kW, 380V, 50Hz</li><li><strong>Production Capacity:</strong> 110 pouches/min</li><li><strong>Connectivity:</strong> OPC UA, MQTT</li></ul><p>With smart sensors, predictive insights, and cloud integration, the ConnectedPouch System is more than just a packaging machine — it's a strategic digital asset for forward-thinking manufacturers embracing the future of intelligent automation.</p>",
+        "date": "2023-08-12",
+        "author": "Raj Patel",
+        "image": "/images/blogs-images/Smart-Pouch-Solutions.png",
+        "category": "Smart",
+        "specifications": {
+            "Dimensions": "1600×800×1850mm",
+            "Weight": "1300kg",
+            "Power": "6.0kW, 380V 50Hz",
+            "Production Capacity": "110 pouches/min",
+            "Connectivity": "OPC UA, MQTT"
+        }
+    },
+    {
+        "id": 8,
+        "title": "Multi-Lane Pouch Packaging System",
+        "excerpt": "High-capacity parallel processing for maximum output",
+        "content": "<h2>MultiPouch 8XL</h2><p>The <strong>MultiPouch 8XL</strong> from Galaxy PackTech is the ultimate solution for high-output pouch packaging, designed specifically for large-scale industrial applications. Featuring eight fully independent lanes running simultaneously, this machine is built for operations that demand extreme productivity without compromising on precision or control.</p><h3>Unmatched Production Output</h3><p>Capable of delivering over <strong>800 pouches per minute</strong>, the MultiPouch 8XL is engineered for industries like food processing, nutraceuticals, pet food, and chemical packaging where speed and volume are critical. Each of its <strong>8 independent lanes</strong> works in synchronized harmony, powered by cutting-edge <strong>servo-driven technology</strong> that ensures uniform performance and minimal vibration.</p><h3>Advanced Synchronized Servo Control</h3><p>The heart of the system lies in its <strong>synchronized servo motors</strong>, which provide precise control over film feeding, sealing, and cutting operations across all lanes. This results in exceptional consistency, even at maximum throughput, reducing waste and enhancing the quality of every pouch produced.</p><h3>Smart Centralized Control System</h3><p>Managing eight high-speed lanes requires intelligent control, and the MultiPouch 8XL delivers just that with a <strong>centralized touchscreen HMI</strong>. Operators can monitor all lanes in real-time, adjust production parameters, run diagnostics, and switch between packaging recipes—all from a single, intuitive interface. This minimizes training requirements and speeds up changeovers during product or material switches.</p><h3>Automatic Lane Balancing</h3><p>To ensure maximum efficiency, the machine features an <strong>automatic lane balancing system</strong> that evenly distributes workload across all lanes based on live feedback. This prevents bottlenecks and mechanical strain on individual stations, improving overall system longevity and reducing the need for manual intervention.</p><h3>Robust Industrial Design</h3><p>With a strong stainless-steel frame and dimensions of <strong>3000×1200×2200mm</strong>, the MultiPouch 8XL is built for long-term, heavy-duty operation. Its massive frame weighs <strong>2800kg</strong> and is designed for easy integration into high-volume production environments. The machine is also compatible with a variety of pouch types and film materials, making it highly adaptable to changing market needs.</p><h3>Technical Specifications</h3><ul><li><strong>Dimensions:</strong> 3000 × 1200 × 2200 mm</li><li><strong>Weight:</strong> 2800 kg</li><li><strong>Power:</strong> 15 kW, 380V, 50Hz</li><li><strong>Production Capacity:</strong> 800 pouches/min</li><li><strong>Lanes:</strong> 8 independent</li></ul><p>For enterprises looking to scale up packaging efficiency to an industrial level, the MultiPouch 8XL offers unmatched speed, control, and reliability. It’s a powerhouse solution tailored for businesses aiming to lead in mass production.</p>",
+        "date": "2023-09-01",
+        "author": "Emma Johnson",
+        "image": "/images/blogs-images/Pouch-Packaging-System-simple-compose.png",
+        "category": "Industrial",
+        "specifications": {
+            "Dimensions": "3000×1200×2200mm",
+            "Weight": "2800kg",
+            "Power": "15kW, 380V 50Hz",
+            "Production Capacity": "800 pouches/min",
+            "Lanes": "8 independent"
+        }
+    },
+    {
+        "id": 9,
+        "title": "Powder Pouch Filling Machine",
+        "excerpt": "Precision filling for fine powders and granules",
+        "content": "<h2>PowderFill Pro 600</h2><p>The <strong>PowderFill Pro 600</strong> is Galaxy PackTech’s premier pouch packaging solution for handling fine powders and granulated products. Designed to deliver precise dosing, clean operation, and high-speed packaging, this machine is ideal for industries such as pharmaceuticals, food supplements, spices, protein powders, and agrochemicals.</p><h3>Specialized Powder Handling</h3><p>At the core of the PowderFill Pro 600 is a highly accurate <strong>auger-based dosing system</strong> that ensures exact fill weights across every pouch, regardless of powder density. It’s designed to prevent dusting and material loss, ensuring a clean packaging environment and reducing waste. The screw-driven auger mechanism works with both free-flowing and semi-free-flowing powders with ease.</p><h3>Speed and Accuracy Combined</h3><p>With a production capacity of up to <strong>100 pouches per minute</strong>, the PowderFill Pro 600 balances volume and accuracy for maximum efficiency. The integrated <strong>weighing feedback system</strong> automatically adjusts fill parameters in real time to meet target weights consistently. This feature is crucial for compliance in industries with strict dosing regulations like pharmaceuticals and nutrition.</p><h3>Hygienic, Dust-Free Operation</h3><p>Designed for hygiene-critical environments, the machine is built with a <strong>fully enclosed stainless steel housing</strong> and a built-in <strong>dust extraction system</strong>. This not only prevents contamination but also maintains air quality in the production area, making it suitable for GMP and food-grade facilities. Quick-disassembly components ensure easy cleaning and minimal downtime.</p><h3>User-Friendly Controls</h3><p>The PowderFill Pro 600 includes a modern <strong>7-inch touchscreen HMI</strong> that allows operators to store up to 50 product recipes, adjust fill volumes, and monitor production metrics. Error alerts, auto-stop features, and self-calibration functions make the machine both safe and intuitive for operators of all experience levels.</p><h3>Technical Specifications</h3><ul><li><strong>Dimensions:</strong> 1600 × 750 × 1900 mm</li><li><strong>Weight:</strong> 1250 kg</li><li><strong>Power:</strong> 5.0 kW, 380V, 50Hz</li><li><strong>Production Capacity:</strong> 100 pouches/min</li><li><strong>Filling System:</strong> Auger with weighing feedback</li></ul><p>The PowderFill Pro 600 is the go-to solution for manufacturers seeking clean, accurate, and efficient powder pouch packaging. It ensures every gram counts while keeping production smooth and hygienic.</p>",
+        "date": "2023-10-05",
+        "author": "Anita Das",
+        "image": "/images/blogs-images/Powder-Filling-Machine-simple.png",
+        "category": "Powder",
+        "specifications": {
+            "Dimensions": "1600×750×1900mm",
+            "Weight": "1250kg",
+            "Power": "5.0kW, 380V 50Hz",
+            "Production Capacity": "100 pouches/min",
+            "Filling System": "Auger with weighing feedback"
+        }
+    }
+]

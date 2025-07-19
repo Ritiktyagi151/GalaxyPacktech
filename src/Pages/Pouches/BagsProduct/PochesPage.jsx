@@ -38,7 +38,7 @@ const PouchMachines = () => {
 
   const shapes = [
     {
-      name: "GALAXY BOX POUCH®",
+      name: "BOX POUCH®",
       image: "bp",
       color: "from-orange-400 to-red-500",
       path: "/shapeofpouch",
@@ -93,14 +93,14 @@ const PouchMachines = () => {
   const pouchTypes = [
     {
       title: "Food",
-      path: "/Searchbytype",
+      path: "/Searchbytypes",
       items: ["Confectionary", "Dry Goods", "Retort Food", "Frozen Food"],
       icon: "🍽️",
       gradient: "from-orange-500 to-red-600",
     },
     {
       title: "Household",
-      path: "/Searchbytype",
+      path: "/Searchbytypes",
       items: [
         "Flower Seeds",
         "Fertilizer or Forage",
@@ -114,28 +114,28 @@ const PouchMachines = () => {
     },
     {
       title: "Beverage",
-      path: "/Searchbytype",
+      path: "/Searchbytypes",
       items: ["Beverages", "Easy Beverage"],
       icon: "🥤",
       gradient: "from-cyan-500 to-blue-600",
     },
     {
       title: "Pet Food",
-      path: "/Searchbytype",
+      path: "/Searchbytypes",
       items: ["Pet Food"],
       icon: "🐕",
       gradient: "from-green-500 to-emerald-600",
     },
     {
       title: "Packaging",
-      path: "/Searchbytype",
+      path: "/Searchbytypes",
       items: ["Vegetables"],
       icon: "📦",
       gradient: "from-purple-500 to-violet-600",
     },
     {
       title: "Store Display",
-      path: "/Searchbytype",
+      path: "/Searchbytypes",
       items: ["Pouch for Outstanding Store Display"],
       icon: "🏪",
       gradient: "from-pink-500 to-rose-600",

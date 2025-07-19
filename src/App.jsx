@@ -27,6 +27,10 @@ import Enquirybutton from "./components/Enquirybutton";
 import ShapeofBags from "./Pages/BagsSubPages/SearchByshapebag";
 import Industries from "./Pages/industries/Industries";
 import GetaQuote from "./components/GetaQuote";
+import BlogDetails from "./Pages/blogs/BlogDetails";
+// import Products from "./Pages/product/Products"; // Import the new Products component
+import ProductDetails from "./Pages/home/productdetails/ProductDetails"; // Import the new ProductDetails component
+import PochesPage from "./Pages/Pouches/BagsProduct/PochesPage";
 
 // Layout component to wrap all pages with Navbar and Footer
 const Layout = () => {
@@ -38,7 +42,6 @@ const Layout = () => {
       <Footer />
       <Enquirybutton />
       <BackToTopButton />
-      
     </div>
   );
 };
@@ -60,7 +63,6 @@ function App() {
             path: "/about-us",
             element: <GalaxyTechAboutComponents />,
           },
-
           {
             path: "/gallerypage",
             element: <Gallery />,
@@ -70,6 +72,10 @@ function App() {
             element: <Blog />,
           },
           {
+            path: "/blogs/:id",
+            element: <BlogDetails />,
+          },
+          {
             path: "/pochespage",
             element: <PouchMachines />,
           },
@@ -77,10 +83,14 @@ function App() {
             path: "/pochespage",
             element: <MachineCategorySelector />,
           },
-
+          // Updated product routes
           {
             path: "/products",
-            element: <ProductPage />,
+            element: <PochesPage />,
+          },
+          {
+            path: "/products/:id",
+            element: <ProductDetails />, // Product details page
           },
           {
             path: "/bagspage",
@@ -99,7 +109,7 @@ function App() {
             element: <SearchByModel />,
           },
           {
-            path: "/Searchbytype",
+            path: "/Searchbytypes",
             element: <SearchByType />,
           },
           {
@@ -118,11 +128,10 @@ function App() {
             path: "/searchbytypebag",
             element: <SearchByType />,
           },
-           {
+          {
             path: "/industries",
             element: <Industries />,
           },
-         
         ],
       },
     ],

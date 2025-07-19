@@ -30,28 +30,7 @@ const MachineCategorySelector = () => {
       ),
       link: "/pochespage", // Add your link path here
     },
-    {
-      id: 2,
-      name: "Bags Making Machine",
-      description: "Advanced equipment for producing durable bags of all sizes",
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-          />
-        </svg>
-      ),
-      link: "/bagspage", // Add your link path here
-    },
+    
   ];
 
   return (
@@ -64,7 +43,7 @@ const MachineCategorySelector = () => {
           Select the category that fits your production needs
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
           {categories.map((category) => (
             <Link
               to={category.link} // React Router

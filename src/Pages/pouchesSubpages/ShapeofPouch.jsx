@@ -1,685 +1,671 @@
 import React, { useState } from "react";
-import { ArrowRight, ChevronRight, Package, Download, X } from "lucide-react";
 import {
-  PDFDownloadLink,
-  Document,
-  Page,
-  Text,
-  View,
-  StyleSheet,
-  Image,
-} from "@react-pdf/renderer";
+  ChevronDown,
+  ChevronUp,
+  Package,
+  Zap,
+  Star,
+  Settings,
+} from "lucide-react";
 
-// PDF Styles
-const styles = StyleSheet.create({
-  page: {
-    padding: 30,
-  },
-  section: {
-    margin: 10,
-    padding: 10,
-  },
-  title: {
-    fontSize: 24,
-    marginBottom: 20,
-    textAlign: "center",
-    fontWeight: "bold",
-    color: "#ea580c",
-  },
-  subtitle: {
-    fontSize: 16,
-    marginBottom: 15,
-    textAlign: "center",
-    color: "#9a3412",
-  },
-  image: {
-    width: "100%",
-    height: 300,
-    marginBottom: 20,
-    objectFit: "contain",
-  },
-  description: {
-    fontSize: 14,
-    lineHeight: 1.5,
-    marginBottom: 20,
-  },
-  specsTitle: {
-    fontSize: 16,
-    fontWeight: "bold",
-    marginBottom: 10,
-    color: "#ea580c",
-  },
-  specItem: {
-    fontSize: 12,
-    marginBottom: 5,
-  },
-  footer: {
-    fontSize: 10,
-    textAlign: "center",
-    marginTop: 30,
-    color: "#666",
-  },
-});
+const PouchShapeSelector = () => {
+  const [expandedSection, setExpandedSection] = useState(null);
+  const [hoveredItem, setHoveredItem] = useState(null);
 
-// PDF Document Component
-const ProductPDF = ({ product }) => (
-  <Document>
-    <Page size="A4" style={styles.page}>
-      <View style={styles.section}>
-        <Text style={styles.title}>{product.title}</Text>
-        <Text style={styles.subtitle}>{product.category}</Text>
-        <Image src={product.image} style={styles.image} />
-        <Text style={styles.description}>{product.description}</Text>
-        <Text style={styles.specsTitle}>Specifications:</Text>
-        {product.specs.map((spec, index) => (
-          <Text key={index} style={styles.specItem}>
-            • {spec}
-          </Text>
-        ))}
-        <Text style={styles.footer}>
-          For more information, please contact Galaxy Pack Tech
-        </Text>
-      </View>
-    </Page>
-  </Document>
-);
+  const toggleSection = (section) => {
+    setExpandedSection(expandedSection === section ? null : section);
+  };
 
-const ShapeofPouch = () => {
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // Placeholder SVG components for different pouch shapes
+  const BoxPouchIcon = () => (
+    <svg width="60" height="60" viewBox="0 0 60 60" className="text-red-600">
+      <rect
+        x="10"
+        y="20"
+        width="40"
+        height="30"
+        rx="2"
+        fill="currentColor"
+        opacity="0.2"
+      />
+      <rect
+        x="12"
+        y="22"
+        width="36"
+        height="26"
+        rx="1"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+      />
+      <rect
+        x="10"
+        y="15"
+        width="40"
+        height="8"
+        rx="1"
+        fill="currentColor"
+        opacity="0.3"
+      />
+      <path
+        d="M15 48 L15 52 L45 52 L45 48"
+        stroke="currentColor"
+        strokeWidth="2"
+        fill="none"
+      />
+    </svg>
+  );
 
-  const pouchTypes = [
+  const ThreeSideSealIcon = () => (
+    <svg width="60" height="60" viewBox="0 0 60 60" className="text-pink-600">
+      <path
+        d="M15 10 L45 10 L45 45 L15 45 Z"
+        fill="currentColor"
+        opacity="0.2"
+      />
+      <path
+        d="M15 10 L45 10 L45 45 L15 45 Z"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+      />
+      <path d="M15 10 L45 10" stroke="currentColor" strokeWidth="3" />
+      <path d="M15 10 L15 45" stroke="currentColor" strokeWidth="3" />
+      <path d="M15 45 L45 45" stroke="currentColor" strokeWidth="3" />
+    </svg>
+  );
+
+  const HalfFoldIcon = () => (
+    <svg width="60" height="60" viewBox="0 0 60 60" className="text-orange-600">
+      <path
+        d="M20 15 L40 15 L40 45 L20 45 Z"
+        fill="currentColor"
+        opacity="0.2"
+      />
+      <path
+        d="M20 15 L40 15 L40 45 L20 45 Z"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+      />
+      <path
+        d="M30 15 L30 45"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeDasharray="3,3"
+      />
+      <path
+        d="M20 45 L20 50 L40 50 L40 45"
+        stroke="currentColor"
+        strokeWidth="2"
+        fill="none"
+      />
+    </svg>
+  );
+
+  const CenterPressIcon = () => (
+    <svg width="60" height="60" viewBox="0 0 60 60" className="text-red-500">
+      <ellipse
+        cx="30"
+        cy="30"
+        rx="20"
+        ry="15"
+        fill="currentColor"
+        opacity="0.2"
+      />
+      <ellipse
+        cx="30"
+        cy="30"
+        rx="20"
+        ry="15"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+      />
+      <path d="M30 15 L30 45" stroke="currentColor" strokeWidth="3" />
+      <circle cx="30" cy="30" r="3" fill="currentColor" />
+    </svg>
+  );
+
+  const SideWeldIcon = () => (
+    <svg width="60" height="60" viewBox="0 0 60 60" className="text-pink-500">
+      <path
+        d="M15 20 L45 20 L40 40 L20 40 Z"
+        fill="currentColor"
+        opacity="0.2"
+      />
+      <path
+        d="M15 20 L45 20 L40 40 L20 40 Z"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+      />
+      <path d="M15 20 L45 20" stroke="currentColor" strokeWidth="3" />
+      <path d="M20 40 L40 40" stroke="currentColor" strokeWidth="3" />
+    </svg>
+  );
+
+  const SpoutIcon = () => (
+    <svg width="60" height="60" viewBox="0 0 60 60" className="text-orange-500">
+      <path
+        d="M20 25 L40 25 L40 45 L20 45 Z"
+        fill="currentColor"
+        opacity="0.2"
+      />
+      <path
+        d="M20 25 L40 25 L40 45 L20 45 Z"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+      />
+      <circle
+        cx="35"
+        cy="20"
+        r="4"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+      />
+      <path d="M35 16 L35 25" stroke="currentColor" strokeWidth="2" />
+    </svg>
+  );
+
+  const sections = [
     {
-      id: "pdtbh",
-      title: "GALAXY BOX POUCH®",
+      id: "box-pouch",
+      title: "BOX POUCH®",
       subtitle: "High-speed BOX POUCH® making machine",
-      color: "from-orange-400 to-red-500",
+      icon: BoxPouchIcon,
+      color: "red",
       items: [
         {
-          id: "tnbhd01",
+          id: "bh-60dg-f",
+          href: "BH-60DG-F.html",
           title:
-            "This model can make BOX POUCH® (Galaxy's original flat bottom pouch)",
-          description:
-            "Galaxy's machine can make various pouches, such as packing bags for food, pouches for commodities and infusion bags for the medical field. The BH-60DG-F model features high-speed production with precision sealing technology that ensures durability and leak-proof packaging. Ideal for food, medical, and industrial applications.",
-          link: "BH-60DG-F.html",
-          image: "/images/products/box-pouch.jpg",
-          category: "BOX POUCH® Series",
-          specs: [
-            "Production Speed: 60 pouches/min",
-            "Pouch Size: 100-300mm (W) x 150-450mm (L)",
-            "Material Thickness: 0.03-0.2mm",
-            "Power Supply: 3-phase 200V/400V",
-            "Machine Dimensions: 2500 x 1500 x 1800mm",
-            "Weight: 1500kg",
-          ],
+            "This model can make BOX POUCH® (Totani's original flat bottom pouch)",
+          desc: "Totani's machine can make various pouches, such as packing bags for food, pouches for commodities and infusion bags for the medical field.",
         },
         {
-          id: "tnbhd02",
-          title: "This model can make large-capacity BOX POUCH®",
-          description:
-            "Galaxy's BH-80DG-F model specializes in large flat bottom pouches suitable for prolonged food preservation and liquid transport. With enhanced stability and a wider sealing area, this machine produces pouches that stand upright and maintain structural integrity even with heavy contents. Perfect for bulk packaging in food and chemical industries.",
-          link: "BH-80DG-F.html",
-          image: "/images/products/large-box-pouch.jpg",
-          category: "Large Capacity BOX POUCH®",
-          specs: [
-            "Production Speed: 45 pouches/min",
-            "Pouch Size: 200-400mm (W) x 250-600mm (L)",
-            "Material Thickness: 0.05-0.25mm",
-            "Optional Features: Zipper attachment, spout insertion",
-            "Power Consumption: 5.5kW",
-            "Air Consumption: 0.5MPa, 200L/min",
-          ],
+          id: "bh-80dg-f",
+          href: "BH-80DG-F.html",
+          title:
+            "This model can make large-capacity BOX POUCH® (Totani's original flat bottom pouch)",
+          desc: "Totani's machine can make large flat bottom pouches that are suitable for prolonged food preservation and to preserve and transport liquids.",
         },
       ],
     },
     {
-      id: "pdtbh2",
+      id: "three-side-seal",
       title: "Three-Side-Seal",
       subtitle:
         "Pouch made by joining two films and sealing three positions around pouch",
-      color: "from-orange-500 to-amber-500",
+      icon: ThreeSideSealIcon,
+      color: "pink",
       items: [
         {
           id: "tnbh01",
+          href: "BH-60D.html",
           title: "Three-side-seal type pouch",
-          description:
-            "Used for retort food packaging with high-temperature resistance. The BH-60D model features precise temperature control for consistent sealing and can handle various packaging materials including aluminum foil and plastic laminates.",
-          link: "BH-60D.html",
-          image: "/images/products/three-side-seal.jpg",
-          category: "Retort Packaging Series",
-          specs: [
-            "Production Speed: 80 pouches/min",
-            "Pouch Size: 80-250mm (W) x 100-350mm (L)",
-            "Seal Width: 8-12mm",
-            "Material Compatibility: PET/AL/CPP, NY/PE, etc.",
-            "Temperature Control: ±1°C accuracy",
-          ],
+          desc: "Used for retort food.",
         },
         {
           id: "tnbh02",
+          href: "BH-60DLLS.html",
           title: "Three-side-seal type standing pouch",
-          description:
-            "Designed for retort food packaging with enhanced display capabilities. The BH-60DLLS model creates pouches with a stable base that stands upright on shelves, perfect for retail environments.",
-          link: "BH-60DLLS.html",
-          image: "/images/products/standing-pouch.jpg",
-          category: "Standing Pouch Series",
-          specs: [
-            "Production Speed: 70 pouches/min",
-            "Base Width: 60-120mm",
-            "Optional Features: Hanger hole, tear notch",
-            "Material Thickness: 0.06-0.25mm",
-            "Machine Footprint: 2000 x 1200 x 1600mm",
-          ],
+          desc: "Used for retort food, appealing as display or for cleanser refill bag.",
         },
         {
           id: "tnbh03",
+          href: "BH-60DLLC.html",
           title: "Three-side-seal type pouch with zipper",
-          description:
-            "Ideal for resealable packaging of snacks and dry goods. The BH-60DLLC model features precision zipper application with leak-proof technology for extended product freshness.",
-          link: "BH-60DLLC.html",
-          image: "/images/products/zipper-pouch.jpg",
-          category: "Zipper Pouch Series",
-          specs: [
-            "Production Speed: 60 pouches/min",
-            "Zipper Types: Single-track, double-track options",
-            "Zipper Width: 3-8mm",
-            "Special Features: Tamper-evident seal option",
-            "Power Requirements: 3-phase 380V, 50Hz",
-          ],
+          desc: "Used for preservation of sweets and flavoring ingredients.",
         },
         {
           id: "tnbh04",
+          href: "BH-60DLLSC.html",
           title: "Three-side-seal type standing pouch with zipper",
-          description:
-            "Combines the convenience of resealable zippers with the display advantages of standing pouches. The BH-60DLLSC model is perfect for premium food products and household items requiring both functionality and shelf appeal.",
-          link: "BH-60DLLSC.html",
-          image: "/images/products/standing-zipper.jpg",
-          category: "Premium Standing Pouch Series",
-          specs: [
-            "Production Speed: 55 pouches/min",
-            "Maximum Pouch Height: 450mm",
-            "Base Width Options: 70mm, 90mm, 110mm",
-            "Zipper Color Options: Multiple available",
-            "Optional Features: Spout attachment",
-          ],
+          desc: "Used for preservation of food or commodities and appealing as display.",
         },
         {
           id: "tnbh05",
+          href: "BH-80D.html",
           title: "Slightly larger three-side-seal type pouch",
-          description:
-            "The BH-80D model handles larger format packaging for family-sized portions or bulk products. Features enhanced film handling capabilities for thicker materials and larger pouch dimensions.",
-          link: "BH-80D.html",
-          image: "/images/products/large-retort.jpg",
-          category: "Large Format Packaging Series",
-          specs: [
-            "Production Speed: 50 pouches/min",
-            "Maximum Pouch Width: 400mm",
-            "Material Thickness: Up to 0.3mm",
-            "Special Features: Automatic film splicing",
-            "Machine Weight: 1800kg",
-          ],
+          desc: "Used for larger portions of retort food, etc.",
         },
         {
           id: "tnbh06",
+          href: "BH-60DLLSC+CT.html",
           title: "Half fold fusion, standing pouch and zipper seal",
-          description:
-            "The BH-60DLLSC+CT combines multiple technologies for premium packaging solutions. Features include half-fold construction for material efficiency, standing base for display, and resealable zipper for product protection.",
-          link: "BH-60DLLSC+CT.html",
-          image: "/images/products/half-fold.jpg",
-          category: "Hybrid Packaging Series",
-          specs: [
-            "Production Speed: 40 pouches/min",
-            "Material Savings: Up to 30% compared to standard pouches",
-            "Zipper Types: Press-to-close or slider options",
-            "Base Construction: Gusseted for stability",
-            "Optional Features: Hang hole, QR code window",
-          ],
+          desc: "Used for pet food, snacks, household goods, detergent, fertilizer or feeding, and etc.",
         },
       ],
     },
     {
-      id: "pdtct",
+      id: "half-fold",
       title: "Half fold fusion",
       subtitle: "Pouch made by folding a film in half and sealing it",
-      color: "from-amber-500 to-yellow-500",
+      icon: HalfFoldIcon,
+      color: "orange",
       items: [
         {
           id: "tnct01",
+          href: "CT-60DLLSC.html",
           title: "Half fold fusion type standing pouch with zipper",
-          description:
-            "The CT-60DLLSC model creates efficient half-fold pouches with zipper closure. Ideal for pet food, agricultural products, and granular materials where material efficiency and resealability are key requirements.",
-          link: "CT-60DLLSC.html",
-          image: "/images/products/half-fold-zipper.jpg",
-          category: "Efficient Packaging Series",
-          specs: [
-            "Production Speed: 65 pouches/min",
-            "Material Savings: 25-30% vs three-side seal",
-            "Zipper Application Accuracy: ±0.5mm",
-            "Film Width Utilization: Up to 95%",
-            "Optional Features: Ventilation holes",
-          ],
+          desc: "Used for various purposes such as packing of food, pet food, fertilizer and seeds.",
         },
         {
           id: "tnct02",
+          href: "CT-80DLLSC.html",
           title: "Large Half fold fusion type standing pouch with zipper",
-          description:
-            "The CT-80DLLSC handles larger capacity pouches with the material efficiency of half-fold construction. Features reinforced bottom gusset for heavy products and precision zipper application for reliable closure.",
-          link: "CT-80DLLSC.html",
-          image: "/images/products/large-half-fold.jpg",
-          category: "Large Capacity Efficient Packaging",
-          specs: [
-            "Production Speed: 45 pouches/min",
-            "Maximum Capacity: Up to 10kg",
-            "Bottom Gusset Depth: 30-80mm",
-            "Zipper Strength: Tested to 5000 open/close cycles",
-            "Machine Dimensions: 2800 x 1600 x 1900mm",
-          ],
+          desc: "Large-capacity pouches that are useful for packing of pet food, fertilizer and seeds.",
         },
       ],
     },
     {
-      id: "pdtfd",
+      id: "center-press",
       title: "Center Press-Seal",
       subtitle: "Pouch made by folding a film in half and sealing its center",
-      color: "from-yellow-500 to-orange-500",
+      icon: CenterPressIcon,
+      color: "red",
       items: [
         {
           id: "tnfd01",
+          href: "FD-35V.html",
           title: "Pouch made by folding a film from both sides and sealing it",
-          description:
-            "The FD-35V model specializes in center-seal packaging for moisture-sensitive products. Features precise center alignment and adjustable seal pressure for consistent package integrity.",
-          link: "FD-35V.html",
-          image: "/images/products/center-seal.jpg",
-          category: "Moisture Barrier Series",
-          specs: [
-            "Production Speed: 120 pouches/min",
-            "Seal Width: 5-10mm adjustable",
-            "Material Compatibility: Multi-layer barrier films",
-            "Moisture Protection: <0.1g/m²/24hr",
-            "Special Features: Nitrogen flushing option",
-          ],
+          desc: "Used for packing of food that can be affected by moisture such as coffee beans, sugar and wheat flour.",
         },
         {
           id: "tnfd02",
+          href: "FD-60D.html",
           title: "Pouch made by folding a film from both sides and sealing it",
-          description:
-            "The FD-60D model offers wider format center-seal packaging for confectionery and snack products. Features enhanced film handling for delicate materials and precision sealing for attractive packages.",
-          link: "FD-60D.html",
-          image: "/images/products/center-seal-candy.jpg",
-          category: "Confectionery Packaging Series",
-          specs: [
-            "Production Speed: 100 pouches/min",
-            "Pouch Width Range: 100-250mm",
-            "Seal Temperature Control: 4-zone independent",
-            "Optional Features: Date coding, batch numbering",
-            "Power Requirements: 220V, 50/60Hz",
-          ],
+          desc: "Used for packing of food such as candy and chocolate.",
         },
         {
           id: "tnfd03",
+          href: "FD-35VSC.html",
           title: "Standing pouch made by folding a film from both sides",
-          description:
-            "The FD-35VSC combines center-seal efficiency with standing pouch convenience. Features automatic bottom forming and precision sealing for stable, attractive packages that stand upright on shelves.",
-          link: "FD-35VSC.html",
-          image: "/images/products/standing-center.jpg",
-          category: "Center-Seal Standing Pouch Series",
-          specs: [
-            "Production Speed: 80 pouches/min",
-            "Base Width Options: 50mm, 70mm, 90mm",
-            "Material Savings: 20% vs traditional standing pouch",
-            "Standing Stability: Tested to 1.5kg load",
-            "Optional Features: Tear notch, hang hole",
-          ],
+          desc: "Used for various purposes such as packing of food, pet food, fertilizer and seeds.",
         },
         {
           id: "tnfd04",
+          href: "FD-60DLLSC.html",
           title: "Large standing pouch made by folding a film from both sides",
-          description:
-            "The FD-60DLLSC handles large-format center-seal standing pouches for bulk products. Features reinforced bottom construction and wide sealing jaws for reliable package integrity with heavy contents.",
-          link: "FD-60DLLSC.html",
-          image: "/images/products/large-standing.jpg",
-          category: "Bulk Packaging Series",
-          specs: [
-            "Production Speed: 60 pouches/min",
-            "Maximum Pouch Height: 600mm",
-            "Bottom Gusset Depth: 50-100mm",
-            "Material Thickness: Up to 0.3mm",
-            "Special Features: Automatic weight compensation",
-          ],
+          desc: "Large-capacity pouches used for packing of pet food, fertilizer and seeds.",
         },
       ],
     },
     {
-      id: "pdthk",
+      id: "side-weld",
       title: "Side-Weld",
       subtitle: "Pouch made by sealing and cutting a film",
-      color: "from-orange-600 to-red-500",
+      icon: SideWeldIcon,
+      color: "pink",
       items: [
         {
           id: "tnhkvk01",
+          href: "HK-40V.html",
           title: "Pouch made by sealing and cutting a film",
-          description:
-            "The HK-40V model produces simple side-weld pouches for non-food items with high efficiency. Features continuous motion operation and quick changeover for flexible production of various pouch sizes.",
-          link: "HK-40V.html",
-          image: "/images/products/side-weld.jpg",
-          category: "Basic Packaging Series",
-          specs: [
-            "Production Speed: 150 pouches/min",
-            "Pouch Width Range: 50-200mm",
-            "Cutting System: Rotary knife with auto-sharpening",
-            "Changeover Time: <5 minutes",
-            "Material Compatibility: LDPE, OPP, PET",
-          ],
+          desc: "Used for packing of clothing and commodities such as handkerchief and towel.",
         },
         {
           id: "tnhkvk02",
+          href: "HK-65V.html",
           title: "Slightly larger pouch made by sealing and cutting a film",
-          description:
-            "The HK-65V handles larger side-weld pouches for textiles and soft goods. Features enhanced film tension control and wider sealing jaws for consistent package quality across larger formats.",
-          link: "HK-65V.html",
-          image: "/images/products/large-side-weld.jpg",
-          category: "Textile Packaging Series",
-          specs: [
-            "Production Speed: 120 pouches/min",
-            "Maximum Pouch Width: 350mm",
-            "Seal Strength: >3kg/inch",
-            "Optional Features: Perforation, hang hole",
-            "Machine Footprint: 1800 x 1000 x 1500mm",
-          ],
+          desc: "Used for packing of clothing and commodities such as handkerchief and towel.",
         },
         {
           id: "tnhkvk03",
+          href: "HK-90V.html",
           title: "Vertically long pouch made by sealing and cutting a film",
-          description:
-            "The HK-90V specializes in vertically-oriented pouches for clothing and long items. Features unique film feeding system that minimizes waste when producing tall, narrow pouches.",
-          link: "HK-90V.html",
-          image: "/images/products/vertical-pouch.jpg",
-          category: "Vertical Packaging Series",
-          specs: [
-            "Production Speed: 100 pouches/min",
-            "Pouch Height: Up to 900mm",
-            "Width Range: 100-250mm",
-            "Special Features: Anti-static film handling",
-            "Material Utilization: >90% efficiency",
-          ],
+          desc: "Vertically long pouches that are useful for packing of commodities and clothing.",
         },
         {
           id: "tnhkvk05",
+          href: "VK-65.html",
           title:
             "Trapezoidal or triangular pouch made by sealing and cutting a film",
-          description:
-            "The VK-65 creates unique trapezoidal and triangular pouches for specialty applications. Features programmable angle adjustment and precision cutting for consistent package shapes.",
-          link: "VK-65.html",
-          image: "/images/products/triangular-pouch.jpg",
-          category: "Specialty Shape Series",
-          specs: [
-            "Production Speed: 80 pouches/min",
-            "Angle Adjustment: 30°-60° programmable",
-            "Cutting Accuracy: ±0.3mm",
-            "Optional Features: Corner rounding",
-            "Special Applications: Sandwich, produce packaging",
-          ],
+          desc: "Used for packing of food such as vegetable and sandwich.",
         },
         {
           id: "tnhkvk06",
+          href: "VK-90.html",
           title: "Large triangular pouch made by sealing and cutting a film",
-          description:
-            "The VK-90 produces oversized triangular pouches for bulk items and specialty retail. Features heavy-duty film handling and reinforced seals for large, heavy packages.",
-          link: "VK-90.html",
-          image: "/images/products/large-triangular.jpg",
-          category: "Large Specialty Packaging",
-          specs: [
-            "Production Speed: 60 pouches/min",
-            "Maximum Base Width: 400mm",
-            "Material Thickness: Up to 0.35mm",
-            "Special Features: Double-seal option",
-            "Machine Weight: 2000kg",
-          ],
+          desc: "Totani's machine can make large-sized trapezoidal and triangular pouches.",
         },
       ],
     },
     {
-      id: "pdtst",
+      id: "spout",
       title: "Spout inserter",
       subtitle:
-        "Galaxy's unit can insert spout automatically in making pouches for juice package and refill cleanser.",
-      color: "from-red-500 to-pink-500",
+        "Totani's unit can insert spout automatically in making pouches for juice package and refill cleanser.",
+      icon: SpoutIcon,
+      color: "orange",
       items: [
         {
-          id: "tnst01",
+          id: "st-30",
+          href: "ST-30.html",
           title: "Automatic spout insertion",
-          description:
-            "The ST-30 spout inserter integrates seamlessly with pouch machines to automatically apply spouts for liquid products. Features precision placement and multiple spout size options for flexible production.",
-          link: "ST-30.html",
-          image: "/images/products/spout-inserter.jpg",
-          category: "Liquid Packaging Series",
-          specs: [
-            "Speed: Up to 50 spouts/min",
-            "Spout Sizes: 15mm-40mm diameter",
-            "Placement Accuracy: ±0.5mm",
-            "Cap Options: Flip-top, screw, press-fit",
-            "Material Compatibility: HDPE, PP spouts",
-          ],
+          desc: "Totani's unit can insert spout automatically in making pouches for juice package and refill cleanser.",
         },
       ],
     },
   ];
 
-  const openModal = (product) => {
-    setSelectedProduct(product);
-    setIsModalOpen(true);
-    document.body.style.overflow = "hidden";
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-    document.body.style.overflow = "auto";
-  };
+  const options = [
+    {
+      href: "op01.html",
+      title: "Coreless Trim Winder",
+      desc: "(Applies to all models)",
+    },
+    {
+      href: "op02.html",
+      title: "Full-Shape Thomson Die-Cut unit",
+      desc: "(Applies to BH / CT series)",
+    },
+    {
+      href: "op04.html",
+      title: "Cutter Control System",
+      desc: "(Applies to BH, CT, FD series)",
+    },
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-orange-600 to-amber-600 text-white py-20">
-        <div className="container mx-auto px-4">
-          <p className="text-orange-200 text-lg mb-2">Products</p>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Search by Shape of Pouch
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-pink-50 to-purple-50 p-6">
+      <div className="max-w-6xl mx-auto">
+        {/* Header with floating animation */}
+        <div className="intro mb-12 text-center">
+          <div className="animate-bounce mb-4">
+            <Package className="w-16 h-16 text-orange-600 mx-auto" />
+          </div>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4 animate-fade-in">
+            Pouch Shape Selector
           </h1>
-          <p className="text-xl text-orange-100 max-w-3xl">
+          <p className="text-xl text-orange-800 font-medium max-w-3xl mx-auto leading-relaxed animate-slide-up">
             Select the shape of the pouch you want to make, and you can see
             detailed information about the pouch making machine you selected.
           </p>
         </div>
-      </div>
 
-      {/* Main Content */}
-      <div className="container mx-auto px-4 py-12">
-        {pouchTypes.map((section) => (
-          <section
-            key={section.id}
-            className={`mb-16 p-8 rounded-xl shadow-lg bg-gradient-to-br ${section.color}/10 to-white`}
-          >
-            <div className="flex items-center mb-4">
-              <div
-                className={`p-3 rounded-lg bg-gradient-to-br ${section.color} mr-4`}
-              >
-                <Package className="text-white w-6 h-6" />
-              </div>
-              <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-orange-800">
-                  {section.title}
-                </h2>
-                <p className="text-lg text-orange-600 font-normal">
-                  {section.subtitle}
-                </p>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-              {section.items.map((item) => (
-                <div
-                  key={item.id}
-                  className="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden"
-                >
-                  <div className="h-48 overflow-hidden">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-lg font-semibold text-orange-700 group-hover:text-orange-900 transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="mt-2 text-gray-600 line-clamp-2">
-                      {item.description}
-                    </p>
-                    <button
-                      onClick={() => openModal(item)}
-                      className="mt-4 flex items-center text-orange-500 hover:text-orange-700 transition-colors"
-                    >
-                      <span className="mr-1">View details</span>
-                      <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-        ))}
-      </div>
-
-      {/* Product Detail Modal */}
-      {isModalOpen && selectedProduct && (
-        <div className="fixed inset-0 z-50 overflow-y-auto">
-          <div className="flex items-center backdrop-blur-sm  bg-opacity-75 justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-            <div
-              className="fixed inset-0 transition-opacity"
-              onClick={closeModal}
+        {/* Sections */}
+        <div className="space-y-8">
+          {sections.map((section, index) => (
+            <section
+              key={section.id}
+              className={`bg-white rounded-xl shadow-lg border-l-4 border-${section.color}-600 overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:scale-102 animate-slide-in-${index}`}
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="absolute  inset-0 "></div>
-            </div>
-            <span className="hidden sm:inline-block sm:align-middle sm:h-screen">
-              &#8203;
-            </span>
-            <div className="inline-block  align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
-              <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                <div className="flex justify-between items-start">
-                  <div>
-                    <h3 className="text-2xl font-bold text-orange-700">
-                      {selectedProduct.title}
-                    </h3>
-                    <p className="text-orange-600">
-                      {selectedProduct.category}
-                    </p>
-                  </div>
-                  <button
-                    onClick={closeModal}
-                    className="text-gray-400 hover:text-gray-500 focus:outline-none"
-                  >
-                    <X className="h-6 w-6" />
-                  </button>
-                </div>
-                <div className="mt-6 grid md:grid-cols-2 gap-8">
-                  <div>
-                    <img
-                      src={selectedProduct.image}
-                      alt={selectedProduct.title}
-                      className="w-full h-64 object-contain rounded-lg"
-                    />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold mb-2">
-                      Product Description
-                    </h4>
-                    <p className="text-gray-700 mb-6">
-                      {selectedProduct.description}
-                    </p>
-
-                    <h4 className="text-lg font-semibold mb-2">
-                      Specifications
-                    </h4>
-                    <ul className="list-disc pl-5 text-gray-700 mb-6">
-                      {selectedProduct.specs.map((spec, index) => (
-                        <li key={index}>{spec}</li>
-                      ))}
-                    </ul>
-
-                    <div className="flex flex-wrap gap-4">
-                      <PDFDownloadLink
-                        document={<ProductPDF product={selectedProduct} />}
-                        fileName={`${selectedProduct.title.replace(
-                          /\s+/g,
-                          "_"
-                        )}_specsheet.pdf`}
-                        className="flex items-center bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-md transition-colors"
+              <div
+                className={`p-6 cursor-pointer bg-gradient-to-r from-${section.color}-50 to-white`}
+                onClick={() => toggleSection(section.id)}
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-4">
+                    <div
+                      className={`transform transition-transform duration-300 ${
+                        expandedSection === section.id
+                          ? "rotate-12 scale-110"
+                          : ""
+                      }`}
+                    >
+                      <section.icon />
+                    </div>
+                    <div>
+                      <h2
+                        className={`text-2xl font-bold text-${section.color}-700 mb-1`}
                       >
-                        {({ loading }) => (
-                          <>
-                            <Download className="w-4 h-4 mr-2" />
-                            {loading
-                              ? "Preparing PDF..."
-                              : "Download Spec Sheet"}
-                          </>
-                        )}
-                      </PDFDownloadLink>
-                      <a
-                        href={selectedProduct.link}
-                        className="flex items-center border border-orange-600 text-orange-600 hover:bg-orange-50 px-4 py-2 rounded-md transition-colors"
-                      >
-                        <span>View Product Page</span>
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </a>
+                        {section.title}
+                      </h2>
+                      <p className="text-lg text-orange-700 font-medium">
+                        {section.subtitle}
+                      </p>
                     </div>
                   </div>
+                  <div
+                    className={`transform transition-transform duration-300 ${
+                      expandedSection === section.id ? "rotate-180" : ""
+                    }`}
+                  >
+                    <ChevronDown
+                      className={`w-6 h-6 text-${section.color}-600`}
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      )}
 
-      {/* Footer */}
-      <footer className="bg-orange-700 text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h2 className="text-2xl font-bold mb-4">
-              Ready to Transform Your Packaging?
-            </h2>
-            <p className="text-orange-200 mb-8 max-w-2xl mx-auto">
-              Discover how Galaxy Pack Tech can revolutionize your production
-              with cutting-edge pouch manufacturing solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/en/contactus/"
-                className="group bg-white text-orange-700 px-8 py-3 rounded-full font-semibold hover:bg-orange-50 transition-all hover:scale-105 flex items-center justify-center"
+              <div
+                className={`overflow-hidden transition-all duration-500 ${
+                  expandedSection === section.id
+                    ? "max-h-screen opacity-100"
+                    : "max-h-0 opacity-0"
+                }`}
               >
-                Contact Us
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
-              <a
-                href="/en/proposals/"
-                className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-orange-700 transition-all hover:scale-105"
-              >
-                Request Proposal
-              </a>
-            </div>
-          </div>
-          <div className="mt-12 pt-8 border-t border-orange-700 flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <img
-                src="/images2/base/hd-logo-white.png"
-                alt="Galaxy Pack Tech"
-                className="h-10"
-              />
-            </div>
-          </div>
+                <ul className="p-6 space-y-4">
+                  {section.items.map((item, itemIndex) => (
+                    <li
+                      key={item.id}
+                      className={`transform transition-all duration-300 hover:scale-105 ${
+                        hoveredItem === item.id ? "translate-x-2" : ""
+                      }`}
+                      onMouseEnter={() => setHoveredItem(item.id)}
+                      onMouseLeave={() => setHoveredItem(null)}
+                      style={{ animationDelay: `${itemIndex * 0.05}s` }}
+                    >
+                      <a href={item.href} className="block group">
+                        <div
+                          className={`p-4 rounded-lg bg-gradient-to-r from-${section.color}-50 to-white border border-${section.color}-100 hover:border-${section.color}-300 transition-all duration-300 hover:shadow-md`}
+                        >
+                          <div className="flex items-start space-x-3">
+                            <div
+                              className={`w-2 h-2 rounded-full bg-${section.color}-400 mt-2 transform transition-transform duration-300 group-hover:scale-150`}
+                            ></div>
+                            <div className="flex-1">
+                              <p
+                                className={`text-${section.color}-800 font-medium mb-2 group-hover:text-${section.color}-900 transition-colors`}
+                              >
+                                {item.title}
+                              </p>
+                              <span className="text-orange-700 text-sm group-hover:text-orange-800 transition-colors">
+                                {item.desc}
+                              </span>
+                            </div>
+                            <div className="transform transition-transform duration-300 group-hover:translate-x-1">
+                              <Star
+                                className={`w-4 h-4 text-${section.color}-400 opacity-0 group-hover:opacity-100 transition-opacity`}
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </section>
+          ))}
         </div>
-      </footer>
+
+        {/* Options Section */}
+        <section className="mt-12 bg-white rounded-xl shadow-lg border-l-4 border-red-400 overflow-hidden transform transition-all duration-300 hover:shadow-xl">
+          <div className="p-6 bg-gradient-to-r from-red-50 to-white">
+            <div className="flex items-center space-x-4">
+              <div className="animate-spin-slow">
+                <Settings className="w-8 h-8 text-red-600" />
+              </div>
+              <h2 className="text-2xl font-bold text-red-600">Options</h2>
+            </div>
+          </div>
+          <ul className="p-6 space-y-4">
+            {options.map((option, index) => (
+              <li
+                key={index}
+                className="transform transition-all duration-300 hover:scale-105 hover:translate-x-2"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <a href={option.href} className="block group">
+                  <div className="p-4 rounded-lg bg-gradient-to-r from-red-50 to-white border border-red-100 hover:border-red-300 transition-all duration-300 hover:shadow-md">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 rounded-full bg-red-400 mt-2 transform transition-transform duration-300 group-hover:scale-150"></div>
+                      <div className="flex-1">
+                        <p className="text-red-700 font-medium mb-1 group-hover:text-red-800 transition-colors">
+                          {option.title}
+                        </p>
+                        <span className="text-orange-700 text-sm group-hover:text-orange-800 transition-colors">
+                          {option.desc}
+                        </span>
+                      </div>
+                      <div className="transform transition-transform duration-300 group-hover:translate-x-1">
+                        <Zap className="w-4 h-4 text-red-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </div>
+
+      <style jsx>{`
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+            transform: translateY(-20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes slide-up {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes slide-in-0 {
+          from {
+            opacity: 0;
+            transform: translateX(-30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes slide-in-1 {
+          from {
+            opacity: 0;
+            transform: translateX(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes slide-in-2 {
+          from {
+            opacity: 0;
+            transform: translateX(-30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes slide-in-3 {
+          from {
+            opacity: 0;
+            transform: translateX(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes slide-in-4 {
+          from {
+            opacity: 0;
+            transform: translateX(-30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes slide-in-5 {
+          from {
+            opacity: 0;
+            transform: translateX(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes spin-slow {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
+        .animate-fade-in {
+          animation: fade-in 0.8s ease-out;
+        }
+
+        .animate-slide-up {
+          animation: slide-up 0.8s ease-out 0.2s both;
+        }
+
+        .animate-slide-in-0 {
+          animation: slide-in-0 0.6s ease-out both;
+        }
+
+        .animate-slide-in-1 {
+          animation: slide-in-1 0.6s ease-out both;
+        }
+
+        .animate-slide-in-2 {
+          animation: slide-in-2 0.6s ease-out both;
+        }
+
+        .animate-slide-in-3 {
+          animation: slide-in-3 0.6s ease-out both;
+        }
+
+        .animate-slide-in-4 {
+          animation: slide-in-4 0.6s ease-out both;
+        }
+
+        .animate-slide-in-5 {
+          animation: slide-in-5 0.6s ease-out both;
+        }
+
+        .animate-spin-slow {
+          animation: spin-slow 3s linear infinite;
+        }
+
+        .hover\\:scale-102:hover {
+          transform: scale(1.02);
+        }
+      `}</style>
     </div>
   );
 };
 
-export default ShapeofPouch;
+export default PouchShapeSelector;

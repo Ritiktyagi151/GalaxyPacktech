@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import {
   Package,
   Factory,
@@ -21,14 +22,14 @@ const Industries = () => {
     {
       id: 1,
       icon: <Utensils className="w-12 h-12" />,
-      title: "Food & Beverage",
+      title: "Food Packaging",
       description:
-        "Premium packaging solutions for food safety and freshness preservation.",
+        "High-speed pouch machines for snacks, ready-to-eat meals, and liquid food products.",
       features: [
-        "Food-grade materials",
-        "Extended shelf life",
-        "Tamper-evident sealing",
-        "Custom branding",
+        "Food-grade pouch materials",
+        "Modified atmosphere packaging",
+        "Zipper and spout options",
+        "High-barrier films for freshness",
       ],
       color: "from-orange-400 to-red-500",
     },
@@ -37,26 +38,26 @@ const Industries = () => {
       icon: <Heart className="w-12 h-12" />,
       title: "Pharmaceutical",
       description:
-        "Specialized packaging for medical products with regulatory compliance.",
+        "Precision pouch packaging for medical products, tablets, and sterile applications.",
       features: [
-        "FDA approved materials",
-        "Child-resistant designs",
-        "Moisture protection",
-        "Sterile packaging",
+        "Child-resistant pouches",
+        "Tamper-evident seals",
+        "Moisture barrier protection",
+        "Compliant with regulatory standards",
       ],
       color: "from-orange-500 to-pink-500",
     },
     {
       id: 3,
-      icon: <Factory className="w-12 h-12" />,
-      title: "Industrial",
+      icon: <Package className="w-12 h-12" />,
+      title: "Consumer Goods",
       description:
-        "Heavy-duty packaging solutions for industrial equipment and components.",
+        "Versatile pouch solutions for household products, detergents, and personal care items.",
       features: [
-        "High strength materials",
-        "Weather resistance",
-        "Custom dimensions",
-        "Bulk packaging",
+        "Stand-up pouch options",
+        "Resealable zippers",
+        "Durable laminate structures",
+        "Custom printing capabilities",
       ],
       color: "from-orange-600 to-yellow-500",
     },
@@ -65,26 +66,26 @@ const Industries = () => {
       icon: <Zap className="w-12 h-12" />,
       title: "Electronics",
       description:
-        "Anti-static and protective packaging for sensitive electronic components.",
+        "Anti-static pouches for electronic components and sensitive devices.",
       features: [
-        "ESD protection",
-        "Shock absorption",
-        "Climate control",
-        "Component organization",
+        "ESD protective materials",
+        "Moisture barrier films",
+        "Transparent viewing windows",
+        "Custom sizing options",
       ],
       color: "from-orange-400 to-blue-500",
     },
     {
       id: 5,
       icon: <Shield className="w-12 h-12" />,
-      title: "Automotive",
+      title: "Industrial",
       description:
-        "Robust packaging for automotive parts and components distribution.",
+        "Heavy-duty pouches for chemicals, lubricants, and industrial products.",
       features: [
-        "Oil resistance",
-        "Temperature stability",
-        "Part protection",
-        "Supply chain optimization",
+        "Chemical-resistant films",
+        "Wide mouth spouts",
+        "High-strength seals",
+        "Bulk packaging solutions",
       ],
       color: "from-orange-500 to-gray-600",
     },
@@ -93,12 +94,12 @@ const Industries = () => {
       icon: <Globe className="w-12 h-12" />,
       title: "E-commerce",
       description:
-        "Optimized packaging solutions for online retail and shipping.",
+        "Lightweight, durable pouches optimized for shipping and direct-to-consumer.",
       features: [
-        "Lightweight design",
-        "Easy opening",
-        "Brand experience",
-        "Sustainable options",
+        "Tear-resistant materials",
+        "Compact shipping profiles",
+        "Brandable surfaces",
+        "Sustainable material options",
       ],
       color: "from-orange-400 to-green-500",
     },
@@ -106,24 +107,24 @@ const Industries = () => {
 
   const stats = [
     {
-      number: "500+",
-      label: "Industries Served",
+      number: "50+",
+      label: "Pouch Machine Models",
       icon: <Factory className="w-8 h-8" />,
     },
     {
-      number: "10M+",
-      label: "Packages Delivered",
+      number: "1000+",
+      label: "Pouch Configurations",
       icon: <Package className="w-8 h-8" />,
     },
     {
-      number: "99.9%",
-      label: "Quality Rate",
-      icon: <Award className="w-8 h-8" />,
+      number: "120/min",
+      label: "Max Production Speed",
+      icon: <Zap className="w-8 h-8" />,
     },
     {
-      number: "24/7",
-      label: "Support Available",
-      icon: <Shield className="w-8 h-8" />,
+      number: "30+",
+      label: "Countries Served",
+      icon: <Globe className="w-8 h-8" />,
     },
   ];
 
@@ -162,6 +163,28 @@ const Industries = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <div class="banner-container">
+        {/* <!-- Desktop Banner (hidden on mobile) */}
+
+        <motion.img
+          src="/images/banners/industy.jpg"
+          alt="Desktop Banner"
+          class="hidden md:block w-full"
+          initial={{ scale: 1.1 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1 }}
+        />
+
+        {/* <!-- Mobile Banner (hidden on desktop) --> */}
+        <motion.img
+          src="/images/mobile-view-banner/industries.jpg"
+          alt="Mobile Banner"
+          class="block md:hidden w-full"
+          initial={{ scale: 1.1 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1 }}
+        />
+      </div>
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-white via-orange-50 to-orange-100 overflow-hidden">
         <div className="absolute inset-0">
@@ -173,21 +196,22 @@ const Industries = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 animate-fade-in-up">
-              Industries We
+              Pouch Solutions for
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500 ml-4">
-                Serve
+                Every Industry
               </span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
-              Delivering specialized packaging solutions across diverse
-              industries with unmatched quality and innovation
+              Specialized pouch-making machines designed to meet the unique
+              packaging requirements across diverse industries
             </p>
             <div className="flex justify-center space-x-4 animate-fade-in-up animation-delay-400">
-              <button className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-3 rounded-full font-semibold hover:from-orange-600 hover:to-red-600 transform hover:scale-105 transition-all duration-300 shadow-lg">
-                Explore Solutions
-              </button>
+              {/* <button className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-3 rounded-full font-semibold hover:from-orange-600 hover:to-red-600 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                View Pouch Machines
+              </button> */}
+
               <button className="border-2 border-orange-500 text-orange-500 px-8 py-3 rounded-full font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300">
-                Contact Sales
+                Request Demo
               </button>
             </div>
           </div>
@@ -226,11 +250,11 @@ const Industries = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Specialized Solutions for Every Industry
+              Industry-Specific Pouch Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our expertise spans multiple sectors, delivering tailored
-              packaging solutions that meet specific industry requirements
+              Our pouch-making machines are engineered to deliver optimal
+              performance for each industry's unique requirements
             </p>
           </div>
 
@@ -248,6 +272,7 @@ const Industries = () => {
                 style={{ transitionDelay: `${index * 100}ms` }}
                 onMouseEnter={() => setActiveCard(industry.id)}
                 onMouseLeave={() => setActiveCard(null)}
+                onClick={() => openModal(industry)}
               >
                 <div className="p-8">
                   <div
@@ -281,7 +306,7 @@ const Industries = () => {
                       onClick={() => openModal(industry)}
                       className="text-orange-500 font-semibold hover:text-orange-600 transition-colors duration-300 flex items-center group-hover:translate-x-2 transform transition-transform"
                     >
-                      Learn More
+                      View Pouch Options
                       <svg
                         className="w-4 h-4 ml-2"
                         fill="none"
@@ -306,16 +331,14 @@ const Industries = () => {
 
       {/* Modal/Popup */}
       {isModalOpen && selectedIndustry && (
-        <div className="fixed inset-0  backdrop-blur-sm z-200 overflow-y-auto">
+        <div className="fixed inset-0  backdrop-blur-sm z-500 overflow-y-auto">
           <div className="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
             {/* Background overlay */}
             <div
-              className="fixed inset-0  transition-opacity"
+              className="fixed inset-0 transition-opacity"
               aria-hidden="true"
               onClick={closeModal}
-            >
-              <div className="absolute inset-0 "></div>
-            </div>
+            ></div>
 
             {/* Modal content */}
             <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full">
@@ -330,7 +353,7 @@ const Industries = () => {
                   </div>
                   <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                     <h3 className="text-2xl leading-6 font-bold text-gray-900">
-                      {selectedIndustry.title}
+                      {selectedIndustry.title} Pouch Solutions
                     </h3>
                     <div className="mt-4">
                       <p className="text-gray-600 mb-4">
@@ -346,30 +369,37 @@ const Industries = () => {
                       </div>
                       <div className="bg-gray-50 p-4 rounded-lg">
                         <h4 className="font-semibold text-gray-800 mb-2">
-                          Additional Information
+                          Recommended Pouch Machines
                         </h4>
-                        <p className="text-gray-600">
-                          Our {selectedIndustry.title.toLowerCase()} packaging
-                          solutions are designed to meet the highest industry
-                          standards. Contact us to discuss custom solutions
-                          tailored to your specific needs.
+                        <p className="text-gray-600 mb-2">
+                          For {selectedIndustry.title.toLowerCase()}{" "}
+                          applications, we recommend:
                         </p>
+                        <ul className="list-disc pl-5 text-gray-600">
+                          <li>High-speed vertical pouch machines</li>
+                          <li>Customizable sealing systems</li>
+                          <li>Specialized material handling</li>
+                          <li>Integrated quality control</li>
+                        </ul>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                <button
+                {/* <button
                   type="button"
                   className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-base font-medium text-white hover:from-orange-600 hover:to-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 sm:ml-3 sm:w-auto sm:text-sm"
-                  onClick={openModal}
+                  onClick={() => {
+                    // Add navigation to contact page or open contact form
+                    console.log("Get a Quote clicked");
+                  }}
                 >
-                  Get a Quote
-                </button>
+                  Get Machine Specifications
+                </button> */}
                 <button
                   type="button"
-                  className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                  className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base  font-medium text-gray-700 hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
                   onClick={closeModal}
                 >
                   Close

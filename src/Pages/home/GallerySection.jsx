@@ -139,11 +139,11 @@ const MachineGallery = () => {
         </div>
 
         {/* Gallery Content - Split Screen Design */}
-        <div className="flex flex-col lg:flex-row gap-8">
+        <div className="mx-auto   gap-8">
           {/* Pouches Machines Section - Left Side */}
-          <div className="lg:w-1/2">
+          <div className="max-w-5xl mx-auto">
             <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-orange-500">
-              <h2 className="text-3xl font-bold text-gray-800 mb-6">
+              <h2 className="text-3xl text-center font-bold text-gray-800 mb-6">
                 Pouches Making Machines
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -182,57 +182,6 @@ const MachineGallery = () => {
                     </div>
                     {machine.featured && (
                       <div className="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold">
-                        FEATURED
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Bags Machines Section - Right Side */}
-          <div className="lg:w-1/2">
-            <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500">
-              <h2 className="text-3xl font-bold text-gray-800 mb-6">
-                Bags Making Machines
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {bagsMachines.map((machine) => (
-                  <div
-                    key={machine.id}
-                    className="relative group cursor-pointer bg-gray-50 rounded-lg overflow-hidden hover:shadow-md transition-shadow duration-300"
-                    onClick={() => setSelectedImage(machine)}
-                  >
-                    <div className="h-48 overflow-hidden">
-                      <img
-                        src={machine.image}
-                        alt={machine.name}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        onError={(e) => {
-                          e.target.style.display = "none";
-                          e.target.parentElement.classList.add("bg-gray-200");
-                          e.target.parentElement.classList.add("flex");
-                          e.target.parentElement.classList.add("items-center");
-                          e.target.parentElement.classList.add(
-                            "justify-center"
-                          );
-                          e.target.parentElement.innerHTML =
-                            '<span class="text-gray-500">Bag Machine Image</span>';
-                        }}
-                      />
-                    </div>
-                    <div className="p-4">
-                      <h3 className="text-lg font-bold text-gray-800 mb-1">
-                        {machine.name}
-                      </h3>
-                      <p className="text-blue-600 font-medium text-sm mb-2">
-                        {machine.model}
-                      </p>
-                      <p className="text-gray-600 text-xs">{machine.specs}</p>
-                    </div>
-                    {machine.featured && (
-                      <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold">
                         FEATURED
                       </div>
                     )}

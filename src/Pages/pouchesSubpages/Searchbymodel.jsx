@@ -1,235 +1,129 @@
 import React from "react";
 
-// Updated machinesData with image URLs
 const machinesData = [
   {
-    series: "BH Series [BOX POUCH®]",
-    id: "bhb",
+    series: "GSC Series",
+    id: "gsc",
     bgColor: "bg-orange-600",
     items: [
       {
-        name: "BH-60DG-F",
-        desc: "BOX POUCH® making machine (with a high quality at a high manufacturing speed)",
-        link: "BH-60DG-F.html",
+        name: "GSC 20 HSI",
+        desc: "Automatic Multi-Format Pouch Machine",
+        link: "GSC-20-HSI.html",
         details:
-          "This model can make BOX POUCH® with many advantages different from all the others.",
-        image: "https://source.unsplash.com/random/300x200?machine",
+          "High-precision machine for center seal, gusset, three side seal, and quad seal pouches",
+        image: "images/product-images/GS-20-HSI-home.jpg",
+        features: [
+          "Max web: 1000mm width, 600mm diameter",
+          "Speed: Up to 140 shots/min",
+          "Handles pouch widths up to 500mm",
+          "Supports recyclable films",
+          "Skip function for longer pouches",
+        ],
       },
       {
-        name: "BH-80DG-F",
-        desc: "BOX POUCH® making machine (with a high quality at a high manufacturing speed)",
-        link: "BH-80DG-F.html",
+        name: "GSC 14 PLUS 300",
+        desc: "High-Speed Pouch Machine",
+        link: "GSC-14-PLUS-300.html",
+        details: "Compact machine delivering up to 300 pouches/minute",
+        image:
+          "/images/product-images/galaxy-packtech-image-resize/GSC-14-PLUS-200.jpg",
+        features: [
+          "Max web: 700mm width",
+          "Speed: Up to 300 pouches/min",
+          "Quick changeover system",
+          "Remote diagnostics support",
+          "Compact footprint",
+        ],
+      },
+      {
+        name: "GSC 20 PLUS COMBI",
+        desc: "Multi-Format Combi Pouch Machine",
+        link: "GSC-20-PLUS-COMBI.html",
         details:
-          "This model can make BOX POUCH® (large-capacity) with many advantages different from all the others.",
-        image: "https://source.unsplash.com/random/300x200?packaging",
+          "All-in-one solution for various pouch types including quad seal",
+        image:
+          "/images/product-images/galaxy-packtech-image-resize/GSC-20-plus-combi.jpg",
+        features: [
+          "Max web: 1000mm width",
+          "Speed: Up to 170 shots/min",
+          "Handles 5+ pouch formats",
+          "Modular design",
+          "Sustainable film ready",
+        ],
       },
     ],
   },
   {
-    series: "BH Series",
-    id: "bh",
+    series: "GS Series",
+    id: "gs",
     bgColor: "bg-orange-500",
     items: [
       {
-        name: "BH-60D",
-        desc: "High-speed, three-side-seal, automatic pouch making machine",
-        link: "BH-60D.html",
-        details:
-          "This model can make pouches with right-and-left side seals and three bottom seals. The pouches are often used for food.",
-        image: "https://source.unsplash.com/random/300x200?industrial",
+        name: "GS 24 TSG",
+        desc: "Automatic Flat Bottom Pouch Machine",
+        link: "/products/${machine.id}  ",
+        details: "Specialized for flat bottom and gusset pouches",
+        image:
+          "/images/product-images/galaxy-packtech-image-resize/GS-24-TSG.jpg",
+        features: [
+          "Max web: 1250mm width",
+          "Speed: Up to 70 shots/min",
+          "2-web or 3-web configurations",
+          "Precision sealing and cutting",
+          "Supports mono-material films",
+        ],
       },
       {
-        name: "BH-60DLLS",
-        desc: "High-speed, three-side-seal, automatic pouch making machine with standing pouch unit",
-        link: "BH-60DLLS.html",
-        details:
-          "This model can make appealing and standing pouches with right-and-left side seals and three bottom seals.",
-        image: "https://source.unsplash.com/random/300x200?manufacturing",
+        name: "GS 24 PLUS 200",
+        desc: "High-Speed Stand-Up Pouch Machine",
+        link: "/products/${machine.id}",
+        details: "Versatile machine for stand-up, zipper, and shaped pouches",
+        image:
+          "/images/product-images/galaxy-packtech-image-resize/GS-24-PLUS-200.jpg",
+        features: [
+          "Max web: 1220mm width",
+          "Speed: Up to 200 cuts/min",
+          "Ultrasonic bit fusing",
+          "Vision QC system",
+          "Supports compostable films",
+        ],
       },
       {
-        name: "BH-60DLLC",
-        desc: "High-speed, three-side-seal, automatic pouch making machine with zipper seal unit",
-        link: "BH-60DLLC.html",
-        details:
-          "This model can make pouches with zipper, right-and-left side seals and three bottom seals. The pouches have good preservation quality.",
-        image: "https://source.unsplash.com/random/300x200?machinery",
-      },
-      {
-        name: "BH-60DLLSC",
-        desc: "High-speed, three-side-seal, automatic pouch making machine with standing pouch and zipper seal units",
-        link: "BH-60DLLSC.html",
-        details:
-          "This model can make standing pouches with zipper. The pouches with zipper can be used to preserve content even after opening.",
-        image: "https://source.unsplash.com/random/300x200?pouch",
-      },
-      {
-        name: "BH-80D",
-        desc: "High-speed, three-side-seal, automatic pouch making machine",
-        link: "BH-80D.html",
-        details:
-          "This model can make larger three-side-seal pouches than BH-60D series model.",
-        image: "https://source.unsplash.com/random/300x200?automation",
-      },
-      {
-        name: "BH-60DLLSC+CT",
-        desc: "High-speed, automatic pouch making machine",
-        link: "BH-60DLLSC+CT.html",
-        details: "Half fold fusion, standing pouch and zipper seal units.",
-        image: "https://source.unsplash.com/random/300x200?factory",
+        name: "GS 20 PLUS",
+        desc: "Automatic Pouch Making Machine",
+        link: "/products/${machine.id}",
+        details: "Versatile machine for stand-up, gusset, and zipper pouches",
+        image:
+          "/images/product-images/galaxy-packtech-image-resize/GS-24-PLUS-200.jpg",
+        features: [
+          "Max web: 1000mm width",
+          "Speed: Up to 160 shots/min",
+          "Recyclable film compatible",
+          "Quick setup with job recall",
+          "Precision web handling",
+        ],
       },
     ],
   },
   {
-    series: "CT Series",
-    id: "ct",
+    series: "GT Series",
+    id: "gt",
     bgColor: "bg-orange-400",
     items: [
       {
-        name: "CT-60DLLSC",
-        desc: "High-speed, half fold fusion, automatic 1-line bag making machine with standing pouch and zipper seal units",
-        link: "CT-60DLLSC.html",
-        details:
-          "This model is our best selling machine that can make standing pouches with zipper. The pouches are the most suitable for pet food, etc. Side gusset/Quad Seal bag can be made with the Quad Seal option.",
-        image: "https://source.unsplash.com/random/300x200?production",
-      },
-      {
-        name: "CT-80DLLSC",
-        desc: "High-speed, half fold fusion, automatic 1-line bag making machine with standing pouch and zipper seal units",
-        link: "CT-80DLLSC.html",
-        details:
-          "This model can make larger standing pouches with zipper than CT-60DLLSC model. The pouches are the most suitable for seeds and fertilizer.",
-        image: "https://source.unsplash.com/random/300x200?equipment",
-      },
-    ],
-  },
-  {
-    series: "FD Series",
-    id: "fd",
-    bgColor: "bg-orange-600",
-    items: [
-      {
-        name: "FD-35V",
-        desc: "High-speed, center press-seal, automatic pouch making machine",
-        link: "FD-35V.html",
-        details:
-          "This model can make pouches that are the most suitable for dry goods such as coffee beans and wheat flour.",
-        image: "https://source.unsplash.com/random/300x200?packing",
-      },
-      {
-        name: "FD-35VSC",
-        desc: "High-speed, half fold fusion, automatic 1-line bag making machine with standing pouch and zipper seal units",
-        link: "FD-35VSC.html",
-        details:
-          "This model can make the center press-seal type of not only standing pouches with zipper, but also side gusset pouches.",
-        image: "https://source.unsplash.com/random/300x200?mechanical",
-      },
-      {
-        name: "FD-60D",
-        desc: "High-speed, center-seal, automatic pouch making machine",
-        link: "FD-60D.html",
-        details:
-          "This model, equipped with creasing heater as standard equipment, can make pouches that are the most suitable for food such as coffee beans and wheat flour.",
-        image: "https://source.unsplash.com/random/300x200?industry",
-      },
-      {
-        name: "FD-60DLLSC",
-        desc: "High-speed, half fold fusion, automatic 1-line bag making machine",
-        link: "FD-60DLLSC.html",
-        details:
-          "This model can make the large center press-seal type of not only standing pouches with zipper, but also side gusset pouches and quad seal bags. The large pouches are the most suitable for seed and fertilizer.",
-        image: "https://source.unsplash.com/random/300x200?heavy-machine",
-      },
-    ],
-  },
-  {
-    series: "HK Series",
-    id: "hk",
-    bgColor: "bg-orange-500",
-    items: [
-      {
-        name: "HK-40V",
-        desc: "High-speed, side-weld, automatic bag making machine",
-        link: "HK-40V.html",
-        details:
-          "This side-weld type model can make small-sized pouches often used for packing of clothing and items such as handkerchiefs and towels.",
-        image: "https://source.unsplash.com/random/300x200?textile",
-      },
-      {
-        name: "HK-65V",
-        desc: "High-speed, side-weld, automatic bag making machine",
-        link: "HK-65V.html",
-        details:
-          "This side-weld type model can make slightly larger pouches often used for packing larger items of clothes, commodities, etc. than HK-40V model.",
-        image: "https://source.unsplash.com/random/300x200?garment",
-      },
-      {
-        name: "HK-90V",
-        desc: "High-speed, side-weld, automatic bag making machine",
-        link: "HK-90V.html",
-        details:
-          "This model can make slender (up to 900 mm) and large pouches as well as large-sized pouches.",
-        image: "https://source.unsplash.com/random/300x200?packaging-machine",
-      },
-      {
-        name: "VK-65",
-        desc: "High-speed, oblique side-weld, automatic bag making machine for triangular and trapezoid bags",
-        link: "VK-65.html",
-        details:
-          "This model can make various sized trapezoidal pouches (triangular), by using inclining thermal blades (blade for both sealing and separating).",
-        image: "https://source.unsplash.com/random/300x200?blade",
-      },
-      {
-        name: "VK-90",
-        desc: "High-speed, oblique large side-weld, automatic bag making machine for triangular and trapezoid bags",
-        link: "VK-90.html",
-        details:
-          "This model can make larger trapezoidal pouches (triangular) than the VK-65 model, suitable for packing of vegetables, flowers, etc.",
-        image: "https://source.unsplash.com/random/300x200?agriculture",
-      },
-    ],
-  },
-  {
-    series: "Spout Inserter",
-    id: "st",
-    bgColor: "bg-orange-600",
-    items: [
-      {
-        name: "ST-30",
-        desc: "Spout inserter",
-        link: "ST-30.html",
-        details:
-          'New cutting-edge spout inserter, the "ST-30"! Wider spout installation angle capabilities than our "ST-24"',
-        image: "https://source.unsplash.com/random/300x200?spout",
-      },
-    ],
-  },
-  {
-    series: "Options",
-    id: "op",
-    bgColor: "bg-orange-400",
-    items: [
-      {
-        name: "Coreless Trim Winder",
-        desc: "Applies to all models",
-        link: "op01.html",
-        details: "Wastage of roll film can be trimmed efficiently and easily.",
-        image: "https://source.unsplash.com/random/300x200?winder",
-      },
-      {
-        name: "Full-Shape Thomson Die-Cut unit",
-        desc: "Applies to BH / CT series",
-        link: "op02.html",
-        details:
-          "Galaxy Packtech’s servo-driven, Thomson die-cut unit can immediately solve problems with the manufacturing of shaped pouches.",
-        image: "https://source.unsplash.com/random/300x200?die-cut",
-      },
-      {
-        name: "Cutter Control System",
-        desc: "Applies to BH, CT, FD series",
-        link: "op04.html",
-        details:
-          "Galaxy Packtech’s original unit meets needs of clean notching and rounded corner cut.",
-        image: "https://source.unsplash.com/random/300x200?cutter",
+        name: "GT 24 PLUS 200",
+        desc: "Multi-Format Pouch Machine",
+        link: "GT-24-PLUS-200.html",
+        details: "Advanced machine for stand-up, zipper, and quad seal pouches",
+        image: "https://example.com/machine6.jpg",
+        features: [
+          "Max web: 1200mm width",
+          "Speed: Up to 200 cuts/min",
+          "Automatic recipe storage",
+          "LAN-enabled remote access",
+          "Compact design",
+        ],
       },
     ],
   },
@@ -256,11 +150,21 @@ const MachineSeries = ({ series, id, bgColor, items }) => (
                 <span className="text-sm text-gray-600">{item.desc}</span>
               </div>
               <dd className="mt-2 text-gray-700">{item.details}</dd>
+              {item.features && (
+                <ul className="mt-2 text-sm text-gray-600">
+                  {item.features.map((feature, i) => (
+                    <li key={i} className="flex items-start">
+                      <span className="text-orange-500 mr-1">•</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </dt>
             <img
               src={item.image}
               alt={item.name}
-              className="w-full md:w-48 h-32 object-cover rounded-lg"
+              className="w-full md:w-[700px] h-50 object-fill rounded-lg"
             />
           </dl>
         </a>

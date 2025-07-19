@@ -29,7 +29,7 @@ const AboutSection = () => {
       title: "Innovation-Driven Culture",
       icon: (
         <svg
-          className="w-12 h-12 text-blue-600"
+          className="w-12 h-12 text-pink-600"
           fill="currentColor"
           viewBox="0 0 24 24"
         >
@@ -43,7 +43,7 @@ const AboutSection = () => {
       title: "Quality Assurance Excellence",
       icon: (
         <svg
-          className="w-12 h-12 text-green-600"
+          className="w-12 h-12 text-red-600"
           fill="currentColor"
           viewBox="0 0 24 24"
         >
@@ -66,8 +66,12 @@ const AboutSection = () => {
   };
 
   return (
-    <div className="py-2 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
-      <div className="container mx-auto px-4">
+    <div className="py-2 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden relative">
+      {/* Decorative gradient background elements */}
+      <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-r from-orange-400 to-pink-500 rounded-full filter blur-3xl opacity-10 -translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-r from-red-500 to-orange-400 rounded-full filter blur-3xl opacity-10 translate-x-1/2 translate-y-1/2"></div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Left Side - Image */}
           <div
@@ -77,8 +81,8 @@ const AboutSection = () => {
                 : "-translate-x-12 opacity-0"
             }`}
           >
-            <div className=" ">
-              <div className="overflow-hidden rounded-xl shadow-2xl transform group-hover:scale-105 transition-transform duration-700">
+            <div className="group">
+              <div className="overflow-hidden rounded-xl shadow-2xl transform group-hover:scale-105 transition-transform duration-700 relative">
                 <img
                   src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                   alt="Modern packaging machinery"
@@ -88,27 +92,9 @@ const AboutSection = () => {
               </div>
             </div>
 
-            {/* Floating Elements */}
-            {/* <div className="absolute -top-4 -left-4 animate-pulse">
-              <div className="w-8 h-8 bg-orange-500 rounded-full opacity-60"></div>
-            </div>
-            <div className="absolute -bottom-6 -right-6 animate-bounce">
-              <div className="w-20 h-20 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full flex items-center justify-center shadow-lg">
-                <svg
-                  className="w-10 h-10 text-white animate-spin"
-                  style={{ animationDuration: "3s" }}
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                </svg>
-              </div>
-            </div> */}
-
-            {/* Tech Pattern Overlay */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 opacity-10">
-              <div className="w-full h-full border-4 border-orange-500 rounded-full animate-ping"></div>
-            </div>
+            {/* Floating decorative elements */}
+            <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-orange-400 to-pink-500 rounded-full opacity-20 animate-float"></div>
+            <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-gradient-to-br from-red-500 to-orange-400 rounded-full opacity-20 animate-float-delay"></div>
           </div>
 
           {/* Right Side - Content */}
@@ -120,26 +106,23 @@ const AboutSection = () => {
             }`}
           >
             <div className="mb-8">
-              <div className="uppercase text-orange-500 font-semibold mb-2 animate-pulse">
+              <div className="uppercase text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-pink-500 font-semibold mb-2">
                 <h6 className="text-sm tracking-wider">
-                  15+ Years of Innovation
+                  24+ Years of Innovation
                 </h6>
               </div>
               <div className="text-4xl font-bold text-gray-800 mb-4">
                 <h1 className="leading-tight">
-                  GalaxyPackTech{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-700 animate-pulse">
+                  Galaxy PackTech{" "}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-pink-500 to-red-500 animate-text-shine">
                     Solutions
                   </span>
                 </h1>
               </div>
-              <div
-                className="h-1 bg-gradient-to-r from-orange-500 to-orange-700 mb-2 transform origin-left animate-pulse"
-                style={{ width: "80px" }}
-              ></div>
-              <div className="text-gray-600  leading-relaxed">
+              <div className="h-1.5 bg-gradient-to-r from-orange-500 via-pink-500 to-red-500 mb-4 w-20 rounded-full"></div>
+              <div className="text-gray-600 leading-relaxed">
                 <p className="text-lg">
-                  Founded in 2008, GalaxyPackTech is a leading provider of
+                  Founded in 2001, Galaxy PackTech is a leading provider of
                   packaging machinery solutions that integrates cutting-edge
                   technology, precision engineering, and global service
                   networks. We specialize in designing and manufacturing
@@ -151,6 +134,7 @@ const AboutSection = () => {
             </div>
 
             <div className="space-y-3">
+              {/* Technology Card */}
               <div
                 className={`group cursor-pointer transform transition-all duration-500 hover:scale-105 ${
                   activeCard === "tech" ? "scale-105" : ""
@@ -159,9 +143,10 @@ const AboutSection = () => {
                 onMouseLeave={() => setActiveCard(null)}
                 onClick={() => openPopup("tech")}
               >
-                <div className="flex items-center p-2 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 border-l-4 border-orange-500">
-                  <div className="mr-6">
-                    <div className="w-10 h-10 bg-gradient-to-r from-orange-100 to-orange-200 rounded-full flex items-center justify-center group-hover:from-orange-200 group-hover:to-orange-300 transition-all duration-300">
+                <div className="flex items-center p-2 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 border-l-4 border-orange-500 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-orange-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="mr-6 relative z-10">
+                    <div className="w-10 h-10 bg-gradient-to-r from-orange-100 to-orange-200 rounded-full flex items-center justify-center group-hover:from-orange-200 group-hover:to-orange-300 transition-all duration-300 shadow-md">
                       <svg
                         className="w-6 h-6 text-orange-600 group-hover:scale-110 transition-transform duration-300"
                         fill="currentColor"
@@ -171,7 +156,7 @@ const AboutSection = () => {
                       </svg>
                     </div>
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 relative z-10">
                     <h5 className="text-xl font-bold text-gray-800 group-hover:text-orange-600 transition-colors duration-300">
                       Advanced Machinery Technology
                     </h5>
@@ -179,7 +164,7 @@ const AboutSection = () => {
                       State-of-the-art automated packaging solutions
                     </p>
                   </div>
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 relative z-10">
                     <svg
                       className="w-6 h-6 text-orange-500"
                       fill="none"
@@ -197,6 +182,7 @@ const AboutSection = () => {
                 </div>
               </div>
 
+              {/* Culture Card */}
               <div
                 className={`group cursor-pointer transform transition-all duration-500 hover:scale-105 ${
                   activeCard === "culture" ? "scale-105" : ""
@@ -205,11 +191,12 @@ const AboutSection = () => {
                 onMouseLeave={() => setActiveCard(null)}
                 onClick={() => openPopup("culture")}
               >
-                <div className="flex items-center p-2 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 border-l-4 border-blue-500">
-                  <div className="mr-6">
-                    <div className="w-10 h-10 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full flex items-center justify-center group-hover:from-blue-200 group-hover:to-blue-300 transition-all duration-300">
+                <div className="flex items-center p-2 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 border-l-4 border-pink-500 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-pink-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="mr-6 relative z-10">
+                    <div className="w-10 h-10 bg-gradient-to-r from-pink-100 to-pink-200 rounded-full flex items-center justify-center group-hover:from-pink-200 group-hover:to-pink-300 transition-all duration-300 shadow-md">
                       <svg
-                        className="w-6 h-6 text-blue-600 group-hover:scale-110 transition-transform duration-300"
+                        className="w-6 h-6 text-pink-600 group-hover:scale-110 transition-transform duration-300"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                       >
@@ -217,17 +204,17 @@ const AboutSection = () => {
                       </svg>
                     </div>
                   </div>
-                  <div className="flex-1">
-                    <h5 className="text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
+                  <div className="flex-1 relative z-10">
+                    <h5 className="text-xl font-bold text-gray-800 group-hover:text-pink-600 transition-colors duration-300">
                       Innovation-Driven Culture
                     </h5>
                     <p className="text-gray-600 mt-1 group-hover:text-gray-700 transition-colors duration-300">
                       Collaborative excellence and continuous improvement
                     </p>
                   </div>
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 relative z-10">
                     <svg
-                      className="w-6 h-6 text-blue-500"
+                      className="w-6 h-6 text-pink-500"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -243,6 +230,7 @@ const AboutSection = () => {
                 </div>
               </div>
 
+              {/* Quality Card */}
               <div
                 className={`group cursor-pointer transform transition-all duration-500 hover:scale-105 ${
                   activeCard === "quality" ? "scale-105" : ""
@@ -251,11 +239,12 @@ const AboutSection = () => {
                 onMouseLeave={() => setActiveCard(null)}
                 onClick={() => openPopup("quality")}
               >
-                <div className="flex items-center p-2 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 border-l-4 border-green-500">
-                  <div className="mr-6">
-                    <div className="w-10 h-10 bg-gradient-to-r from-green-100 to-green-200 rounded-full flex items-center justify-center group-hover:from-green-200 group-hover:to-green-300 transition-all duration-300">
+                <div className="flex items-center p-2 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 border-l-4 border-red-500 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-red-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="mr-6 relative z-10">
+                    <div className="w-10 h-10 bg-gradient-to-r from-red-100 to-red-200 rounded-full flex items-center justify-center group-hover:from-red-200 group-hover:to-red-300 transition-all duration-300 shadow-md">
                       <svg
-                        className="w-6 h-6 text-green-600 group-hover:scale-110 transition-transform duration-300"
+                        className="w-6 h-6 text-red-600 group-hover:scale-110 transition-transform duration-300"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                       >
@@ -263,17 +252,17 @@ const AboutSection = () => {
                       </svg>
                     </div>
                   </div>
-                  <div className="flex-1">
-                    <h5 className="text-xl font-bold text-gray-800 group-hover:text-green-600 transition-colors duration-300">
+                  <div className="flex-1 relative z-10">
+                    <h5 className="text-xl font-bold text-gray-800 group-hover:text-red-600 transition-colors duration-300">
                       Quality Assurance Excellence
                     </h5>
                     <p className="text-gray-600 mt-1 group-hover:text-gray-700 transition-colors duration-300">
                       ISO certified manufacturing and testing standards
                     </p>
                   </div>
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 relative z-10">
                     <svg
-                      className="w-6 h-6 text-green-500"
+                      className="w-6 h-6 text-red-500"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -295,14 +284,22 @@ const AboutSection = () => {
 
       {/* Popup Modal */}
       {activePopup && (
-        <div className="fixed  inset-0 z-200 flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-5000 flex items-center justify-center p-4">
           <div
-            className="absolute inset-0 bg-opacity-80 backdrop-blur-sm transition-opacity duration-300"
+            className="absolute inset-0  bg-opacity-80 backdrop-blur-sm transition-opacity duration-300"
             onClick={closePopup}
           ></div>
           <div className="relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[80vh] overflow-hidden transform transition-all duration-500 scale-100 opacity-100">
             {/* Header */}
-            <div className="bg-gradient-to-r from-gray-800 to-gray-900 text-white p-6 relative overflow-hidden">
+            <div
+              className={`bg-gradient-to-r ${
+                activePopup === "tech"
+                  ? "from-orange-600 to-orange-800"
+                  : activePopup === "culture"
+                  ? "from-pink-600 to-pink-800"
+                  : "from-red-600 to-red-800"
+              } text-white p-6 relative overflow-hidden`}
+            >
               <div className="absolute top-0 right-0 w-32 h-32 bg-white opacity-5 rounded-full transform translate-x-16 -translate-y-16"></div>
               <div className="absolute bottom-0 left-0 w-20 h-20 bg-white opacity-5 rounded-full transform -translate-x-10 translate-y-10"></div>
               <div className="relative z-10 flex items-center justify-between">
@@ -352,7 +349,7 @@ const AboutSection = () => {
               <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
                 {activePopup === "tech" && (
                   <>
-                    <div className="bg-orange-50 p-4 rounded-lg text-center">
+                    <div className="bg-orange-50 p-4 rounded-lg text-center border border-orange-100">
                       <div className="text-2xl font-bold text-orange-600">
                         500+
                       </div>
@@ -360,13 +357,13 @@ const AboutSection = () => {
                         Units per minute
                       </div>
                     </div>
-                    <div className="bg-orange-50 p-4 rounded-lg text-center">
+                    <div className="bg-orange-50 p-4 rounded-lg text-center border border-orange-100">
                       <div className="text-2xl font-bold text-orange-600">
                         99.9%
                       </div>
                       <div className="text-sm text-gray-600">Accuracy rate</div>
                     </div>
-                    <div className="bg-orange-50 p-4 rounded-lg text-center">
+                    <div className="bg-orange-50 p-4 rounded-lg text-center border border-orange-100">
                       <div className="text-2xl font-bold text-orange-600">
                         24/7
                       </div>
@@ -378,24 +375,24 @@ const AboutSection = () => {
                 )}
                 {activePopup === "culture" && (
                   <>
-                    <div className="bg-blue-50 p-4 rounded-lg text-center">
-                      <div className="text-2xl font-bold text-blue-600">
+                    <div className="bg-pink-50 p-4 rounded-lg text-center border border-pink-100">
+                      <div className="text-2xl font-bold text-pink-600">
                         200+
                       </div>
                       <div className="text-sm text-gray-600">
                         Expert team members
                       </div>
                     </div>
-                    <div className="bg-blue-50 p-4 rounded-lg text-center">
-                      <div className="text-2xl font-bold text-blue-600">
+                    <div className="bg-pink-50 p-4 rounded-lg text-center border border-pink-100">
+                      <div className="text-2xl font-bold text-pink-600">
                         12%
                       </div>
                       <div className="text-sm text-gray-600">
                         R&D investment
                       </div>
                     </div>
-                    <div className="bg-blue-50 p-4 rounded-lg text-center">
-                      <div className="text-2xl font-bold text-blue-600">
+                    <div className="bg-pink-50 p-4 rounded-lg text-center border border-pink-100">
+                      <div className="text-2xl font-bold text-pink-600">
                         50+
                       </div>
                       <div className="text-sm text-gray-600">Patents filed</div>
@@ -404,22 +401,22 @@ const AboutSection = () => {
                 )}
                 {activePopup === "quality" && (
                   <>
-                    <div className="bg-green-50 p-4 rounded-lg text-center">
-                      <div className="text-2xl font-bold text-green-600">
+                    <div className="bg-red-50 p-4 rounded-lg text-center border border-red-100">
+                      <div className="text-2xl font-bold text-red-600">
                         0.01%
                       </div>
                       <div className="text-sm text-gray-600">Defect rate</div>
                     </div>
-                    <div className="bg-green-50 p-4 rounded-lg text-center">
-                      <div className="text-2xl font-bold text-green-600">
+                    <div className="bg-red-50 p-4 rounded-lg text-center border border-red-100">
+                      <div className="text-2xl font-bold text-red-600">
                         99.5%
                       </div>
                       <div className="text-sm text-gray-600">
                         Uptime guarantee
                       </div>
                     </div>
-                    <div className="bg-green-50 p-4 rounded-lg text-center">
-                      <div className="text-2xl font-bold text-green-600">
+                    <div className="bg-red-50 p-4 rounded-lg text-center border border-red-100">
+                      <div className="text-2xl font-bold text-red-600">
                         5 Year
                       </div>
                       <div className="text-sm text-gray-600">Warranty</div>
@@ -432,11 +429,17 @@ const AboutSection = () => {
             {/* Footer */}
             <div className="border-t bg-gray-50 px-8 py-2 flex justify-between items-center">
               <div className="text-sm text-gray-600">
-                Learn more about GalaxyPackTech solutions
+                Learn more about Galaxy PackTech solutions
               </div>
               <button
                 onClick={closePopup}
-                className="px-6 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors duration-200"
+                className={`px-6 py-2 rounded-lg text-white hover:opacity-90 transition-colors duration-200 ${
+                  activePopup === "tech"
+                    ? "bg-orange-600"
+                    : activePopup === "culture"
+                    ? "bg-pink-600"
+                    : "bg-red-600"
+                }`}
               >
                 Close
               </button>
@@ -444,7 +447,7 @@ const AboutSection = () => {
           </div>
         </div>
       )}
-    </div> 
+    </div>
   );
 };
 
