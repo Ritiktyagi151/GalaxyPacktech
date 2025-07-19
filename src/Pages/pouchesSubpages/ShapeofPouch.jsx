@@ -180,14 +180,14 @@ const PouchShapeSelector = () => {
       items: [
         {
           id: "bh-60dg-f",
-          href: "BH-60DG-F.html",
+          href: "/products",
           title:
             "This model can make BOX POUCH® (Totani's original flat bottom pouch)",
           desc: "Totani's machine can make various pouches, such as packing bags for food, pouches for commodities and infusion bags for the medical field.",
         },
         {
           id: "bh-80dg-f",
-          href: "BH-80DG-F.html",
+          href: "/products",
           title:
             "This model can make large-capacity BOX POUCH® (Totani's original flat bottom pouch)",
           desc: "Totani's machine can make large flat bottom pouches that are suitable for prolonged food preservation and to preserve and transport liquids.",
@@ -204,37 +204,37 @@ const PouchShapeSelector = () => {
       items: [
         {
           id: "tnbh01",
-          href: "BH-60D.html",
+          href: "/products",
           title: "Three-side-seal type pouch",
           desc: "Used for retort food.",
         },
         {
           id: "tnbh02",
-          href: "BH-60DLLS.html",
+          href: "/products",
           title: "Three-side-seal type standing pouch",
           desc: "Used for retort food, appealing as display or for cleanser refill bag.",
         },
         {
           id: "tnbh03",
-          href: "BH-60DLLC.html",
+          href: "/products",
           title: "Three-side-seal type pouch with zipper",
           desc: "Used for preservation of sweets and flavoring ingredients.",
         },
         {
           id: "tnbh04",
-          href: "BH-60DLLSC.html",
+          href: "/products",
           title: "Three-side-seal type standing pouch with zipper",
           desc: "Used for preservation of food or commodities and appealing as display.",
         },
         {
           id: "tnbh05",
-          href: "BH-80D.html",
+          href: "/products",
           title: "Slightly larger three-side-seal type pouch",
           desc: "Used for larger portions of retort food, etc.",
         },
         {
           id: "tnbh06",
-          href: "BH-60DLLSC+CT.html",
+          href: "/products",
           title: "Half fold fusion, standing pouch and zipper seal",
           desc: "Used for pet food, snacks, household goods, detergent, fertilizer or feeding, and etc.",
         },
@@ -249,13 +249,13 @@ const PouchShapeSelector = () => {
       items: [
         {
           id: "tnct01",
-          href: "CT-60DLLSC.html",
+          href: "/products",
           title: "Half fold fusion type standing pouch with zipper",
           desc: "Used for various purposes such as packing of food, pet food, fertilizer and seeds.",
         },
         {
           id: "tnct02",
-          href: "CT-80DLLSC.html",
+          href: "/products",
           title: "Large Half fold fusion type standing pouch with zipper",
           desc: "Large-capacity pouches that are useful for packing of pet food, fertilizer and seeds.",
         },
@@ -270,25 +270,25 @@ const PouchShapeSelector = () => {
       items: [
         {
           id: "tnfd01",
-          href: "FD-35V.html",
+          href: "/products",
           title: "Pouch made by folding a film from both sides and sealing it",
           desc: "Used for packing of food that can be affected by moisture such as coffee beans, sugar and wheat flour.",
         },
         {
           id: "tnfd02",
-          href: "FD-60D.html",
+          href: "/products",
           title: "Pouch made by folding a film from both sides and sealing it",
           desc: "Used for packing of food such as candy and chocolate.",
         },
         {
           id: "tnfd03",
-          href: "FD-35VSC.html",
+          href: "/products",
           title: "Standing pouch made by folding a film from both sides",
           desc: "Used for various purposes such as packing of food, pet food, fertilizer and seeds.",
         },
         {
           id: "tnfd04",
-          href: "FD-60DLLSC.html",
+          href: "/products",
           title: "Large standing pouch made by folding a film from both sides",
           desc: "Large-capacity pouches used for packing of pet food, fertilizer and seeds.",
         },
@@ -303,32 +303,32 @@ const PouchShapeSelector = () => {
       items: [
         {
           id: "tnhkvk01",
-          href: "HK-40V.html",
+          href: "/products",
           title: "Pouch made by sealing and cutting a film",
           desc: "Used for packing of clothing and commodities such as handkerchief and towel.",
         },
         {
           id: "tnhkvk02",
-          href: "HK-65V.html",
+          href: "/products",
           title: "Slightly larger pouch made by sealing and cutting a film",
           desc: "Used for packing of clothing and commodities such as handkerchief and towel.",
         },
         {
           id: "tnhkvk03",
-          href: "HK-90V.html",
+          href: "/products",
           title: "Vertically long pouch made by sealing and cutting a film",
           desc: "Vertically long pouches that are useful for packing of commodities and clothing.",
         },
         {
           id: "tnhkvk05",
-          href: "VK-65.html",
+          href: "/products",
           title:
             "Trapezoidal or triangular pouch made by sealing and cutting a film",
           desc: "Used for packing of food such as vegetable and sandwich.",
         },
         {
           id: "tnhkvk06",
-          href: "VK-90.html",
+          href: "/products",
           title: "Large triangular pouch made by sealing and cutting a film",
           desc: "Totani's machine can make large-sized trapezoidal and triangular pouches.",
         },
@@ -344,7 +344,7 @@ const PouchShapeSelector = () => {
       items: [
         {
           id: "st-30",
-          href: "ST-30.html",
+          href: "/products",
           title: "Automatic spout insertion",
           desc: "Totani's unit can insert spout automatically in making pouches for juice package and refill cleanser.",
         },
@@ -354,17 +354,17 @@ const PouchShapeSelector = () => {
 
   const options = [
     {
-      href: "op01.html",
+      href: "/products",
       title: "Coreless Trim Winder",
       desc: "(Applies to all models)",
     },
     {
-      href: "op02.html",
+      href: "/products",
       title: "Full-Shape Thomson Die-Cut unit",
       desc: "(Applies to BH / CT series)",
     },
     {
-      href: "op04.html",
+      href: "/products",
       title: "Cutter Control System",
       desc: "(Applies to BH, CT, FD series)",
     },

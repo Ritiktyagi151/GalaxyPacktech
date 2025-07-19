@@ -9,7 +9,7 @@ const machinesData = [
       {
         name: "GSC 20 HSI",
         desc: "Automatic Multi-Format Pouch Machine",
-        link: "GSC-20-HSI.html",
+        link: "/products",
         details:
           "High-precision machine for center seal, gusset, three side seal, and quad seal pouches",
         image: "images/product-images/GS-20-HSI-home.jpg",
@@ -24,7 +24,7 @@ const machinesData = [
       {
         name: "GSC 14 PLUS 300",
         desc: "High-Speed Pouch Machine",
-        link: "GSC-14-PLUS-300.html",
+        link: "/products",
         details: "Compact machine delivering up to 300 pouches/minute",
         image:
           "/images/product-images/galaxy-packtech-image-resize/GSC-14-PLUS-200.jpg",
@@ -39,7 +39,7 @@ const machinesData = [
       {
         name: "GSC 20 PLUS COMBI",
         desc: "Multi-Format Combi Pouch Machine",
-        link: "GSC-20-PLUS-COMBI.html",
+        link: "/products",
         details:
           "All-in-one solution for various pouch types including quad seal",
         image:
@@ -62,7 +62,7 @@ const machinesData = [
       {
         name: "GS 24 TSG",
         desc: "Automatic Flat Bottom Pouch Machine",
-        link: "/products/${machine.id}  ",
+        link: "/products",
         details: "Specialized for flat bottom and gusset pouches",
         image:
           "/images/product-images/galaxy-packtech-image-resize/GS-24-TSG.jpg",
@@ -77,7 +77,7 @@ const machinesData = [
       {
         name: "GS 24 PLUS 200",
         desc: "High-Speed Stand-Up Pouch Machine",
-        link: "/products/${machine.id}",
+        link: "/products",
         details: "Versatile machine for stand-up, zipper, and shaped pouches",
         image:
           "/images/product-images/galaxy-packtech-image-resize/GS-24-PLUS-200.jpg",
@@ -92,7 +92,7 @@ const machinesData = [
       {
         name: "GS 20 PLUS",
         desc: "Automatic Pouch Making Machine",
-        link: "/products/${machine.id}",
+        link: "/products",
         details: "Versatile machine for stand-up, gusset, and zipper pouches",
         image:
           "/images/product-images/galaxy-packtech-image-resize/GS-24-PLUS-200.jpg",
@@ -114,7 +114,7 @@ const machinesData = [
       {
         name: "GT 24 PLUS 200",
         desc: "Multi-Format Pouch Machine",
-        link: "GT-24-PLUS-200.html",
+        link: "/products",
         details: "Advanced machine for stand-up, zipper, and quad seal pouches",
         image: "https://example.com/machine6.jpg",
         features: [

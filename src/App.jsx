@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -12,8 +12,8 @@ import Footer from "./common/footer/Footer";
 
 import Home from "./Pages/home/Home";
 import ContactPage from "./Pages/contact-us/Contact-Us";
-import PouchMachines from "./Pages/Pouches/BagsProduct/PochesPage";
-import BagMachines from "./Pages/Pouches/BagsProduct/BagsPage";
+// import PouchMachines from "./Pages/Pouches/BagsProduct/PochesPage";
+// import BagMachines from "./Pages/Pouches/BagsProduct/BagsPage";
 import ShapeofPouch from "./Pages/pouchesSubpages/ShapeofPouch";
 import GalaxyTechAboutComponents from "./Pages/aboutus/About-Us";
 import Gallery from "./Pages/gallery/GalleryPage";
@@ -47,7 +47,7 @@ const Layout = () => {
 };
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
   // Define routes using createBrowserRouter with a layout route
   const router = createBrowserRouter(
@@ -75,10 +75,10 @@ function App() {
             path: "/blogs/:id",
             element: <BlogDetails />,
           },
-          {
-            path: "/pochespage",
-            element: <PouchMachines />,
-          },
+          // {
+          //   path: "/pochespage",
+          //   element: <PouchMachines />,
+          // },
           {
             path: "/pochespage",
             element: <MachineCategorySelector />,
@@ -92,10 +92,10 @@ function App() {
             path: "/products/:id",
             element: <ProductDetails />, // Product details page
           },
-          {
-            path: "/bagspage",
-            element: <BagMachines />,
-          },
+          // {
+          //   path: "/bagspage",
+          //   element: <BagMachines />,
+          // },
           {
             path: "/bagspage",
             element: <MachineCategorySelector />,
