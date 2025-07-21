@@ -70,7 +70,19 @@ const GetaQuote = () => {
           <motion.button
             onClick={() => setShowForm(true)}
             className="px-5 py-2.5 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all block"
-            whileTap={{ scale: 0.98 }}
+            whileTap={{ scale: 0.95 }}
+            whileHover={{
+              y: -5,
+              transition: {
+                y: {
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 5,
+                  repeat: Infinity,
+                  repeatType: "reverse"
+                }
+              }
+            }}
           >
             Get a Quote
           </motion.button>
@@ -83,7 +95,7 @@ const GetaQuote = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-300 flex top-0 left-0 w-full h-screen items-center backdrop-blur-sm justify-center p-4 "
+            className="fixed inset-0 z-500 flex top-0 left-0 w-full h-screen items-center backdrop-blur-sm justify-center p-4 "
             onClick={() => setShowForm(false)}
           >
             <motion.div

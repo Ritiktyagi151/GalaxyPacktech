@@ -10,12 +10,10 @@ import {
   FaBlog,
   FaPhone,
   FaBoxOpen,
-  FaFacebook,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedin,
-  FaWhatsapp,
-  FaYoutube,
+  FaCertificate,
+  FaUsers,
+  FaBuilding,
+  FaBriefcase,
   FaMailBulk,
 } from "react-icons/fa";
 import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
@@ -23,131 +21,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import GetaQuote from "../../components/GetaQuote";
 
-const TopBar = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const slides = [
-    "🚀 FREE SHIPPING ON ORDERS OVER $500",
-    "🔥 HOT DEALS - UP TO 30% OFF THIS WEEK",
-    "⭐ NEW PRODUCTS JUST ARRIVED!",
-    "💎 PREMIUM QUALITY GUARANTEED",
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
-    <div className="fixed top-0 left-0 right-0 bg-gradient-to-r from-orange-500 via-orange-600 to-pink-500 text-white text-sm z-[200] uppercase">
-      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row justify-between items-center h-auto sm:h-8 py-1 sm:py-0">
-          {/* Left Social Icons - Always visible */}
-          <div className="flex items-center space-x-3 order-1 sm:order-1 mb-1 sm:mb-0">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.facebook.com/share/1FFToPjU2Z/"
-              className="hover:text-orange-200 transition-colors"
-              aria-label="Facebook"
-            >
-              <FaFacebook />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://x.com/GalaxyPackTech/status/1273291850133106688"
-              className="hover:text-orange-200 transition-colors"
-              aria-label="Twitter"
-            >
-              <FaTwitter />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.instagram.com/galaxypacktech?igsh=MXB6czc1a3N0Y2xvOQ=="
-              className="hover:text-orange-200 transition-colors"
-              aria-label="Instagram"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.linkedin.com/company/galaxy-packtech-pvt-ltd/"
-              className="hover:text-orange-200 transition-colors"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://youtube.com/@galaxypacktech?si=pX-w-LoGebW8sK1v"
-              className="hover:text-orange-200 transition-colors"
-              aria-label="YouTube"
-            >
-              <FaYoutube />
-            </a>
-          </div>
-
-          {/* Middle Text Slider - Hidden on small screens */}
-          <div className="hidden sm:flex flex-1 ml-52 overflow-hidden order-3 sm:order-2 w-full sm:w-auto justify-center">
-            <div className="relative h-full">
-              <div
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-              >
-                {slides.map((slide, index) => (
-                  <div
-                    key={index}
-                    className="w-full flex-shrink-0 text-center px-2 whitespace-nowrap"
-                  >
-                    {slide}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Right Contact Info - Stacked on small screens */}
-          <div className="flex items-center gap-4 order-2 sm:order-3 text-xs sm:text-sm">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="tel:+919971479938"
-              className="flex items-center hover:text-orange-200 transition-colors"
-            >
-              <FaPhone className="mr-1 text-xs" />
-              <span>+91 9971479938</span>
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="mailto:gaurav@galaxypacktech.com"
-              className="flex items-center hover:text-orange-200 transition-colors"
-            >
-              <FaMailBulk className="mr-1 text-xs" />
-              <span className="hidden md:inline">
-                GAURAV@GALAXYPACKTECH.COM
-              </span>
-              <span className="md:hidden">EMAIL US</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [hoveredNav, setHoveredNav] = useState(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const sliderTexts = [
+    "🚀 Premium Packaging Solutions Since 2005",
+    "🌟 Trusted by 1000+ Clients Worldwide",
+    "🏆 Award-Winning Packaging Machinery",
+    "💡 Innovative Solutions for Your Business",
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -157,12 +44,73 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % sliderTexts.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [sliderTexts.length]);
+
+  const leftTopNavLinks = [
+    {
+      name: "CERTIFICATIONS",
+      path: "/certifications",
+      icon: <FaCertificate className="mr-2" />,
+    },
+    {
+      name: "CLIENTELE",
+      path: "/clientele",
+      icon: <FaUsers className="mr-2" />,
+    },
+    {
+      name: "FACILITY",
+      path: "/facility",
+      icon: <FaBuilding className="mr-2" />,
+    },
+  ];
+
+  const rightTopNavLinks = [
+    { name: "CAREER", path: "/career", icon: <FaBriefcase className="mr-2" /> },
+    {
+      name: "INDUSTRIES",
+      path: "/industries",
+      icon: <FaIndustry className="mr-2" />,
+    },
+    {
+      name: "CONTACT US",
+      path: "/contact-us",
+      icon: <FaPhone className="mr-2" />,
+    },
+  ];
+
+  const mainNavLinks = [
     { name: "HOME", path: "/", icon: <FaHome className="mr-2" /> },
     {
       name: "ABOUT US",
       path: "/about-us",
       icon: <FaInfoCircle className="mr-2" />,
+      submenu: [
+        {
+          name: "ABOUT GALAXY PACK TECH",
+          path: "/about-us",
+          icon: <FaInfoCircle className="mr-2" />,
+        },
+        {
+          name: "OUR LEADERSHIP",
+          path: "/about-us#leadership",
+          icon: <FaUsers className="mr-2" />,
+        },
+        {
+          name: "VISION & MISSION",
+          path: "/about-us#vision",
+          icon: <FaInfoCircle className="mr-2" />,
+        },
+        {
+          name: "PHILOSOPHY",
+          path: "/about-us#philosophy",
+          icon: <FaInfoCircle className="mr-2" />,
+        },
+      ],
     },
     {
       name: "PRODUCTS",
@@ -192,21 +140,11 @@ const Navbar = () => {
       ],
     },
     {
-      name: "INDUSTRIES",
-      path: "/industries",
-      icon: <FaIndustry className="mr-2" />,
-    },
-    {
       name: "GALLERY",
       path: "/gallerypage",
       icon: <FaImages className="mr-2" />,
     },
     { name: "BLOGS", path: "/blogs", icon: <FaBlog className="mr-2" /> },
-    {
-      name: "CONTACT US",
-      path: "/contact-us",
-      icon: <FaPhone className="mr-2" />,
-    },
   ];
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -214,17 +152,73 @@ const Navbar = () => {
 
   return (
     <>
-      <TopBar />
-
       <header
-        className={`sticky mb-8 top-8 w-full z-[150] transition-all duration-300 ${
+        className={`sticky top-0 w-full z-[150] transition-all duration-300 ${
           isScrolled
-            ? "bg-gradient-to-r from-orange-50 via-white to-orange-50 shadow-lg"
-            : "bg-gradient-to-r from-orange-50/90 via-white/90 to-orange-50/90 backdrop-blur-sm"
+            ? "bg-gradient-to-r from-orange-50 to-pink-50 shadow-lg"
+            : "bg-gradient-to-r from-orange-100/90 to-pink-100/90 backdrop-blur-sm"
         }`}
       >
-        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-17">
+        <div className="max-w-8xl">
+          {/* Top Navigation Bar - Split into left and right sections */}
+          <div className="hidden md:flex justify-between items-center h-10 bg-gradient-to-r from-red-500 to-orange-500 rounded-t-lg px-4">
+            {/* Left side - 3 items */}
+            <div className="flex">
+              {leftTopNavLinks.map((link) => (
+                <motion.div
+                  key={`top-left-${link.name}`}
+                  whileHover={{ scale: 1.05 }}
+                  className="px-4 py-2"
+                >
+                  <Link
+                    to={link.path}
+                    className="flex items-center text-sm font-medium text-white hover:text-orange-100"
+                  >
+                    {link.icon}
+                    {link.name}
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Middle - Text Slider */}
+            <div className="flex-1 mx-4 overflow-hidden">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentSlide}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.3 }}
+                  className="text-center text-white font-medium text-sm whitespace-nowrap"
+                >
+                  {sliderTexts[currentSlide]}
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            {/* Right side - 3 items */}
+            <div className="flex">
+              {rightTopNavLinks.map((link) => (
+                <motion.div
+                  key={`top-right-${link.name}`}
+                  whileHover={{ scale: 1.05 }}
+                  className="px-4 py-2"
+                >
+                  <Link
+                    to={link.path}
+                    className="flex items-center text-sm font-medium text-white hover:text-orange-100"
+                  >
+                    {link.icon}
+                    {link.name}
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Main Navigation */}
+          <div className="flex justify-between px-9 items-center h-17 bg-gradient-to-r from-orange-50 to-pink-50">
             {/* Logo */}
             <motion.div
               className="flex items-center space-x-3"
@@ -243,7 +237,7 @@ const Navbar = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-1">
-              {navLinks.map((link) => (
+              {mainNavLinks.map((link) => (
                 <motion.div
                   key={link.name}
                   className="relative"
@@ -253,8 +247,8 @@ const Navbar = () => {
                   <motion.div
                     className={`flex items-center px-4 py-2 rounded-lg font-medium transition-colors ${
                       hoveredNav === link.name
-                        ? "text-white bg-gradient-to-r from-orange-500 to-pink-500"
-                        : "text-gray-700 hover:text-orange-600"
+                        ? "text-white bg-gradient-to-r from-red-500 to-orange-500"
+                        : "text-orange-800 hover:bg-orange-100"
                     }`}
                   >
                     <Link to={link.path} className="flex items-center">
@@ -275,7 +269,7 @@ const Navbar = () => {
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
-                      className="absolute left-0 w-56 origin-top-left rounded-lg bg-white shadow-lg ring-0 ring-black ring-opacity-5 focus:outline-none z-50"
+                      className="absolute left-0 w-56 origin-top-left rounded-lg bg-gradient-to-b from-orange-200 to-pink-200 shadow-lg ring-0 ring-black ring-opacity-5 focus:outline-none z-50"
                     >
                       <div className="py-1">
                         {link.submenu.map((item) => (
@@ -284,8 +278,8 @@ const Navbar = () => {
                             to={item.path}
                             className={`flex items-center px-4 py-2 text-sm ${
                               item.isHeading
-                                ? "bg-gradient-to-r from-orange-100 to-pink-100 text-orange-700 font-bold border-b border-orange-100"
-                                : "text-gray-700 hover:bg-gradient-to-r hover:from-orange-50 hover:to-pink-50 hover:text-orange-600"
+                                ? "bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold border-b border-orange-400"
+                                : "text-orange-800 hover:bg-orange-100"
                             }`}
                           >
                             {item.icon}
@@ -303,7 +297,7 @@ const Navbar = () => {
             <div className="flex items-center space-x-4">
               <motion.button
                 onClick={toggleSearch}
-                className="p-2 rounded-full bg-gradient-to-r from-orange-100 to-pink-100 text-orange-600 hover:from-orange-200 hover:to-pink-200 transition-colors"
+                className="p-2 rounded-full bg-gradient-to-r from-red-500 to-orange-500 text-white hover:from-red-600 hover:to-orange-600 transition-colors"
                 whileTap={{ scale: 0.9 }}
               >
                 <FaSearch className="text-lg" />
@@ -313,7 +307,7 @@ const Navbar = () => {
 
               <motion.button
                 onClick={toggleMenu}
-                className="md:hidden p-2 rounded-full bg-gradient-to-r from-orange-100 to-pink-100 text-orange-600 hover:from-orange-200 hover:to-pink-200 focus:outline-none"
+                className="md:hidden p-2 rounded-full bg-gradient-to-r from-red-500 to-orange-500 text-white hover:from-red-600 hover:to-orange-600 focus:outline-none"
                 whileTap={{ scale: 0.9 }}
               >
                 {isMenuOpen ? (
@@ -334,15 +328,62 @@ const Navbar = () => {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden bg-gradient-to-b from-orange-50 to-pink-50 shadow-xl overflow-hidden uppercase"
+              className="md:hidden bg-gradient-to-b from-orange-100 to-pink-100 shadow-xl overflow-hidden uppercase"
             >
               <div className="px-4 pt-2 pb-6 space-y-2">
                 <div id="google_translate_element_mobile" className="mb-2" />
 
-                {navLinks.map((link) => (
+                {/* Left Top Navigation Links in Mobile */}
+                <div className="border-b border-orange-200 pb-2 mb-2">
+                  {leftTopNavLinks.map((link) => (
+                    <motion.div
+                      key={`mobile-top-left-${link.name}`}
+                      className="flex items-center px-4 py-3 text-orange-800 hover:bg-orange-200 rounded-lg font-medium"
+                      initial={{ x: -20, opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      exit={{ x: -20, opacity: 0 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <Link
+                        to={link.path}
+                        onClick={() => setIsMenuOpen(false)}
+                        className="flex items-center w-full"
+                      >
+                        {link.icon}
+                        {link.name}
+                      </Link>
+                    </motion.div>
+                  ))}
+                </div>
+
+                {/* Right Top Navigation Links in Mobile */}
+                <div className="border-b border-orange-200 pb-2 mb-2">
+                  {rightTopNavLinks.map((link) => (
+                    <motion.div
+                      key={`mobile-top-right-${link.name}`}
+                      className="flex items-center px-4 py-3 text-orange-800 hover:bg-orange-200 rounded-lg font-medium"
+                      initial={{ x: -20, opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      exit={{ x: -20, opacity: 0 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <Link
+                        to={link.path}
+                        onClick={() => setIsMenuOpen(false)}
+                        className="flex items-center w-full"
+                      >
+                        {link.icon}
+                        {link.name}
+                      </Link>
+                    </motion.div>
+                  ))}
+                </div>
+
+                {/* Main Navigation Links in Mobile */}
+                {mainNavLinks.map((link) => (
                   <div key={`mobile-${link.name}`}>
                     <motion.div
-                      className="flex items-center px-4 py-3 text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-pink-500 rounded-lg font-medium"
+                      className="flex items-center px-4 py-3 text-orange-800 hover:bg-orange-200 rounded-lg font-medium"
                       initial={{ x: -20, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       exit={{ x: -20, opacity: 0 }}
@@ -365,8 +406,8 @@ const Navbar = () => {
                             to={item.path}
                             className={`flex items-center px-4 py-2 text-sm ${
                               item.isHeading
-                                ? "bg-gradient-to-r from-orange-100 to-pink-100 text-orange-700 font-bold"
-                                : "text-gray-600 hover:text-orange-600 hover:bg-gradient-to-r hover:from-orange-50 hover:to-pink-50"
+                                ? "bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold"
+                                : "text-orange-800 hover:bg-orange-200"
                             } rounded-lg`}
                             onClick={() => setIsMenuOpen(false)}
                           >
@@ -404,19 +445,19 @@ const Navbar = () => {
                 <div className="h-full flex flex-col">
                   <div className="p-4 border-b border-orange-200 flex items-center">
                     <div className="relative flex-1">
-                      <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-pink-500" />
+                      <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-orange-600" />
                       <input
                         type="text"
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                         placeholder="SEARCH PRODUCTS, SOLUTIONS..."
-                        className="w-full pl-10 pr-12 py-3 bg-white rounded-lg border border-orange-200 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-gray-700 placeholder-pink-500"
+                        className="w-full pl-10 pr-12 py-3 bg-white rounded-lg border border-orange-300 focus:ring-2 focus:ring-orange-400 focus:border-orange-400 text-orange-800 placeholder-orange-400"
                         autoFocus
                       />
                     </div>
                     <button
                       onClick={toggleSearch}
-                      className="ml-4 p-2 rounded-full bg-gradient-to-r from-orange-100 to-pink-100 text-orange-600 hover:from-orange-200 hover:to-pink-200"
+                      className="ml-4 p-2 rounded-full bg-gradient-to-r from-red-500 to-orange-500 text-white hover:from-red-600 hover:to-orange-600"
                     >
                       <HiX className="text-xl" />
                     </button>

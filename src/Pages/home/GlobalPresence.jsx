@@ -17,7 +17,7 @@ const GlobalPresence = () => {
     </svg>
   );
 
-  // Country Flag SVG Components (same as before)
+  // Country Flag SVG Components
   const FlagSVGs = {
     Bhutan: ({ className = "w-12 h-8" }) => (
       <svg
@@ -289,21 +289,159 @@ const GlobalPresence = () => {
         />
       </svg>
     ),
+    // New Asian country flags
+    "South Korea": ({ className = "w-12 h-8" }) => (
+      <svg className={className} viewBox="0 0 90 60" xmlns="http://www.w3.org/2000/svg">
+        <rect width="90" height="60" fill="#FFFFFF"/>
+        <circle cx="45" cy="30" r="20" fill="#CD2E3A"/>
+        <path d="M45,10 C55,15 65,25 65,30 C65,35 55,45 45,50 C35,45 25,35 25,30 C25,25 35,15 45,10" fill="#0047A0"/>
+        <path d="M45,15 C53,19 60,25 60,30 C60,35 53,41 45,45 C37,41 30,35 30,30 C30,25 37,19 45,15" fill="#FFFFFF"/>
+        <path d="M45,20 C50,22 55,26 55,30 C55,34 50,38 45,40 C40,38 35,34 35,30 C35,26 40,22 45,20" fill="#CD2E3A"/>
+      </svg>
+    ),
+    "Thailand": ({ className = "w-12 h-8" }) => (
+      <svg className={className} viewBox="0 0 90 60" xmlns="http://www.w3.org/2000/svg">
+        <rect width="90" height="12" fill="#A51931"/>
+        <rect y="12" width="90" height="12" fill="#FFFFFF"/>
+        <rect y="24" width="90" height="12" fill="#2D2A4A"/>
+        <rect y="36" width="90" height="12" fill="#FFFFFF"/>
+        <rect y="48" width="90" height="12" fill="#A51931"/>
+      </svg>
+    ),
+    "Vietnam": ({ className = "w-12 h-8" }) => (
+      <svg className={className} viewBox="0 0 90 60" xmlns="http://www.w3.org/2000/svg">
+        <rect width="90" height="60" fill="#DA251D"/>
+        <path d="M45,20 L55,30 L45,40 L35,30 Z" fill="#FFFF00"/>
+      </svg>
+    ),
+    "Malaysia": ({ className = "w-12 h-8" }) => (
+      <svg className={className} viewBox="0 0 90 60" xmlns="http://www.w3.org/2000/svg">
+        <rect width="90" height="30" fill="#CC0001"/>
+        <rect y="30" width="90" height="30" fill="#FFFFFF"/>
+        <rect width="45" height="60" fill="#010066"/>
+        <polygon points="20,12 25,22 35,22 27,30 32,40 20,34 8,40 13,30 5,22 15,22" fill="#FFFF00"/>
+      </svg>
+    ),
+    "Singapore": ({ className = "w-12 h-8" }) => (
+      <svg className={className} viewBox="0 0 90 60" xmlns="http://www.w3.org/2000/svg">
+        <rect width="90" height="30" fill="#FFFFFF"/>
+        <rect y="30" width="90" height="30" fill="#CE1126"/>
+        <polygon points="15,15 20,20 25,15 20,10" fill="#FFFFFF"/>
+        <polygon points="25,25 30,30 35,25 30,20" fill="#CE1126"/>
+      </svg>
+    ),
+    "Philippines": ({ className = "w-12 h-8" }) => (
+      <svg className={className} viewBox="0 0 90 60" xmlns="http://www.w3.org/2000/svg">
+        <rect width="45" height="60" fill="#0038A8"/>
+        <rect x="45" width="45" height="60" fill="#CE1126"/>
+        <polygon points="0,0 90,30 0,60" fill="#FFFFFF"/>
+        <path d="M20,20 L25,25 30,20 25,15Z" fill="#FCD116"/>
+        <path d="M70,40 L65,35 60,40 65,45Z" fill="#FCD116"/>
+      </svg>
+    ),
+    "Indonesia": ({ className = "w-12 h-8" }) => (
+      <svg className={className} viewBox="0 0 90 60" xmlns="http://www.w3.org/2000/svg">
+        <rect width="90" height="30" fill="#CE1126"/>
+        <rect y="30" width="90" height="30" fill="#FFFFFF"/>
+      </svg>
+    ),
+    // New other region flags
+    "France": ({ className = "w-12 h-8" }) => (
+      <svg className={className} viewBox="0 0 90 60" xmlns="http://www.w3.org/2000/svg">
+        <rect width="30" height="60" fill="#0055A4"/>
+        <rect x="30" width="30" height="60" fill="#FFFFFF"/>
+        <rect x="60" width="30" height="60" fill="#EF4135"/>
+      </svg>
+    ),
+    "Italy": ({ className = "w-12 h-8" }) => (
+      <svg className={className} viewBox="0 0 90 60" xmlns="http://www.w3.org/2000/svg">
+        <rect width="30" height="60" fill="#009246"/>
+        <rect x="30" width="30" height="60" fill="#FFFFFF"/>
+        <rect x="60" width="30" height="60" fill="#CE2B37"/>
+      </svg>
+    ),
+    "Spain": ({ className = "w-12 h-8" }) => (
+      <svg className={className} viewBox="0 0 90 60" xmlns="http://www.w3.org/2000/svg">
+        <rect width="90" height="12" fill="#C60B1E"/>
+        <rect y="12" width="90" height="36" fill="#FFC400"/>
+        <rect y="48" width="90" height="12" fill="#C60B1E"/>
+        <rect x="30" y="20" width="30" height="20" fill="#C60B1E"/>
+      </svg>
+    ),
+    "UK": ({ className = "w-12 h-8" }) => (
+      <svg className={className} viewBox="0 0 90 60" xmlns="http://www.w3.org/2000/svg">
+        <rect width="90" height="60" fill="#012169"/>
+        <path d="M0,0 L90,60 M90,0 L0,60" stroke="#FFFFFF" strokeWidth="8"/>
+        <path d="M0,20 L90,40 M90,20 L0,40" stroke="#C8102E" strokeWidth="4"/>
+        <path d="M20,0 L40,60 M50,0 L70,60" stroke="#C8102E" strokeWidth="8"/>
+        <path d="M0,24 L90,36 M0,36 L90,24" stroke="#C8102E" strokeWidth="4"/>
+      </svg>
+    ),
+    "Canada": ({ className = "w-12 h-8" }) => (
+      <svg className={className} viewBox="0 0 90 60" xmlns="http://www.w3.org/2000/svg">
+        <rect width="90" height="60" fill="#FF0000"/>
+        <rect width="30" height="60" fill="#FFFFFF"/>
+        <rect x="60" width="30" height="60" fill="#FFFFFF"/>
+        <path d="M45,10 L50,20 55,10 50,15Z" fill="#FF0000"/>
+      </svg>
+    ),
+    "Australia": ({ className = "w-12 h-8" }) => (
+      <svg className={className} viewBox="0 0 90 60" xmlns="http://www.w3.org/2000/svg">
+        <rect width="90" height="60" fill="#012169"/>
+        <path d="M0,0 L90,60 M90,0 L0,60" stroke="#FFFFFF" strokeWidth="8"/>
+        <path d="M0,20 L90,40 M90,20 L0,40" stroke="#E4002B" strokeWidth="4"/>
+        <circle cx="70" cy="15" r="5" fill="#FFFFFF"/>
+        <circle cx="70" cy="15" r="3" fill="#E4002B"/>
+      </svg>
+    ),
+    "South Africa": ({ className = "w-12 h-8" }) => (
+      <svg className={className} viewBox="0 0 90 60" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="0,0 90,0 0,60" fill="#000000"/>
+        <polygon points="90,0 90,60 0,60" fill="#FFB612"/>
+        <polygon points="0,0 90,30 0,60" fill="#E03C31"/>
+        <polygon points="90,0 45,30 90,60" fill="#007749"/>
+        <polygon points="0,30 90,30 45,15" fill="#FFFFFF"/>
+        <polygon points="0,30 90,30 45,45" fill="#FFFFFF"/>
+      </svg>
+    ),
   };
 
   const countries = [
+    // Asian countries (original + 9 new)
     { name: "Bhutan", flag: "🇧🇹", region: "Asia" },
     { name: "Nepal", flag: "🇳🇵", region: "Asia" },
     { name: "Sri Lanka", flag: "🇱🇰", region: "Asia" },
     { name: "Bangladesh", flag: "🇧🇩", region: "Asia" },
-    { name: "UAE", flag: "🇦🇪", region: "Middle East" },
-    { name: "Syria", flag: "🇸🇾", region: "Middle East" },
-    { name: "Iran", flag: "🇮🇷", region: "Middle East" },
-    { name: "Kuwait", flag: "🇰🇼", region: "Middle East" },
+    { name: "UAE", flag: "🇦🇪", region: "Asia" },
+    { name: "Syria", flag: "🇸🇾", region: "Asia" },
+    { name: "Iran", flag: "🇮🇷", region: "Asia" },
+    { name: "Kuwait", flag: "🇰🇼", region: "Asia" },
+    { name: "India", flag: "🇮🇳", region: "Asia" },
+    // { name: "Japan", flag: "🇯🇵", region: "Asia" },
+    // { name: "South Korea", flag: "🇰🇷", region: "Asia" },
+    // { name: "Thailand", flag: "🇹🇭", region: "Asia" },
+    // { name: "Vietnam", flag: "🇻🇳", region: "Asia" },
+    // { name: "Malaysia", flag: "🇲🇾", region: "Asia" },
+    // { name: "Singapore", flag: "🇸🇬", region: "Asia" },
+    // { name: "Philippines", flag: "🇵🇭", region: "Asia" },
+    // { name: "Indonesia", flag: "🇮🇩", region: "Asia" },
+    
+    // Other regions (original + 9 new)
     { name: "Uganda", flag: "🇺🇬", region: "Africa" },
     { name: "Tanzania", flag: "🇹🇿", region: "Africa" },
     { name: "Egypt", flag: "🇪🇬", region: "Africa" },
     { name: "Brazil", flag: "🇧🇷", region: "South America" },
+    { name: "USA", flag: "🇺🇸", region: "North America" },
+    { name: "Germany", flag: "🇩🇪", region: "Europe" },
+    { name: "France", flag: "🇫🇷", region: "Europe" },
+    { name: "Italy", flag: "🇮🇹", region: "Europe" },
+    { name: "Spain", flag: "🇪🇸", region: "Europe" },
+    // { name: "UK", flag: "🇬🇧", region: "Europe" },
+    // { name: "Russia", flag: "🇷🇺", region: "Europe" },
+    // { name: "Canada", flag: "🇨🇦", region: "North America" },
+    // { name: "Mexico", flag: "🇲🇽", region: "North America" },
+    // { name: "Australia", flag: "🇦🇺", region: "Oceania" },
+    // { name: "South Africa", flag: "🇿🇦", region: "Africa" },
   ];
 
   const mapCountries = [
@@ -359,118 +497,9 @@ const GlobalPresence = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-orange-400 to-orange-600 mx-auto rounded-full"></div>
         </div>
 
-        {/* Statistics Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-          <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-200">
-            <div className="text-3xl font-bold text-orange-600 mb-2">
-              {countries.length}+
-            </div>
-            <div className="text-gray-700 font-medium">Countries Served</div>
-          </div>
-          <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-200">
-            <div className="text-3xl font-bold text-orange-600 mb-2">50+</div>
-            <div className="text-gray-700 font-medium">Global Partners</div>
-          </div>
-          <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-200">
-            <div className="text-3xl font-bold text-orange-600 mb-2">24/7</div>
-            <div className="text-gray-700 font-medium">Global Support</div>
-          </div>
-          <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-200">
-            <div className="text-3xl font-bold text-orange-600 mb-2">10M+</div>
-            <div className="text-gray-700 font-medium">Products Delivered</div>
-          </div>
-        </div>
-
-        {/* Flags Grid (Desktop) */}
-        <div className="hidden md:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-12">
-          {countries.map((country, index) => {
-            const FlagComponent = FlagSVGs[country.name];
-            return (
-              <div
-                key={index}
-                className="bg-white/90 backdrop-blur-sm rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-xl border border-orange-200"
-                onMouseEnter={() => setHoveredCountry(index)}
-                onMouseLeave={() => setHoveredCountry(null)}
-              >
-                <div className="p-4 text-center">
-                  <div className="mb-2 transform transition-transform duration-300 hover:scale-110">
-                    {/* Smaller Flag */}
-                    <div className="w-10 h-6 mx-auto">
-                      {FlagComponent ? <FlagComponent /> : country.flag}
-                    </div>
-                  </div>
-                  <div className="text-xs text-gray-600 mb-1">
-                    {country.region}
-                  </div>
-                </div>
-                <div
-                  className={`bg-gradient-to-r from-orange-500 to-orange-600 text-white text-center py-2 text-sm font-medium transition-all duration-300 ${
-                    hoveredCountry === index
-                      ? "from-orange-600 to-orange-700"
-                      : ""
-                  }`}
-                >
-                  {country.name}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Flags Slider (Mobile) */}
-        <div className="md:hidden mb-16 px-4">
-          <Swiper
-            modules={[]} // Remove Navigation and Pagination modules
-            spaceBetween={20}
-            slidesPerView={2}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-            }}
-            loop={true}
-            speed={800}
-            breakpoints={{
-              640: {
-                slidesPerView: 3,
-              },
-            }}
-          >
-            {countries.map((country, index) => {
-              const FlagComponent = FlagSVGs[country.name];
-              return (
-                <SwiperSlide key={index}>
-                  <div
-                    className="bg-white/90 backdrop-blur-sm rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-xl border border-orange-200"
-                    onMouseEnter={() => setHoveredCountry(index)}
-                    onMouseLeave={() => setHoveredCountry(null)}
-                  >
-                    <div className="p-6 text-center">
-                      <div className="mb-3 transform transition-transform duration-300 hover:scale-110">
-                        {FlagComponent ? <FlagComponent /> : country.flag}
-                      </div>
-                      <div className="text-sm text-gray-600 mb-1">
-                        {country.region}
-                      </div>
-                    </div>
-                    <div
-                      className={`bg-gradient-to-r from-orange-500 to-orange-600 text-white text-center py-3 font-medium transition-all duration-300 ${
-                        hoveredCountry === index
-                          ? "from-orange-600 to-orange-700"
-                          : ""
-                      }`}
-                    >
-                      {country.name}
-                    </div>
-                  </div>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
-        </div>
-
         {/* Three Column Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-16">
-          {/* Left Block */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 ">
+          {/* Left Block - Asian Markets */}
           <div className="lg:col-span-1">
             <div className="bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg h-full relative overflow-hidden border border-orange-200">
               <div className="absolute -top-4 -left-4 text-orange-400 opacity-10">
@@ -526,47 +555,12 @@ const GlobalPresence = () => {
                   }}
                 ></div>
 
-                {/* Country Markers */}
-                {/* {mapCountries.map((country, index) => {
-                  const FlagComponent = FlagSVGs[country.name];
-                  return (
-                    <div
-                      key={index}
-                      className="absolute transform -translate-x-1/2 -translate-y-1/2 group cursor-pointer"
-                      style={{
-                        left: `${country.x}%`,
-                        top: `${country.y}%`,
-                      }}
-                      onMouseEnter={() => setHoveredCountry(`map-${index}`)}
-                      onMouseLeave={() => setHoveredCountry(null)}
-                    >
-                      <div className="relative">
-                        <div className="w-4 h-4 bg-orange-500 rounded-full border-2 border-white shadow-lg transform transition-all duration-300 group-hover:scale-150 group-hover:bg-orange-600"></div>
-                        <div
-                          className={`absolute left-1/2 transform -translate-x-1/2 mt-2 px-3 py-2 bg-white rounded-lg shadow-lg text-xs font-medium whitespace-nowrap transition-all duration-300 border border-orange-200 ${
-                            hoveredCountry === `map-${index}`
-                              ? "opacity-100 scale-100"
-                              : "opacity-0 scale-95"
-                          }`}
-                        >
-                          <div className="mb-1">
-                            {FlagComponent ? (
-                              <FlagComponent className="w-6 h-4" />
-                            ) : (
-                              country.flag
-                            )}
-                          </div>
-                          <div className="text-gray-800">{country.name}</div>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })} */}
+                
               </div>
             </div>
           </div>
 
-          {/* Right Block */}
+          {/* Right Block - Other Regions */}
           <div className="lg:col-span-1">
             <div className="bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg h-full relative overflow-hidden border border-orange-200">
               <div className="absolute -bottom-4 -right-4 text-orange-400 opacity-10">
@@ -578,7 +572,6 @@ const GlobalPresence = () => {
               <ul className="space-y-4 relative z-10">
                 {countries
                   .filter((c) => c.region !== "Asia")
-                  .slice(0, 5)
                   .map((country, index) => {
                     const FlagComponent = FlagSVGs[country.name];
                     return (

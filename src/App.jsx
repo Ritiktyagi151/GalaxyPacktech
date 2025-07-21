@@ -4,6 +4,7 @@ import {
   RouterProvider,
   Outlet,
   ScrollRestoration,
+  Navigate,
 } from "react-router-dom";
 
 import "./App.css";
@@ -12,10 +13,7 @@ import Footer from "./common/footer/Footer";
 
 import Home from "./Pages/home/Home";
 import ContactPage from "./Pages/contact-us/Contact-Us";
-// import PouchMachines from "./Pages/Pouches/BagsProduct/PochesPage";
-// import BagMachines from "./Pages/Pouches/BagsProduct/BagsPage";
 import ShapeofPouch from "./Pages/pouchesSubpages/ShapeofPouch";
-import GalaxyTechAboutComponents from "./Pages/aboutus/About-Us";
 import Gallery from "./Pages/gallery/GalleryPage";
 import Blog from "./Pages/blogs/Blogs";
 import ProductPage from "./Pages/product/ProductMain";
@@ -28,11 +26,17 @@ import ShapeofBags from "./Pages/BagsSubPages/SearchByshapebag";
 import Industries from "./Pages/industries/Industries";
 import GetaQuote from "./components/GetaQuote";
 import BlogDetails from "./Pages/blogs/BlogDetails";
-// import Products from "./Pages/product/Products"; // Import the new Products component
-import ProductDetails from "./Pages/home/productdetails/ProductDetails"; // Import the new ProductDetails component
+import ProductDetails from "./Pages/home/productdetails/ProductDetails";
 import PochesPage from "./Pages/Pouches/BagsProduct/PochesPage";
 
-// Layout component to wrap all pages with Navbar and Footer
+// 🆕 About Us components (sidebar pages)
+import AboutLayout from "../src/Pages/aboutus/ManufacturingLayout";
+import About from "../src/Pages/aboutus/About-Us";
+import Leadership from "../src/Pages/aboutus/Leadership";
+import VisionMission from "../src/Pages/aboutus/VisionMission";
+import Philosophy from "../src/Pages/aboutus/Philosophy";
+
+// Global Layout with Navbar/Footer
 const Layout = () => {
   return (
     <div>
@@ -47,9 +51,6 @@ const Layout = () => {
 };
 
 function App() {
-  // const [count, setCount] = useState(0);
-
-  // Define routes using createBrowserRouter with a layout route
   const router = createBrowserRouter(
     [
       {
@@ -59,10 +60,31 @@ function App() {
             path: "/",
             element: <Home />,
           },
+
+          // 🆕 About Us nested routes
           {
             path: "/about-us",
-            element: <GalaxyTechAboutComponents />,
+            element: <AboutLayout />,
+            children: [
+              {
+                path: "about",
+                element: <About />,
+              },
+              {
+                path: "leadership",
+                element: <Leadership />,
+              },
+              {
+                path: "vision",
+                element: <VisionMission />,
+              },
+              {
+                path: "philosophy",
+                element: <Philosophy />,
+              },
+            ],
           },
+
           {
             path: "/gallerypage",
             element: <Gallery />,
@@ -75,27 +97,18 @@ function App() {
             path: "/blogs/:id",
             element: <BlogDetails />,
           },
-          // {
-          //   path: "/pochespage",
-          //   element: <PouchMachines />,
-          // },
           {
             path: "/pochespage",
             element: <MachineCategorySelector />,
           },
-          // Updated product routes
           {
             path: "/products",
             element: <PochesPage />,
           },
           {
             path: "/products/:id",
-            element: <ProductDetails />, // Product details page
+            element: <ProductDetails />,
           },
-          // {
-          //   path: "/bagspage",
-          //   element: <BagMachines />,
-          // },
           {
             path: "/bagspage",
             element: <MachineCategorySelector />,
@@ -136,7 +149,6 @@ function App() {
       },
     ],
     {
-      // Enable scroll restoration
       scrollRestoration: "auto",
     }
   );
